@@ -1,0 +1,12 @@
+_site/
+node_modules/
+.idea/
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+*.sh
+### Jekyll template
+_site/
+.sass-cache/
+.jekyll-metadata
+.vscode

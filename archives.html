@@ -1,0 +1,23 @@
+---
+layout: page
+header-img: "img/tag-bg.jpg"
+---
+
+<div class="archives-list">
+  <div class="post-preview">
+    <span>文章归档</span>
+  </div>
+</div>
+
+<div class="archives-list">
+  {% for post in site.posts %}
+  <div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+      <h2 class="post-title">
+        {{ post.date | date: "%x"}} : {{ post.title }}
+      </h2>
+    </a>
+  </div>
+  <hr>
+  {% endfor %}
+</div>

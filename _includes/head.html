@@ -1,0 +1,90 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
+    {% if page.keyword %}<meta name="keyword" content="{{ page.keyword }}">{% else %}<meta name="keyword" content="{{ site.keyword }}">{% endif %}
+    <link rel="shortcut icon" href="//img.yuxiumin.com/assets/img/favicon.ico">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "//img.yuxiumin.com/assets/css/bootstrap.min-201903302003.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "//img.yuxiumin.com/assets/css/blog-201904082241.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "//img.yuxiumin.com/assets/css/syntax-201903302003.css" | prepend: site.baseurl }}">
+    <link href="https://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showProcessingMessages: false,
+            messageStyle: "none",
+            tex2jax: {
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                inlineMath: [['$','$']],
+                ignoreClass:"class1"
+            },
+            "HTML-CSS": {
+                showMathMenu: false
+            }
+        });
+    </script>
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script></script>
+
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        ul, ol {
+          padding-left: 20px;
+        }
+
+        h1 { font-size: 22.5px;}
+        h2 { font-size: 20px;}
+        h3 { font-size: 18px; }
+        h4 { font-size: 16px; }
+        h5 { font-size: 14px; }
+        h1.title {
+          font-size: 32px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 65em;
+            border: 1px solid #dedede;
+            margin: 15px auto;
+            border-collapse: collapse;
+            empty-cells: show;
+        }
+        table th, table td {
+          height: 35px;
+          border: 1px solid #dedede;
+          padding: 0 10px;
+        }
+        table th {
+            font-weight: bold;
+            text-align: center !important;
+            background: rgba(158,188,226,0.2);
+        }
+        table tbody tr:nth-child(2n) {
+            background: rgba(158,188,226,0.12);
+        }
+        table tr:hover {
+            background: #efefef;
+        }
+        table th {
+            white-space: nowrap;
+        }
+        table td:nth-child(1) {
+            white-space: nowrap;
+        }
+    </style>
+</head>

@@ -1,0 +1,72 @@
+# Site settings
+title: fish 的血域
+author: 余修忞
+SEOTitle: fish 的血域 | 余修忞的 Blog
+header-img: ""
+email: xmyu.xueyufish@gmail.com
+description: "余修忞的个人博客, 键盘、屏幕、耳机, 加上一杯清茶，记录百面人生"
+keyword: "余修忞, yuxiumin, xueyufish"
+url: "http://www.yuxiumin.com"
+baseurl: ""
+copyright: 2019
+timezone: Asia/Shanghai
+
+# SNS settings
+RSS: true
+weibo_username:     xueyufish
+zhihu_username:
+github_username:    xueyufish
+twitter_username:   xueyufish
+#facebook_username:  xueyufish
+
+# Build settings
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true
+
+# plugins
+plugins: [jekyll-paginate]
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Duoshuo settings
+#duoshuo_username: xueyufish
+
+# Baidu Analytics
+ba_track_id: bacdc6155a36bf3a4c3cc580196017b0
+
+# Sidebar settings
+sidebar-about-description: "Geek， 爱技术，产品控，完美主义者。 爱好旅游， 国学， 佛学研究中。"
+
+# Featured Tags
+featured-tags: true
+featured-condition-size: 2
+
+# Archives
+archives: true
+
+# Recent entries
+recent-entries: true
+entries-condition-size: 10
+
+# Friends
+#friends: [
+#    {
+#        title: "Foo",
+#        href: "#"
+#    },{
+#        title: "Bar",
+#        href: "#"
+#    },{
+#        title: "Example Friends",
+#        href: "#"
+#    },{
+#        title: "It helps SEO",
+#        href: "#"
+#    }
+#]

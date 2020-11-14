@@ -1,0 +1,153 @@
+---
+layout: default
+---
+
+<header class="intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="site-header">
+        <span class="header-name">
+          <a href="{{'/' | prepend: site.baseurl }}">
+            <h1 class="title">{{ site.title }}</h1>
+          </a>
+        </span>
+        <span class="header-desc">
+          {{ site.description }}
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+      {{ content }}
+    </div>
+    <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container">
+      <section class="visible-md visible-lg">
+        <div class="short-about">
+          <img src="//img.yuxiumin.com/assets/img/profile.jpg"/>
+          {% if site.sidebar-about-description %}
+          <p>{{site.sidebar-about-description}}</p>
+          {% endif %}
+
+          <ul class="list-inline">
+            {% if site.RSS %}
+            <li>
+              <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.twitter_username %}
+            <li>
+              <a href="https://twitter.com/{{ site.twitter_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.zhihu_username %}
+            <li>
+              <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-stack-1x fa-inverse">知</i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.weibo_username %}
+            <li>
+              <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.facebook_username %}
+            <li>
+              <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+            {% if site.github_username %}
+            <li>
+              <a target="_blank" href="https://github.com/{{ site.github_username }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+          <img src="//img.yuxiumin.com/assets/img/wechat-qrcode.jpeg"/>
+        </div>
+      </section>
+
+      {% if site.featured-tags %}
+      <section>
+        <hr class="hidden-sm hidden-xs">
+        <h5>常用标签</h5>
+        <div class="tags">
+          {% for tag in site.tags  %}
+            {% if tag[1].size > site.featured-condition-size %}
+              <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                {{ tag[0] }}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if site.archives %}
+      <hr class="hidden-sm hidden-xs">
+      <h5>文章归档</h5>
+      <div>
+        <a href="{{'/archives/' | prepend: site.baseurl }}">查看所有文章</a>
+      </div>
+      {% endif %}
+
+      {% if site.recent-entries %}
+      <hr class="hidden-sm hidden-xs">
+      <h5>最新文章</h5>
+      <div>
+        <ul class="list-inline">
+          <li>
+            <a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a>
+          </li>
+          {% for post in site.posts offset:1 limit:site.entries-condition-size %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if site.friends %}
+      <hr>
+      <h5>友情链接</h5>
+      <ul class="list-inline">
+        {% for friend in site.friends %}
+          <li><a href="{{friend.href}}">{{friend.title}}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
