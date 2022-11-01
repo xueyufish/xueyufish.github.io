@@ -17,7 +17,7 @@ tags:
 
 # 结构
 
-![装饰器结构](http://img.yuxiumin.com/screenshots/design-patterns/68af332773f45dc1447601343535f646.png)
+![装饰器结构](/assets/attachment/design-pattern/68af332773f45dc1447601343535f646.png)
 
 装饰器模式由以下几部分组成：
 

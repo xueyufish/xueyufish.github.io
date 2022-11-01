@@ -16,7 +16,7 @@ tags:
 对象行为模式
 
 # 结构
-![责任链模式结构](http://img.yuxiumin.com/screenshots/design-patterns/32c83454621f93c07b084f5be74f7339.jpg)
+![责任链模式结构](/assets/attachment/design-pattern/32c83454621f93c07b084f5be74f7339.jpg)
 
 责任链模式由以下几部分组成：
 

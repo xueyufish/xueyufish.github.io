@@ -168,7 +168,7 @@ TCC 模型认为对于业务系统中的一个特定的业务逻辑，其对外�
 1. 初步操作 Try: 完成所有业务检查，预留必须的资源；
 2. 确认操作 Confirm: 真正执行业务逻辑，不做任务业务检查，只使用 Try 阶段预留的业务资源。因此，只要 Try 成功，Confirm 必须能成功。另外，Confirm操作需满足幂等性，保证每一笔分布式事务有且只能成功一次。
 3. 取消操作 Cancel: 释放 Try 阶段预留的业务资源。同样，Cancel 操作也需要保证幂等性。
-![tcc-transaction-model](http://img.yuxiumin.com/screenshots/distributed-system-transaction-consistency/91762cceea0e9be0251923dfaa809686.jpg?imageView/2/w/360/h/360)
+![tcc-transaction-model](/assets/image/distributed-system-transaction-consistency/91762cceea0e9be0251923dfaa809686.jpg)
 
 TCC 模型包括三部分：
 1. 主业务服务：整个业务活动的发起方，服务的编排者，负责发起并完成整个业务活动；

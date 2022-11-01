@@ -81,7 +81,7 @@ tags:
 
 示例：
 
-![我的头像](http://img.yuxiumin.com/assets/img/profile.jpg)
+![我的头像](http:/assets/image/profile.jpg)
 
 
 # 高阶语法

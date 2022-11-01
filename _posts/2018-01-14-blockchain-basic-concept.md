@@ -47,7 +47,7 @@ tags:
 * 链（Chain）：由一个个区块按照发生顺序串联而成，是整个状态变化的日志记录。
 
 如果把区块链作为一个状态机，则每次交易就是试图改变一次状态，而每次共识生成的区块，就是参与者对于区块中所有交易内容导致状态改变的结果进行确认。
-![simpleBlockchain](http://img.yuxiumin.com/screenshots/blockchain-basic-concept/simpleBlockchain.png)
+![simpleBlockchain](/assets/attachment/blockchain-basic-concept/simpleBlockchain.png)
 
 在实现上，首先假设存在一个分布式的数据记录本（这方面的技术相对成熟），这个记录本只允许添加、不允许删除。其结构是一个线性的链表，由一个个“区块”串联组成，这也是其名字“区块链”的来源。新的数据要加入，必须放到一个新的区块中。而这个块（以及块里的交易）是否合法，可以通过一些手段快速检验出来。维护节点都可以提议一个新的区块，然而必须经过一定的共识机制来对最终选择的区块达成一致。
 
@@ -90,7 +90,7 @@ tags:
 
 缺陷：这种情况下，如果参与多方均诚实可靠依照约定执行，则该记账方案可以正常工作。但是一旦有参与方恶意操作，篡改已发生过的记录，则无法确保账本记录的正确性，并且他人无法获知篡改是否发生。
 
-![简单分布式记账](/assets/screenshots/blockchain-basic-concept/a5926e8ae4bbac0b1f5411db55ee6c4b.png)
+![简单分布式记账](/assets/attachment/blockchain-basic-concept/a5926e8ae4bbac0b1f5411db55ee6c4b.png)
 
 **2、带有数字摘要验证的分布式记账**
 
@@ -98,17 +98,17 @@ tags:
 
 缺陷：由于每次校验需要从头对所有的历史数据计算数字摘要，当账本中存有大量历史交易时，数字摘要计算成本将变得很高。而且，随着新交易的发生，计算耗费将越来越大，该方案将无法支撑大规模的记账情形。
 
-![带有数字摘要验证的分布式](http://img.yuxiumin.com/screenshots/blockchain-basic-concept/ed0aa8f87f0ea7629daafa204543f970.png)
+![带有数字摘要验证的分布式](/assets/attachment/blockchain-basic-concept/ed0aa8f87f0ea7629daafa204543f970.png)
 
 **3、带有数字摘要验证的可扩展分布式记账**
 
 每次摘要时实际上已经确保了从头开始到摘要位置的历史的正确性，因此当新的交易发生后，实际上需要进行额外验证的只是新发生的若干交易，即增量部分。因此，计算摘要的过程可以改进为对旧的摘要值以及增量交易内容进行验证。这样就既解决了防篡改问题，又解决了可扩展性问题。
 
-![带有数字摘要验证的可扩展的分布式](http://img.yuxiumin.com/screenshots/blockchain-basic-concept/6019e73b9c32054acf2316faa20822f3.png)
+![带有数字摘要验证的可扩展的分布式](/assets/attachment/blockchain-basic-concept/6019e73b9c32054acf2316faa20822f3.png)
 
 实际上，方案三账本结构就是一个区块链结构。
 
-![区块链结构](http://img.yuxiumin.com/screenshots/blockchain-basic-concept/4125dd96bdd5a60dc6fa3d3b4d06fbd1.png)
+![区块链结构](/assets/attachment/blockchain-basic-concept/4125dd96bdd5a60dc6fa3d3b4d06fbd1.png)
 
 ### 参考资料
 

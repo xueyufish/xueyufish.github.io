@@ -16,7 +16,7 @@ tags:
 结构型模式
 
 # 结构
-![享元模式结构](http://img.yuxiumin.com/screenshots/design-patterns/8352b0abbac97a61f526ffac5318b091.jpeg)
+![享元模式结构](/assets/attachment/design-pattern/8352b0abbac97a61f526ffac5318b091.png)
 
 ## 内部状态与外部状态
 

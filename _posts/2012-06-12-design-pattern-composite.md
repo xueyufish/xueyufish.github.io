@@ -16,7 +16,7 @@ tags:
 结构型模式
 
 # 结构
-![组合模式结构](http://img.yuxiumin.com/screenshots/design-patterns/42f47ef4e360ab86e6d9b23e8e433510.png)
+![组合模式结构](/assets/attachment/design-pattern/42f47ef4e360ab86e6d9b23e8e433510.png)
 
 组合模式由以下几部分组成:
 

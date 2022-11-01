@@ -17,7 +17,7 @@ tags:
 
 # 结构
 
-![代理模式结构](http://img.yuxiumin.com/screenshots/design-patterns/b808097e7b3af60fdfb9b34a283e587d.png)
+![代理模式结构](/assets/attachment/design-pattern/b808097e7b3af60fdfb9b34a283e587d.png)
 
 代理模式由以下几部分组成：
 

@@ -13,7 +13,7 @@ JVM中，垃圾收集算法主要分为复制、标记清除、标记整理、�
 ### 标记-清除算法
 
 将需要回收的对象进行标记，然后清除
-![标记清除法.jpg](http://img.yuxiumin.com/screenshots/jvm-gc-algorithm/a4248c4b-6c1d-4fb8-a557-86da92d3a294.jpg)
+![标记清除法.jpg](/assets/attachment/jvm-gc-algorithm/a4248c4b-6c1d-4fb8-a557-86da92d3a294.jpg)
 
 **不足:**
 
@@ -25,7 +25,7 @@ JVM中，垃圾收集算法主要分为复制、标记清除、标记整理、�
 ### 复制算法
 
 将内存划分为大小相等的两块，每次只使用其中一块，当这一块内存用完了就将还存活的对象复制到另一块上面，然后再把使用过的内存空间进行一次清理。
-![复制算法.jpg](http://img.yuxiumin.com/screenshots/jvm-gc-algorithm/e6b733ad-606d-4028-b3e8-83c3a73a3797.jpg)
+![复制算法.jpg](/assets/attachment/jvm-gc-algorithm/e6b733ad-606d-4028-b3e8-83c3a73a3797.jpg)
 
 **优点:**
 * 由于是每次都对整个半区进行内存回收，内存分配时不必考虑内存碎片问题。
@@ -42,7 +42,7 @@ JVM中，垃圾收集算法主要分为复制、标记清除、标记整理、�
 
 让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。
 
-![标记-整理算法.jpg](http://img.yuxiumin.com/screenshots/jvm-gc-algorithm/902b83ab-8054-4bd2-898f-9a4a0fe52830.jpg)
+![标记-整理算法.jpg](/assets/attachment/jvm-gc-algorithm/902b83ab-8054-4bd2-898f-9a4a0fe52830.jpg)
 
 这种方法可以解决内存碎片问题，但是会增加停顿时间。
 
@@ -50,7 +50,7 @@ JVM中，垃圾收集算法主要分为复制、标记清除、标记整理、�
 
 现在的商业虚拟机采用分代收集算法，它根据对象存活周期将内存划分为几块，不同块采用适当的收集算法。
 
-![分代收集算法.jpg](http://img.yuxiumin.com/screenshots/jvm-gc-algorithm/341412-20170310111906594-1376910719.png)
+![分代收集算法.jpg](/assets/attachment/jvm-gc-algorithm/341412-20170310111906594-1376910719.png)
 
 上面可以看到堆分成三个区域：
 

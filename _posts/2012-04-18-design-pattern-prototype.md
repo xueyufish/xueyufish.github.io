@@ -17,7 +17,7 @@ tags:
 
 # 结构
 
-![原型模式结构](http://img.yuxiumin.com/screenshots/design-patterns/560883237ff644668f99af1c053a5ff3.png)
+![原型模式结构](/assets/attachment/design-pattern/560883237ff644668f99af1c053a5ff3.png)
 
 原型模式由以下几部分组成：
 

@@ -50,7 +50,7 @@ tags:
   >
 	> 2.2.3 参与者向协调者返回事务 rollback 结果信息。
 
-![2PC](http://img.yuxiumin.com/screenshots/two-phase-commit-protocol/07717718-1230-4347-aa18-2041c315e670.jpg)
+![2PC](/assets/attachment/two-phase-commit-protocol/07717718-1230-4347-aa18-2041c315e670.jpg)
 
 需要注意的是，在准备阶段，参与者执行了事务，但是还未提交。只有在提交阶段协接收到协调者发来的通知后，才进行提交或者回滚。
 

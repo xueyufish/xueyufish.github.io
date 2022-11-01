@@ -73,7 +73,7 @@ tags:
   >
   >3.2.3 参与者向协调者反馈事务提交结果
 
-![3PC](http://img.yuxiumin.com/screenshots/three-phase-commit-protocol/b19a8c6db59993f61140cd6ffc26bc15.png)
+![3PC](/assets/attachment/three-phase-commit-protocol/b19a8c6db59993f61140cd6ffc26bc15.png)
 
 # 和 2PC 的不同
 

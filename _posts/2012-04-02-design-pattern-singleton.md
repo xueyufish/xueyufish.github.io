@@ -7,7 +7,6 @@ keyword:    "设计模式, 创建型模式, 单例模式, 余修忞, yuxiumin, x
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 设计模式
-    - 创建型模式
 ---
 
 # 定义
@@ -17,7 +16,7 @@ tags:
 创建型模式
 
 # 结构
-![单例模式结构](http://img.yuxiumin.com/screenshots/design-patterns/b9f8dd056cceee1cdc014d31580ad071.gif)
+![单例模式结构](/assets/attachment/design-pattern/b9f8dd056cceee1cdc014d31580ad071.gif)
 
 # 实现
 单例模式的实现主要有懒汉式、饿汉式、双重校验锁、静态内部类、枚举等 5 种，具体如下：

@@ -17,7 +17,7 @@ tags:
 
 # 结构
 
-![建造者模式结构](http://img.yuxiumin.com/screenshots/design-patterns/c73ac087e363fe63156e35d2bca0ae11.png)
+![建造者模式结构](/assets/attachment/design-pattern/c73ac087e363fe63156e35d2bca0ae11.png)
 
 建造者模式由以下几部分组成：
 1. **建造者 (Builder)**：为创建一个 Product 对象的各个部件指定抽象接口；

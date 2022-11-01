@@ -10,7 +10,7 @@ tags:
     - Java
     - JVM
 ---
-![JVM架构.jpg](http://img.yuxiumin.com/screenshots/jvm-memory-model/jvm-architecture.jpg)
+![JVM架构.jpg](/assets/attachment/jvm-memory-model/jvm-architecture.jpg)
 
 Jvm 内存模型主要包括程序计数器（寄存器）、虚拟机栈、本地方法栈、堆、方法区、运行常量池、直接内存几部分组成。
 
@@ -93,7 +93,7 @@ Java 内存模型的主要目标是定义程序中各个变量的访问规则，
 
 Java 内存模型规定了**所有的变量都存储在主内存中。每个线程还有自己的工作内存, 线程的工作内存中保存了该线程使用到的变量的主内存的副本拷贝，线程对变量的所有操作（读取、赋值等）都必须在工作内存中进行，而不能直接读写主内存中的变量（volatile 变量仍然有工作内存的拷贝，但是由于它特殊的操作顺序性规定，所以看起来如同直接在主内存中读写访问一般）。不同的线程之间也无法直接访问对方工作内存中的变量，线程之间值的传递都需要通过主内存来完成。**
 
-![JVM架构.jpg](http://img.yuxiumin.com/screenshots/jvm-memory-model/373f842b0b3d25afaf4fb126bdd16e37.png)
+![JVM架构.jpg](/assets/attachment/jvm-memory-model/373f842b0b3d25afaf4fb126bdd16e37.png)
 
 线程 1 和线程 2 要想进行数据的交换一般要经历下面的步骤：
 

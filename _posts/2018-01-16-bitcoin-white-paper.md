@@ -29,7 +29,7 @@ tags:
 >We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the next by digitally signing a hash of the previous transaction and the public key of the next owner and adding these to the end of the coin. A payee can verify the signatures to verify the chain of ownership.
 
 我们定义，一枚电子货币是这样的一串数字签名：每一位所有者通过对前一次交易和下一位拥有者的公钥签署一个随机散列的数字签名，并将这个签名附加在这枚电子货币的末尾，电子货币就发送给了下一位所有者。而收款人通过对签名进行检验，就能够验证该链条的所有者。
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/05b3da49f78ab0645385007c81ca12e7.png "Transactions")
+![alt text](/assets/attachment/bitcoin-white-paper/05b3da49f78ab0645385007c81ca12e7.png "Transactions")
 
 >The problem of course is the payee can't verify that one of the owners did not double-spend the coin. A common solution is to introduce a trusted central authority, or mint, that checks every transaction for double spending. After each transaction, the coin must be returned to the mint to issue a new coin, and only coins issued directly from the mint are trusted not to be double-spent. The problem with this solution is that the fate of the entire money system depends on the company running the mint, with every transaction having to go through them, just like a bank.
 
@@ -45,7 +45,7 @@ tags:
 
 本解决方案首先提出一个“时间戳服务器”。时间戳服务器通过对以区块(block)形式存在的一组数据实施随机散列而加上时间戳，并将该随机散列进行广播，就像在新闻或世界性新闻组网络的发帖一样[2-5] 。显然，该时间戳能够证实特定数据必然于某特定时间是的确存在的，因为只有在该时刻存在了才能获取相应的随机散列值。每个时间戳应当将前一个时间戳纳入其随机散列值中，每一个随后的时间戳都对之前的一个时间戳进行增强，这样就形成了一个链条。
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/a11c53e47a31451edf355fdd589fad73.png "Timestamp server")
+![alt text](/assets/attachment/bitcoin-white-paper/a11c53e47a31451edf355fdd589fad73.png "Timestamp server")
 
 ### 4、工作量证明（Proof-of-Work）
 >To implement a distributed timestamp server on a peer-to-peer basis, we will need to use a proof- of-work system similar to Adam Back's Hashcash [6], rather than newspaper or Usenet posts. The proof-of-work involves scanning for a value that when hashed, such as with SHA-256, the hash begins with a number of zero bits. The average work required is exponential in the number of zero bits required and can be verified by executing a single hash.
@@ -56,7 +56,7 @@ tags:
 
 我们在区块中补增一个随机数 (Nonce)，这个随机数要使得该给定区块的随机散列值出现了所需的那么多个 0。我们通过反复尝试来找到这个随机数，直到找到为止，这样我们就构建了一个工作量证明机制。只要该 CPU 耗费的工作量能够满足该工作量证明机制，那么除非重新完成相当的工作量，该区块的信息就不可更改。由于之后的区块是链接在该区块之后的，所以想要更改该区块中的信息，就还需要重新完成之后所有区块的全部工作量。
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/51b69a696d3ce25b1b7ad7163231db0b.png "Block")
+![alt text](/assets/attachment/bitcoin-white-paper/51b69a696d3ce25b1b7ad7163231db0b.png "Block")
 
 >The proof-of-work also solves the problem of determining representation in majority decision making. If the majority were based on one-IP-address-one-vote, it could be subverted by anyone able to allocate many IPs. Proof-of-work is essentially one-CPU-one-vote. The majority decision is represented by the longest chain, which has the greatest proof-of-work effort invested in it. If a majority of CPU power is controlled by honest nodes, the honest chain will grow the fastest and outpace any competing chains. To modify a past block, an attacker would have to redo the proof-of-work of the block and all blocks after it and then catch up with and surpass the work of the honest nodes. We will show later that the probability of a slower attacker catching up diminishes exponentially as subsequent blocks are added.
 
@@ -123,7 +123,7 @@ tags:
 
 如果最近的交易已经被纳入了足够多的区块之中，那么就可以丢弃该交易之前的数据，以回收硬盘空间。为了同时确保不损害区块的随机散列值，交易信息被随机散列时，被构建成一种Merkle树 [7] 的形态，使得只有根(root)被纳入了区块的随机散列值。通过将该树（tree）的分支拔除（stubbing）的方法，老区块就能被压缩。而内部的随机散列值是不必保存的。
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/bbe6f12df0c3b1720130ee7b605cc31a.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/bbe6f12df0c3b1720130ee7b605cc31a.png "T")
 
 >A block header with no transactions would be about 80 bytes. If we suppose blocks are generated every 10 minutes, 80 bytes * 6 * 24 * 365 = 4.2MB per year. With computer systems typically selling with 2GB of RAM as of 2008, and Moore's Law predicting current growth of 1.2GB per year, storage should not be a problem even if the block headers must be kept in memory.
 
@@ -145,7 +145,7 @@ As such, the verification is reliable as long as honest nodes control the networ
 
 虽然可以单个单个地对电子货币进行处理，但是对于每一枚电子货币单独发起一次交易将是一种笨拙的办法。为了使得价值易于组合与分割，交易被设计为可以纳入多个输入和输出。一般而言是某次价值较大的前次交易构成的单一输入，或者由某几个价值较小的前次交易共同构成的并行输入，但是输出最多只有两个：一个用于支付，另一个用于找零（如有）。
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/81249646aa2ad078278c3235a7945acd.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/81249646aa2ad078278c3235a7945acd.png "T")
 
 >It should be noted that fan-out, where a transaction depends on several transactions, and those transactions depend on many more, is not a problem here. There is never the need to extract a complete standalone copy of a transaction's history.
 
@@ -175,7 +175,7 @@ As such, the verification is reliable as long as honest nodes control the networ
 
 攻击者成功填补某一既定差距的可能性，可以近似地看做赌徒破产问题。假定一个赌徒拥有无限的透支信用，然后开始进行潜在次数为无穷的赌博，试图填补上自己的亏空。那么我们可以计算他填补上亏空的概率，也就是该攻击者赶上诚实链条，如下所示[8] ：
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/2f7281daf25a9bcaa94ac096f82ef2bf.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/2f7281daf25a9bcaa94ac096f82ef2bf.png "T")
 
 >Given our assumption that p > q, the probability drops exponentially as the number of blocks the attacker has to catch up with increases. With the odds against him, if he doesn't make a lucky lunge forward early on, his chances become vanishingly small as he falls further behind.
 
@@ -193,19 +193,19 @@ As such, the verification is reliable as long as honest nodes control the networ
 
 然后收款人将等待交易出现在首个区块中，然后在等到z个区块链接其后。此时，他仍然不能确切知道攻击者已经进展了多少个区块，但是假设诚实区块将耗费平均预期时间以产生一个区块，那么攻击者的潜在进展就是一个泊松分布，分布的期望值为：
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/93935e78b8f671fc09b79270e709f54f.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/93935e78b8f671fc09b79270e709f54f.png "T")
 
 >To get the probability the attacker could still catch up now, we multiply the Poisson density for each amount of progress he could have made by the probability he could catch up from that point:
 
 当此情形，为了计算攻击者追赶上的概率，我们将攻击者取得进展区块数量的泊松分布的概率密度，乘以在该数量下攻击者依然能够追赶上的概率。
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/7e9c4fcff95b919b6e9e3bf42e85b0bc.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/7e9c4fcff95b919b6e9e3bf42e85b0bc.png "T")
 
 >Rearranging to avoid summing the infinite tail of the distribution...
 
 化为如下形式，避免对无限数列求和：
 
-![alt text](http://img.yuxiumin.com/screenshots/bitcoin-white-paper/f2133c6b0e25e3c0f83a805ee6cf7a98.png "T")
+![alt text](/assets/attachment/bitcoin-white-paper/f2133c6b0e25e3c0f83a805ee6cf7a98.png "T")
 
 写为如下C语言代码：
 

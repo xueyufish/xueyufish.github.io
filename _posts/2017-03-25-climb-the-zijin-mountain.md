@@ -8,7 +8,7 @@ tags:
     - 生活
 ---
 
-![山顶照](http://img.yuxiumin.com/screenshots/climb-the-zijin-mountain/shanding.jpeg?imageView2/1/w/700/h/400)
+![山顶照](/assets/attachment/climb-the-zijin-mountain/shanding.jpeg)
 
 坐在电脑前写这篇文章的时候，两条腿仍然不断的用阵阵酸痛提醒我今天的壮举，内心依然难以平复。
 
@@ -28,6 +28,6 @@ tags:
 
 最后附上12年前的照片和今天的照片，希望未来大家都好！
 
-![大学登顶照](http://img.yuxiumin.com/screenshots/climb-the-zijin-mountain/daxue.jpg?imageView2/1/w/700/h/400 "Title")
+![大学登顶照](/assets/attachment/climb-the-zijin-mountain/daxue.jpg "Title")
 
-![团队照片](http://img.yuxiumin.com/screenshots/climb-the-zijin-mountain/tuandui.jpeg?imageView2/1/w/700/h/400 "Title")
+![团队照片](/assets/attachment/climb-the-zijin-mountain/tuandui.jpeg "Title")

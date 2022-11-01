@@ -9,7 +9,7 @@ tags:
 ---
 
 ### 类的生命周期
-![类加载流程.jpg](http://img.yuxiumin.com/screenshots/jvm-classloader-intro/32b8374a-e822-4720-af0b-c0f485095ea2.jpg)
+![类加载流程.jpg](/assets/attachment/jvm-classloader-intro/32b8374a-e822-4720-af0b-c0f485095ea2.jpg)
 通常类的声明周期包括以下 7 个阶段：
 -  **加载（Loading）** 
 -  **验证（Verification）** 
@@ -167,7 +167,7 @@ public static void main(String[] args) {
 
 应用程序都是由三种类加载器相互配合进行加载的，如果有必要，还可以加入自己定义的类加载器。下图展示的类加载器之间的层次关系，称为类加载器的双亲委派模型（Parents Delegation Model）。该模型要求除了顶层的启动类加载器外，其余的类加载器都应有自己的父类加载器，这里类加载器之间的父子关系一般通过组合（Composition）关系来实现，而不是通过继承（Inheritance）的关系实现。
 
-![双亲委派模型.jpg](http://img.yuxiumin.com/screenshots/jvm-classloader-intro/2cdc3ce2-fa82-4c22-baaa-000c07d10473.jpg)
+![双亲委派模型.jpg](/assets/attachment/jvm-classloader-intro/2cdc3ce2-fa82-4c22-baaa-000c07d10473.jpg)
 
 **工作过程** 
 

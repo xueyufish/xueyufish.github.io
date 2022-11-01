@@ -10,7 +10,7 @@ tags:
     - 生活
 ---
 
-![Title](//img.yuxiumin.com/screenshots/the-most-important-day/xinya.jpg?imageView2/1/w/700/h/400)
+![Title](/assets/attachment/the-most-important-day/xinya.jpg)
 
 2011年06月09日上午09:35分，南京市妇幼保健院。
 
@@ -44,5 +44,5 @@ tags:
 
 我和老婆忍不住亲吻了一下小宝贝。宝贝，祝你一切安好，世界欢迎你！谢谢你，老婆，最伟大的母亲!
 
-![生产后的老婆](//img.yuxiumin.com/screenshots/the-most-important-day/wangyue.jpg)
-![刚出生的宝贝](//img.yuxiumin.com/screenshots/the-most-important-day/chusheng1.jpg)
+![生产后的老婆](/assets/attachment/the-most-important-day/wangyue.jpg)
+![刚出生的宝贝](/assets/attachment/the-most-important-day/chusheng1.jpg)

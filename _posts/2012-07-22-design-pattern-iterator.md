@@ -24,7 +24,7 @@ tags:
 3. 为遍历不同的聚合结构提供一个统一的接口（即支持多态迭代）
 
 # 结构
-![迭代器模式结构](http://img.yuxiumin.com/screenshots/design-patterns/d46d4576754fa24c7602524514fb048f.png)
+![迭代器模式结构](/assets/attachment/design-pattern/d46d4576754fa24c7602524514fb048f.png)
 
 迭代器模式由记下几部分组成：
 

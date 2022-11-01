@@ -788,7 +788,7 @@ body {
   border-top: 1px solid #eee;
 }
 /* Archives End*/
-/* Hux make all img responsible in post-container */
+/* Hux make all image responsible in post-container */
 .post-container img {
   display: block;
   max-width: 100%;

@@ -32,7 +32,7 @@ tags:
 # RabbitMQ 介绍
 RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、存储和转发消息。RabbitMQ 整体模型架构如下：
 
-![RabbitMQ-Model-Arch](http://img.yuxiumin.com/screenshots/rabbitmq-intro/de78dbe878d6941f665c1003351cfb73.png)
+![RabbitMQ-Model-Arch](/assets/attachment/rabbitmq-intro/de78dbe878d6941f665c1003351cfb73.png)
 
 ## 生产者和消费者
 **生产者 (Producer)**: 消息投递方，创建消息然后发布到 RabbitMQ 中。消息一般包含消息体 (payload) 和标签 (label) 两个部分。在实际应用中，消息体一般是带有业务逻辑结构的数据，标签则用来表述这条消息，比如交换器的名称、路由键。生产者把消息交给 RabbitMQ，RabbitMQ 根据标签把消息发送给感兴趣的消费者。
@@ -43,7 +43,7 @@ RabbitMQ 整体上是一个生产者与消费者模型，主要负责接收、�
 
 消息队列运转流程如下图所示：
 
-![RabbitMQ-Operation-Process](http://img.yuxiumin.com/screenshots/rabbitmq-intro/2e684d113e1159bbc3c53c2d81270a52.png)
+![RabbitMQ-Operation-Process](/assets/attachment/rabbitmq-intro/2e684d113e1159bbc3c53c2d81270a52.png)
 
 ## 队列
 **队列 (Queue)**：用于存储消息。RabbitMQ 中**消息只能存储在队列中**，生产者生产消息并最终投递到队列中，消费者可以从队列中获取消息并消费。多个消费者可以订阅同一个队列，这时队列中的消息会被**平均分摊**给多个消费者进行处理，而不是每个消费者都收到所有的消息并处理。

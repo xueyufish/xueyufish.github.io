@@ -93,14 +93,14 @@ Redlock 算法假设有 N 个 Redis 节点，这些节点互相独立，一般�
 5. Client2 获取锁并且更新资源；
 6. 过阵 Client1 处理完密集事务以后再去更新资源，把 Client2 更新的冲掉了。悲剧发生了，数据出错了。
 
-![unsafe-lock](http://img.yuxiumin.com/screenshots/distributed-lock/unsafe-lock.png)
+![unsafe-lock](/assets/image/distributed-lock/unsafe-lock.png)
 
 为了解决这个问题，文章作者引入了栅栏(fencing)技术，在每个写请求中附加一个自增的版本号，这就是乐观锁的实现：
 * 锁服务需要有一个单调递增的版本号；
 * 写数据时，也要带上自己的版本号；
 * 数据库服务需要保存数据的版本号，然后对请求做检查。
 
-![fencing-tokens](http://img.yuxiumin.com/screenshots/distributed-lock/fencing-tokens.png)
+![fencing-tokens](/assets/image/distributed-lock/fencing-tokens.png)
 
 Redis 作者后来对这篇文章中提出的问题进行了相应的评论，具体参见[Is Redlock safe](http://antirez.com/news/101)这篇文章。不过个人认为，基于 redis 实现的分布式锁，如果需要强一致性保证，还是需要增加版本号做保证，上述文章中提到的问题也切实有可能发生，并且 HBase 中就确实发生过[Hbase and HDFS Understanding filesystem usage in HBase](https://www.slideshare.net/enissoz/hbase-and-hdfs-understanding-filesystem-usage)。
 

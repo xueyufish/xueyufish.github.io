@@ -16,7 +16,7 @@ tags:
 结构型模式
 
 # 结构
-![外观模式结构](http://img.yuxiumin.com/screenshots/design-patterns/b6ba224734afb621a00e84dcf3572a16.png)
+![外观模式结构](/assets/attachment/design-pattern/b6ba224734afb621a00e84dcf3572a16.png)
 
 外观模式结构比较简单，由以下两部分组成：
 

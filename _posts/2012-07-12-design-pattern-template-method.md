@@ -17,7 +17,7 @@ tags:
 对象行为模式
 
 # 结构
-![模板方法结构](http://img.yuxiumin.com/screenshots/design-patterns/3416bcdb8fa046b6e804b4561d59c97d.png)
+![模板方法结构](/assets/attachment/design-pattern/3416bcdb8fa046b6e804b4561d59c97d.png)
 
 模板方法由以下两部分组成：
 1. **抽象类（AbstractClass）**: 定义抽象的原语操作。它的方法包括两类：

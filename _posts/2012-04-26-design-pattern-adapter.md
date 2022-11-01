@@ -20,10 +20,10 @@ tags:
 适配器模式可分为两种结构，分别为类适配器结构和对象适配器结构。对象适配器依赖多重继承实现，对象适配器通过对象间组合实现。相比较而言，对象适配器更被广泛使用。具体实现结构图下：
 
 类适配器使用多重继承对一个接口和另一个接口进行匹配：
-![类适配器结构](http://img.yuxiumin.com/screenshots/design-patterns/c5e8c04358811533c7b401e6aebbc807.jpg)
+![类适配器结构](/assets/attachment/design-pattern/c5e8c04358811533c7b401e6aebbc807.jpg)
 
 对象适配器依赖于对象组合：
-![对象适配器结构](http://img.yuxiumin.com/screenshots/design-patterns/0a2674c1ed96e10fc538b15084f75174.jpg)
+![对象适配器结构](/assets/attachment/design-pattern/0a2674c1ed96e10fc538b15084f75174.jpg)
 
 适配器模式主要由以下部分组成:
 1. **目标角色(Target)**: 定义 Client 使用的与特定领域相关的接口；

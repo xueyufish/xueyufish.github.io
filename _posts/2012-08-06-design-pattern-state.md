@@ -16,7 +16,7 @@ tags:
 对象行为模式
 
 # 结构
-![命令模式结构](http://img.yuxiumin.com/screenshots/design-patterns/088a4e330cd72f998b9174caa9006fbd.png)
+![命令模式结构](/assets/attachment/design-pattern/088a4e330cd72f998b9174caa9006fbd.png)
 
 命令模式由记下几部分组成：
 

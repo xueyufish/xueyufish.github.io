@@ -6,7 +6,6 @@ author:     "余修忞(xueyufish)"
 keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, 余修忞, yuxiumin, xueyufish"
 tags:
     - 设计模式
-    - 创建型模式
 ---
 
 # 定义
@@ -17,7 +16,7 @@ tags:
 
 # 结构
 
-![工厂方法结构](http://img.yuxiumin.com/screenshots/design-patterns/92aa5402b066887668e352dbe53dd3e6.png)
+![工厂方法结构](/assets/attachment/design-pattern/92aa5402b066887668e352dbe53dd3e6.png)
 
 工厂方法主要由以下几部分组成：
 

@@ -19,7 +19,7 @@ CAP 理论指分布式系统不可能同时满足一致性（C：Consistency）�
 * **分区容忍性 (Partition tolerance)**：指在分布式环境中，系统遇到任何网络分区故障的时候，仍然需要能够保证对外提供满足一致性和可用性的服务，除非是整个网络环境都发生了故障。
 
 在设计分布式系统时，需要根据实际需求弱化某一要求。因此就有了下图中的三种设计：CA、CP 和 AP。
-![CAP](http://img.yuxiumin.com/screenshots/cap-base-flp/f50bc364-fdc2-4a46-9b8f-f8f5b6add3b8.jpg)
+![CAP](/assets/attachment/cap-base-flp/f50bc364-fdc2-4a46-9b8f-f8f5b6add3b8.jpg)
 
 根据 CAP 定理的约束，我们可以推导出满足场景的应用如下：
 

@@ -17,7 +17,7 @@ tags:
 结构型模式
 
 # 结构
-![桥接模式结构](http://img.yuxiumin.com/screenshots/design-patterns/1ead1bb0503306630998bba3095d6487.jpg)
+![桥接模式结构](/assets/attachment/design-pattern/1ead1bb0503306630998bba3095d6487.jpg)
 
 桥接模式由以下部分组成：
 
