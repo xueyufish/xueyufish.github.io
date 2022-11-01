@@ -1,1 +1,3 @@
-# 我的个人博客
+## Blog
+
+YuXiumin's personal blog. See: https://www.yuxiumin.com/
