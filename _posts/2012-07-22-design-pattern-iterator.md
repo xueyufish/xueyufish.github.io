@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 迭代器模式(Iterator)"
 date:       2012-07-22
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 迭代器模式, Iterator Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 迭代器模式, Iterator Pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

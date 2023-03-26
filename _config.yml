@@ -1,23 +1,22 @@
 # Site settings
-title: fish 的血域
-author: 余修忞
-SEOTitle: fish 的血域 | 余修忞的 Blog
+title: 文心修舍
+author: xueyufish
+SEOTitle: 文心修舍 | 架构设计 | 程序开发 | 产品设计| 金融 | 理财 | 读书笔记 | 生活 | 教育 | 哲学 | 历史
 header-img: ""
 email: xmyu.xueyufish@gmail.com
-description: "余修忞的个人博客, 键盘、屏幕、耳机, 加上一杯清茶，记录百面人生"
-keyword: "余修忞, yuxiumin, xueyufish"
-url: "http://www.yuxiumin.com"
+description: "职业是架构师, 技术总监, 但更愿意被称作一名 Geek，希望做有信仰的知识分享者, 一起聊技术, 谈生活, 话人生."
+keyword: "架构设计, 程序开发, 产品设计, 金融, 理财, 读书笔记, 生活, 教育, 哲学, 历史"
+url: "https://www.yuxiumin.com"
 baseurl: ""
-copyright: Copyright 2011-2020
+copyright: Copyright 2011-2023
 timezone: Asia/Shanghai
 
 # SNS settings
 RSS: true
 weibo_username:     xueyufish
-zhihu_username:
+zhihu_username:     xueyufish
 github_username:    xueyufish
 twitter_username:   xueyufish
-#facebook_username:  xueyufish
 
 # Build settings
 highlighter: rouge
@@ -41,7 +40,7 @@ kramdown:
 ba_track_id: bacdc6155a36bf3a4c3cc580196017b0
 
 # Sidebar settings
-sidebar-about-description: "Geek， 爱技术，产品控，完美主义者。 爱好旅游， 国学， 佛学研究中。"
+sidebar-about-description: ""
 
 # Featured Tags
 featured-tags: true

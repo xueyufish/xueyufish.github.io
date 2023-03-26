@@ -3,7 +3,7 @@ layout:     post
 title:      "JVM 垃圾收集 - 对象可回收判断"
 keyword:    "Java, JVM, GC"
 date:       2014-03-21
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 tags:
     - Java
 ---

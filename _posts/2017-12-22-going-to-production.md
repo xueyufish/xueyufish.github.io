@@ -2,7 +2,7 @@
 layout:     post
 title:      "发布至生产环境的准备事项(译)"
 date:       2017-12-22
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 keyword:    "DevOps, 架构"
 tags:
     - DevOps

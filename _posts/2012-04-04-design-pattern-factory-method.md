@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 工厂方法(Factory Method)"
 date:       2012-04-04
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, xueyufish"
 tags:
     - 设计模式
 ---

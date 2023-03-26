@@ -2,8 +2,8 @@
 layout:     post
 title:      "Markdown 语法总结"
 date:       2012-12-16
-author:     "余修忞(xueyufish)"
-keyword:    "程序语言, Markdown, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "程序语言, Markdown, xueyufish"
 tags:
     - Markdown
 ---

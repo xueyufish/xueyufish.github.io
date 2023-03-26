@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 组合模式(Composite)"
 date:       2012-06-12
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 组合模式, Composite Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 组合模式, Composite Pattern, xueyufish"
 tags:
     - 设计模式
     - 结构型模式

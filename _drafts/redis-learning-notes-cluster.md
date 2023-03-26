@@ -2,8 +2,8 @@
 layout:     post
 title:      "Redis 学习笔记 - 集群"
 date:       2018-04-25
-author:     "余修忞(xueyufish)"
-keyword:    "Redis, 缓存, 分布式缓存, 集群, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "Redis, 缓存, 分布式缓存, 集群, xueyufish"
 tags:
     - Redis
     - 缓存

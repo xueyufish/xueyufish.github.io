@@ -2,7 +2,7 @@
 layout:     post
 title:      "智能运维"
 date:       2018-12-22
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 ---
 
 ## 运维现状

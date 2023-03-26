@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 责任链模式(Chain-of-responsibility pattern)"
 date:       2012-07-28
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 责任链模式, Chain-of-responsibility pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 责任链模式, Chain-of-responsibility pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

@@ -2,8 +2,8 @@
 layout:     post
 title:      "C++ Primer 学习笔记 (一) - 变量和基本类型"
 date:       2013-06-15
-author:     "余修忞(xueyufish)"
-keyword:    "程序语言, C++, 读书笔记, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "程序语言, C++, 读书笔记, xueyufish"
 tags:
     - 程序语言
     - C++

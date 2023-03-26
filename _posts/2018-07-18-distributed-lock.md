@@ -2,8 +2,8 @@
 layout:     post
 title:      "分布式锁及其实现方式简介"
 date:       2018-07-18
-author:     "余修忞(xueyufish)"
-keyword:    "分布式, 锁, Lock, 分布式锁, Redis, Mysql, Zookeeper, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "分布式, 锁, Lock, 分布式锁, Redis, Mysql, Zookeeper, xueyufish"
 description: "分布式锁及其实现方式简介"
 tags:
     - 分布式

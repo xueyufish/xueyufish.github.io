@@ -2,8 +2,8 @@
 layout:     post
 title:      "度过有意义的生命"
 date:       2011-12-21 21:15
-author:     "余修忞(xueyufish)"
-keyword:    "生活, 励志, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "生活, 励志, xueyufish"
 tags:
     - 生活
     - 励志

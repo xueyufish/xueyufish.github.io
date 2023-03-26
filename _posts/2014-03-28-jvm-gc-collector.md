@@ -3,7 +3,7 @@ layout:     post
 title:      "JVM 垃圾收集 - 垃圾收集器"
 keyword:    "Java, JVM, GC"
 date:       2014-03-28
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 tags:
     - Java
 ---

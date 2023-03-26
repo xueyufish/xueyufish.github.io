@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 桥接模式(Bridge)"
 date:       2012-06-04
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 桥接模式, Bridge Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 桥接模式, Bridge Pattern, xueyufish"
 tags:
     - 设计模式
     - 结构型模式

@@ -2,8 +2,8 @@
 layout:     post
 title:      "三阶段提交协议"
 date:       2017-05-10
-author:     "余修忞(xueyufish)"
-keyword:    "分布式, 分布式系统, 分布式协议, 三阶段提交协议, 3PC, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "分布式, 分布式系统, 分布式协议, 三阶段提交协议, 3PC, xueyufish"
 description: "三阶段提交协议"
 tags:
     - 分布式

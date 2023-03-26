@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 原型模式(Prototype)"
 date:       2012-04-18
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 原型模式, Prototype Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 原型模式, Prototype Pattern, xueyufish"
 tags:
     - 设计模式
     - 创建型模式

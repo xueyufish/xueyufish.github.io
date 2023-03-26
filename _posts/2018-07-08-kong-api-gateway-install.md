@@ -2,8 +2,8 @@
 layout:     post
 title:      "Kong Api网关简介(一) 安装运行"
 date:       2018-07-08
-author:     "余修忞(xueyufish)"
-keyword:    "开源项目, 网关, Gateway, Kong, Nginx, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "开源项目, 网关, Gateway, Kong, Nginx, xueyufish"
 description: "Kong Api网关安装运行简介"
 tags:
     - 开源项目

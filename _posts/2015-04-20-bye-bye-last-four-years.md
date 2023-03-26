@@ -2,7 +2,7 @@
 layout:     post
 title:      "再见，我的四年生活"
 date:       2015-04-20
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 tags:
     - 工作
 ---

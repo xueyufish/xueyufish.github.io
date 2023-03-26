@@ -2,9 +2,9 @@
 layout:     post
 title:      "聊聊缓存更新策略"
 date:       2018-07-20
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 description: "关于分布式缓存更新策略探讨"
-keyword:    "缓存, Cache, 分布式缓存, 分布式, 余修忞, yuxiumin, xueyufish"
+keyword:    "缓存, Cache, 分布式缓存, 分布式, xueyufish"
 tags:
     - 缓存
     - 分布式

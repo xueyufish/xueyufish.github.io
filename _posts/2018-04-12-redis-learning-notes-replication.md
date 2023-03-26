@@ -2,8 +2,8 @@
 layout:     post
 title:      "Redis 学习笔记 - 复制"
 date:       2018-04-12
-author:     "余修忞(xueyufish)"
-keyword:    "Redis, 缓存, 分布式缓存, 复制, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "Redis, 缓存, 分布式缓存, 复制, xueyufish"
 description: "Redis 复制学习笔记"
 tags:
     - Redis

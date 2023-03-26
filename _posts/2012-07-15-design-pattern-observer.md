@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 观察者(Observer)"
 date:       2012-07-15
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 观察者, Observer Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 观察者, Observer Pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

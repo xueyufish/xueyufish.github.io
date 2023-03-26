@@ -2,8 +2,8 @@
 layout:     post
 title:      "Redis 学习笔记 - 基本使用"
 date:       2018-04-05
-author:     "余修忞(xueyufish)"
-keyword:    "Redis, 缓存, 分布式缓存, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "Redis, 缓存, 分布式缓存, xueyufish"
 description: "Redis 基本使用学习笔记"
 tags:
     - Redis

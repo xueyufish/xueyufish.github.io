@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 享元模式(Flyweight)"
 date:       2012-06-20
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 享元模式, Flyweight Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 享元模式, Flyweight Pattern, xueyufish"
 tags:
     - 设计模式
     - 结构型模式

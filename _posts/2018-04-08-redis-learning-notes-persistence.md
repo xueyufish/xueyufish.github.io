@@ -2,8 +2,8 @@
 layout:     post
 title:      "Redis 学习笔记 - 持久化"
 date:       2018-04-08
-author:     "余修忞(xueyufish)"
-keyword:    "Redis, 缓存, 分布式缓存, 持久化, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "Redis, 缓存, 分布式缓存, 持久化, xueyufish"
 description: "Redis 持久化学习笔记"
 tags:
     - Redis

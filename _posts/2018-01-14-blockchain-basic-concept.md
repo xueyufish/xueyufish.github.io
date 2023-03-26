@@ -3,7 +3,7 @@ layout:     post
 title:      "区块链基本概念"
 subtitle:   ""
 date:       2018-01-14
-author:     "余修忞(xueyufish) "
+author:     "xueyufish "
 tags:
     - 区块链
 ---

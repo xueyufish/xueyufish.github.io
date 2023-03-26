@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 单例模式(Singleton)"
 date:       2012-04-02
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 创建型模式, 单例模式, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 创建型模式, 单例模式, xueyufish"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 设计模式

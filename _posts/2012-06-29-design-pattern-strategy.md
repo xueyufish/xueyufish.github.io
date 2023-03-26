@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 策略模式(Strategy)"
 date:       2012-06-29
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 策略模式, Strategy Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 策略模式, Strategy Pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

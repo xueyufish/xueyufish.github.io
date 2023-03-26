@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 适配器模式(Adapter)"
 date:       2012-04-26
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 适配器模式, Adapter Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 适配器模式, Adapter Pattern, xueyufish"
 tags:
     - 设计模式
     - 结构性模式

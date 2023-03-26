@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 模板方法(Template Method)"
 date:       2012-07-12
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 模板方法, Template Method, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 模板方法, Template Method, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

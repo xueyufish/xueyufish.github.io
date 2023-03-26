@@ -2,8 +2,8 @@
 layout:     post
 title:      "加入创业团队: 说说我的原因"
 date:       2011-07-27
-author:     "余修忞(xueyufish)"
-keyword:    "工作, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "工作, xueyufish"
 tags:
     - 工作
 ---

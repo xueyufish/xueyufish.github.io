@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 装饰器模式(Decorator)"
 date:       2012-05-08
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 装饰器模式, Decorator Pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 装饰器模式, Decorator Pattern, xueyufish"
 tags:
     - 设计模式
     - 结构型模式

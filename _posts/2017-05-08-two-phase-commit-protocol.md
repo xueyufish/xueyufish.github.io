@@ -2,8 +2,8 @@
 layout:     post
 title:      "两阶段提交协议"
 date:       2017-05-08
-author:     "余修忞(xueyufish)"
-keyword:    "分布式, 分布式系统, 分布式协议, 两阶段提交协议, 2PC, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "分布式, 分布式系统, 分布式协议, 两阶段提交协议, 2PC, xueyufish"
 description: "两阶段提交协议"
 tags:
     - 2PC

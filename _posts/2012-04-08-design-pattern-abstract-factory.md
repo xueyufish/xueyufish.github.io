@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 抽象工厂(Abstract Factory)"
 date:       2012-04-08
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 抽象工厂, Abstract Factory, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 抽象工厂, Abstract Factory, xueyufish"
 tags:
     - 设计模式
 ---

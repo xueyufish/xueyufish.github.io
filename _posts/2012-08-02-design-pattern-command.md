@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 命令模式(Command pattern)"
 date:       2012-08-02
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 命令模式, Command pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 命令模式, Command pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式

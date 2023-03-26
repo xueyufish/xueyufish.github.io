@@ -2,9 +2,9 @@
 layout:     post
 title:      "最重要的一天: 宝贝女儿出生，升级做父亲"
 date:       2011-06-09
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 description: "人生再没有比这更重要的一天"
-keyword:    "生活, 家庭, 余修忞, yuxiumin, xueyufish"
+keyword:    "生活, 家庭, xueyufish"
 tags:
     - 家庭
     - 生活

@@ -2,9 +2,9 @@
 layout:     post
 title:      "RabbitMQ 简述"
 date:       2017-10-25
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 description: "关于 RabbitMQ 的原理及使用过程中需要注意事项的简单描述"
-keyword:    "RabbitMQ, MQ, 消息队列, 余修忞, yuxiumin, xueyufish"
+keyword:    "RabbitMQ, MQ, 消息队列, xueyufish"
 tags:
     - RabbitMQ
     - 消息队列

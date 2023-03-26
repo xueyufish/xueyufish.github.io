@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 建造者模式(Builder)"
 date:       2012-04-15
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 建造者, Builder, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 建造者, Builder, xueyufish"
 tags:
     - 设计模式
     - 创建型模式

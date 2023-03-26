@@ -2,7 +2,7 @@
 layout:     post
 title:      "比特币：一种点对点的电子现金系统"
 date:       2018-01-16
-author:     "余修忞(xueyufish)"
+author:     "xueyufish"
 header-img: ""
 tags:
     - 区块链

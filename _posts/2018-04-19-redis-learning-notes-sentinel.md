@@ -2,8 +2,8 @@
 layout:     post
 title:      "Redis 学习笔记 - 哨兵"
 date:       2018-04-19
-author:     "余修忞(xueyufish)"
-keyword:    "Redis, 缓存, 分布式缓存, sentinel, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "Redis, 缓存, 分布式缓存, sentinel, xueyufish"
 description: "Redis 哨兵学习笔记"
 tags:
     - Redis

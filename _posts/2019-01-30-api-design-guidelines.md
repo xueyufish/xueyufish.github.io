@@ -2,8 +2,8 @@
 layout:     post
 title:      "REST API 设计指南"
 date:       2019-01-30
-author:     "余修忞(xueyufish)"
-keyword:    "架构设计, REST, API, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "架构设计, REST, API, xueyufish"
 tags:
     - 架构设计
     - REST

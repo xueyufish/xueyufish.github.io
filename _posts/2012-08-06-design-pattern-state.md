@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 状态模式(State pattern)"
 date:       2012-08-06
-author:     "余修忞(xueyufish)"
-keyword:    "设计模式, 状态模式, State pattern, 余修忞, yuxiumin, xueyufish"
+author:     "xueyufish"
+keyword:    "设计模式, 状态模式, State pattern, xueyufish"
 tags:
     - 设计模式
     - 对象行为模式
