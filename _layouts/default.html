@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 {% include head.html %}
 
 <body ontouchstart="">
-{{ content }}
+  <!-- Skip to main content link - 可访问性增强 -->
+  <a href="#main-content" class="skip-to-main">跳转到主内容</a>
+
+  <div id="wrapper">
+    {{ content }}
+  </div>
 
 {% include footer.html %}
 

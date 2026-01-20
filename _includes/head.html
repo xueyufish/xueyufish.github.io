@@ -2,25 +2,68 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+
+    <!-- 基础 SEO Meta 标签 -->
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
     {% if page.keyword %}<meta name="keyword" content="{{ page.keyword }}">{% else %}<meta name="keyword" content="{{ site.keyword }}">{% endif %}
+    <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="{% if page.noindex %}noindex{% else %}index,follow{% endif %}">
+    <meta name="googlebot" content="{% if page.noindex %}noindex{% else %}index,follow{% endif %}">
+
+    <!-- Cloudflare 安全头部 -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- 语言和地区 -->
+    <meta name="language" content="Chinese">
+    <meta name="geo.region" content="CN">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.SEOTitle }}{% endif %}">
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% else %}<meta property="og:description" content="{{ site.description }}">{% endif %}
+    <meta property="og:image" content="{% if page.og-image %}{{ page.og-image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/image/logo.png{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.SEOTitle }}{% endif %}">
+    {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
+    <meta name="twitter:image" content="{% if page.og-image %}{{ page.og-image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/image/logo.png{% endif %}">
+    {% if site.twitter_username %}<meta name="twitter:creator" content="@{{ site.twitter_username }}">{% endif %}
 
     <!-- 资源预加载 -->
-    <link rel="preload" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}" as="style">
+    <link rel="preload" href="{{ "/assets/css/main.min.css?v=" | append: site.version | prepend: site.baseurl }}" as="style">
     <link rel="preload" href="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}" as="script">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/assets/image/favicon.ico">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/image/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/image/favicon.ico">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+    <!-- 备用语言标签 -->
+    <link rel="alternate" hreflang="zh-cn" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
     <!-- DNS 预解析 - 优化外部资源加载 -->
     <link rel="dns-prefetch" href="//cdn.staticfile.org">
     <link rel="dns-prefetch" href="//cdn.bootcss.com">
+    <!-- 预连接到 Cloudflare CDN -->
+    <link rel="preconnect" href="https://www.yuxiumin.com" crossorigin>
+
+    <!-- RSS 订阅 -->
+    {% if site.RSS %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    {% endif %}
 
     <!-- 合并后的 CSS 文件（使用 preload 提升加载性能） -->
-    <link rel="stylesheet" href="{{ "/assets/css/main.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/main.min.css?v=" | append: site.version | prepend: site.baseurl }}">
 
     <!-- Font-Awesome - 使用更快的 CDN -->
     <link href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -77,4 +120,61 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- JSON-LD 结构化数据 - SEO 优化 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if page.date %}BlogPosting{% else %}WebSite{% endif %}",
+      {% if page.date %}
+      "headline": "{{ page.title }}",
+      "image": "{% if page.og-image %}{{ page.og-image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/image/logo.png{% endif %}",
+      "genre": "{{ site.keyword }}",
+      "keywords": "{{ page.keyword | default: site.keyword }}",
+      "url": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}",
+      "datePublished": "{{ page.date | date: "%Y-%m-%d" }}",
+      {% if page.edit-date %}
+      "dateModified": "{{ page.edit-date | date: "%Y-%m-%d" }}",
+      {% endif %}
+      "description": "{{ page.description | default: site.description }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/assets/image/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+      }
+      {% else %}
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}{{ site.baseurl }}",
+      "description": "{{ site.description }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.baseurl }}/assets/image/logo.png"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}{{ site.baseurl }}/search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+      {% endif %}
+    }
+    </script>
 </head>

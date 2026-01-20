@@ -92,3 +92,6 @@ entries-condition-size: 10
 #        href: "#"
 #    }
 #]
+
+# 资源版本号（用于缓存破坏）
+version: 1.0.0

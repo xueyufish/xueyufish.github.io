@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<header class="intro-header">
+<header class="intro-header" role="banner">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
         <div class="site-header">
           <span class="header-logo">
-            <a href="{{'/' | prepend: site.baseurl }}">
-              <img src="/assets/image/logo.png" alt="{{ site.title }}"/>
+            <a href="{{'/' | prepend: site.baseurl }}" aria-label="返回首页">
+              <img src="/assets/image/logo.png" alt="{{ site.title }} Logo"/>
             </a>
           </span>
           <span class="header-name">
@@ -26,32 +26,34 @@ layout: default
   </div>
 </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-      {{ content }}
-    </div>
-    <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container">
+<main id="main-content" role="main" tabindex="-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
+        {{ content }}
+      </div>
+    <aside class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container" role="complementary" aria-label="侧边栏">
       <!-- 搜索框 -->
-      <section class="visible-md visible-lg">
-        <div class="search-container">
+      <section class="visible-md visible-lg" aria-label="搜索">
+        <div class="search-container" role="search">
           <h5>搜索文章</h5>
           <div class="search-input-wrapper">
-            <input type="text" id="search-input" placeholder="输入关键词搜索..." autocomplete="off">
-            <button id="search-button" class="search-button">
-              <i class="fa fa-search"></i>
+            <label for="search-input" class="sr-only">搜索文章</label>
+            <input type="search" id="search-input" placeholder="输入关键词搜索..." autocomplete="off" aria-label="搜索文章">
+            <button id="search-button" class="search-button" aria-label="开始搜索">
+              <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
-          <div id="search-loading" class="search-loading">加载中...</div>
-          <div id="search-results" class="search-results"></div>
+          <div id="search-loading" class="search-loading" role="status" aria-live="polite">加载中...</div>
+          <div id="search-results" class="search-results" role="listbox" aria-label="搜索结果"></div>
         </div>
       </section>
 
       <!-- 微信二维码 -->
-      <section class="visible-md visible-lg">
+      <section class="visible-md visible-lg" aria-label="关于博主">
         <hr class="hidden-sm hidden-xs">
         <div class="short-about">
-          <img src="/assets/image/wechat-qrcode.jpg" alt="微信二维码"/>
+          <img src="/assets/image/wechat-qrcode.jpg" alt="扫描二维码关注博主微信"/>
           {% if site.sidebar-about-description %}
           <p style="margin-top: 10px;">{{site.sidebar-about-description}}</p>
           {% endif %}
@@ -59,13 +61,13 @@ layout: default
       </section>
 
       <!-- 社交链接 -->
-      <section class="visible-md visible-lg">
+      <section class="visible-md visible-lg" aria-label="社交媒体">
         <hr class="hidden-sm hidden-xs">
         <div class="short-about">
           <ul class="list-inline">
             {% if site.RSS %}
             <li>
-              <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              <a href="{{ "/feed.xml" | prepend: site.baseurl }}" aria-label="订阅 RSS">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -75,7 +77,7 @@ layout: default
             {% endif %}
             {% if site.twitter_username %}
             <li>
-              <a href="https://twitter.com/{{ site.twitter_username }}">
+              <a href="https://twitter.com/{{ site.twitter_username }}" aria-label="访问 Twitter 主页" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -85,7 +87,7 @@ layout: default
             {% endif %}
             {% if site.zhihu_username %}
             <li>
-              <a target="_blank" href="https://www.zhihu.com/people/{{ site.zhihu_username }}">
+              <a href="https://www.zhihu.com/people/{{ site.zhihu_username }}" aria-label="访问知乎主页" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-stack-1x fa-inverse">知</i>
@@ -95,7 +97,7 @@ layout: default
             {% endif %}
             {% if site.weibo_username %}
             <li>
-              <a target="_blank" href="http://weibo.com/{{ site.weibo_username }}">
+              <a href="http://weibo.com/{{ site.weibo_username }}" aria-label="访问微博主页" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
@@ -105,7 +107,7 @@ layout: default
             {% endif %}
             {% if site.facebook_username %}
             <li>
-              <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username }}">
+              <a href="https://www.facebook.com/{{ site.facebook_username }}" aria-label="访问 Facebook 主页" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -115,7 +117,7 @@ layout: default
             {% endif %}
             {% if site.github_username %}
             <li>
-              <a target="_blank" href="https://github.com/{{ site.github_username }}">
+              <a href="https://github.com/{{ site.github_username }}" aria-label="访问 GitHub 主页" target="_blank" rel="noopener noreferrer">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -128,55 +130,61 @@ layout: default
       </section>
 
       {% if site.featured-tags %}
-      <section>
+      <section aria-label="常用标签">
         <hr class="hidden-sm hidden-xs">
         <h5>常用标签</h5>
-        <div class="tags">
+        <nav class="tags" aria-label="标签云">
           {% for tag in site.tags  %}
             {% if tag[1].size > site.featured-condition-size %}
-              <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+              <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }} ({{ tag[1].size }} 篇文章)" rel="tag">
                 {{ tag[0] }}
               </a>
             {% endif %}
           {% endfor %}
-        </div>
+        </nav>
       </section>
       {% endif %}
 
       {% if site.archives %}
-      <hr class="hidden-sm hidden-xs">
-      <h5>文章归档</h5>
-      <div>
-        <a href="{{'/archives/' | prepend: site.baseurl }}">查看所有文章</a>
-      </div>
+      <nav aria-label="文章归档">
+        <hr class="hidden-sm hidden-xs">
+        <h5>文章归档</h5>
+        <div>
+          <a href="{{'/archives/' | prepend: site.baseurl }}">查看所有文章</a>
+        </div>
+      </nav>
       {% endif %}
 
       {% if site.recent-entries %}
-      <hr class="hidden-sm hidden-xs">
-      <h5>最新文章</h5>
-      <div>
-        <ul class="list-inline1">
-          <li>
-            <a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a>
-          </li>
-          {% for post in site.posts offset:1 limit:site.entries-condition-size %}
+      <nav aria-label="最新文章">
+        <hr class="hidden-sm hidden-xs">
+        <h5>最新文章</h5>
+        <div>
+          <ul class="list-inline1">
             <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a>
             </li>
-          {% endfor %}
-        </ul>
-      </div>
+            {% for post in site.posts offset:1 limit:site.entries-condition-size %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </nav>
       {% endif %}
 
       {% if site.friends %}
-      <hr>
-      <h5>友情链接</h5>
-      <ul class="list-inline">
-        {% for friend in site.friends %}
-          <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-        {% endfor %}
-      </ul>
+      <nav aria-label="友情链接">
+        <hr>
+        <h5>友情链接</h5>
+        <ul class="list-inline">
+          {% for friend in site.friends %}
+            <li><a href="{{friend.href}}" target="_blank" rel="noopener noreferrer">{{friend.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
       {% endif %}
     </div>
   </div>
-</div>
+</main>

@@ -731,3 +731,99 @@
   background-color: #3b82f6;
 }
 
+/* === 主题切换按钮样式 === */
+
+.theme-toggle {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(96, 165, 250);
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+  background-color: rgb(96, 165, 250);
+  border-color: rgb(96, 165, 250);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid rgb(96, 165, 250);
+  outline-offset: 2px;
+}
+
+/* 提示文字 */
+.theme-toggle::after {
+  content: '切换主题';
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: rgb(10, 10, 10);
+  white-space: nowrap;
+  background-color: rgb(255, 255, 255);
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.theme-toggle:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 响应式 */
+@media (max-width: 1199px) {
+  .theme-toggle {
+    bottom: 75px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-toggle {
+    bottom: 70px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-toggle::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    bottom: 60px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+  }
+}
+

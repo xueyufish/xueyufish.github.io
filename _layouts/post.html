@@ -2,41 +2,62 @@
 layout: page
 ---
 
+<!-- 文章目录 -->
+<aside id="toc-container" class="article-toc" aria-label="文章目录" role="complementary"></aside>
+
+<!-- 移动端目录按钮 -->
+<button id="toc-button" aria-label="打开文章目录">
+  <i class="fa fa-list" aria-hidden="true"></i>
+</button>
+
+<!-- 移动端目录遮罩层 -->
+<div id="toc-overlay" aria-hidden="true"></div>
+
 <article>
-  <div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <div class="post-title">
-        {{page.title}}
-      </div>
-    </a>
+  <header class="post-preview">
+    <h1 class="post-title">
+      {{ page.title }}
+    </h1>
 
     <div class="post-meta">
-      {% if post.author %}{{ post.author }}{% else %} xueyufish {% endif %}
-      创建于 {{ page.date | date: "%Y年%m月%d日" }}
-      
-      {% if page.edit-date %} 
-      , 修订于 {{ page.edit-date | edit-date: "%Y年%m月%d日" }}
+      <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+        {% if post.author %}{{ post.author }}{% else %} xueyufish {% endif %}
+        创建于 {{ page.date | date: "%Y年%m月%d日" }}
+      </time>
+      {% if page.edit-date %}
+      <time datetime="{{ page.edit-date | date: "%Y-%m-%d" }}">
+        , 修订于 {{ page.edit-date | edit-date: "%Y年%m月%d日" }}
+      </time>
       {% endif %}
     </div>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
   </div>
-  {{ content }}
+
   <hr>
-  <ul class="pager">
+
+  <nav class="pager" aria-label="文章导航">
     {% if page.previous.url %}
     <li class="previous">
-      <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}">&larr; {{page.previous.title}}</a>
+      <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> {{page.previous.title}}
+      </a>
     </li>
     {% endif %}
 
     {% if page.next.url %}
     <li class="next">
-      <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}">{{page.next.title}} &rarr;</a>
+      <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" rel="next">
+        {{page.next.title}} <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </a>
     </li>
     {% endif %}
-  </ul>
+  </nav>
 
   {% if site.duoshuo_username %}
-  <div class="comment">
+  <div class="comment" role="complementary" aria-label="评论区">
     <div class="ds-thread"
          data-thread-key="{{page.id}}"
          data-title="{{page.title}}"

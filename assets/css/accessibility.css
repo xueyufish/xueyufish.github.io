@@ -1,0 +1,140 @@
+/**
+ * 可访问性增强样式 - 极简版
+ * 符合 WCAG 2.1 AA 标准
+ *
+ * 设计原则：
+ * 1. 只添加，不覆盖 - 只添加新的可访问性功能
+ * 2. 使用 ID 选择器 - 避免影响其他元素
+ * 3. 最小化影响 - 不修改任何现有样式
+ */
+
+/* ========================================
+   Skip to Main Content 链接
+   ======================================== */
+
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: rgb(96, 165, 250);
+  color: rgb(255, 255, 255);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+  transition: top 0.3s ease;
+}
+
+.skip-to-main:focus {
+  top: 0;
+  outline: 3px solid rgb(59, 130, 246);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   减少动画偏好设置
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skip-to-main {
+    transition: none;
+  }
+}
+
+/* ========================================
+   屏幕阅读器专用内容
+   ======================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 当聚焦时可见（用于 skip links） */
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ========================================
+   功能按钮触摸目标增强
+   ======================================== */
+
+/* 只针对特定功能按钮，不影响其他按钮 */
+#toc-button,
+#theme-toggle,
+#back-to-top {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 确保触摸目标至少 44x44px */
+#toc-button,
+#theme-toggle,
+#back-to-top {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* 移动端增大到 48x48px */
+@media (max-width: 767px) {
+  #toc-button,
+  #theme-toggle,
+  #back-to-top {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .skip-to-main {
+    right: 0;
+    left: auto;
+    border-radius: 0 0 0 4px;
+  }
+}
+
+/* ========================================
+   夜间模式可访问性
+   ======================================== */
+
+[data-theme="dark"] .skip-to-main {
+  background-color: rgb(96, 165, 250);
+  color: rgb(0, 0, 0);
+}
+
+/* ========================================
+   打印样式
+   ======================================== */
+
+@media print {
+  .skip-to-main,
+  #toc-button,
+  #theme-toggle,
+  #back-to-top {
+    display: none !important;
+  }
+}
