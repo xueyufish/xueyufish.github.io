@@ -14,7 +14,12 @@
       "Bash(for:*)",
       "Bash(do if grep -q font-size.*1rem $file)",
       "Bash(then echo '=== $file ===' grep -n font-size.*1rem $file)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "Bash(gzip:*)",
+      "Bash(du:*)",
+      "Bash(npm install:*)"
     ]
   }
 }
