@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(git restore:*)",
+      "Bash(xargs:*)",
+      "Bash(git ls-tree:*)",
+      "WebSearch",
+      "Bash(if [ -f scripts/build.sh ])",
+      "Bash(then cat scripts/build.sh)",
+      "Bash(else echo \"build.sh 不存在\")",
+      "Bash(fi:*)",
+      "Bash(grep:*)",
+      "Bash(for:*)",
+      "Bash(do if grep -q font-size.*1rem $file)",
+      "Bash(then echo '=== $file ===' grep -n font-size.*1rem $file)"
+    ]
+  }
+}

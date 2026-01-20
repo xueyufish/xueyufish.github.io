@@ -1,0 +1,59 @@
+/**
+ * 图片懒加载样式
+ */
+
+/* 图片加载中的样式 */
+img.lazy-loading {
+  opacity: 0.6;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0),
+                    linear-gradient(45deg, #f0f0f0 25%, transparent 25%, transparent 75%, #f0f0f0 75%, #f0f0f0);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  animation: loading-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-animation {
+  0% {
+    background-position: 0 0, 10px 10px;
+  }
+  100% {
+    background-position: 20px 20px, 30px 30px;
+  }
+}
+
+/* 图片加载完成的样式 */
+img.lazy-loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* 图片加载失败的样式 */
+img.lazy-error {
+  opacity: 0.5;
+  border: 2px dashed #ff6b6b;
+  background-color: #fff5f5;
+}
+
+/* 夜间模式下的懒加载样式 */
+[data-theme="dark"] img.lazy-loading {
+  background-color: #2c2c2c;
+  background-image: linear-gradient(45deg, #383838 25%, transparent 25%, transparent 75%, #383838 75%, #383838),
+                    linear-gradient(45deg, #383838 25%, transparent 25%, transparent 75%, #383838 75%, #383838);
+}
+
+[data-theme="dark"] img.lazy-error {
+  background-color: #4a1a1a;
+  border-color: #f87171;
+}
+
+/* 响应式图片支持 */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* 为图片添加可选的淡入效果 */
+img[data-src] {
+  transition: opacity 0.3s ease;
+}

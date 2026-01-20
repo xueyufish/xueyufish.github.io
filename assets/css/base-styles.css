@@ -1,0 +1,87 @@
+/* ========================================
+   基础样式重置和排版
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 列表样式重置 */
+ul, ol {
+  padding-left: 20px;
+}
+
+/* 标题字体大小 */
+h1 { font-size: 22.5px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+
+h1.title {
+  font-size: 32px;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  max-width: 65em;
+  border: 1px solid #dedede;
+  margin: 15px auto;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+
+table th,
+table td {
+  height: 35px;
+  border: 1px solid #dedede;
+  padding: 0 10px;
+}
+
+table th {
+  font-weight: bold;
+  text-align: center !important;
+  background: rgba(158, 188, 226, 0.2);
+}
+
+table tbody tr:nth-child(2n) {
+  background: rgba(158, 188, 226, 0.12);
+}
+
+table tr:hover {
+  background: #efefef;
+}
+
+table th {
+  white-space: nowrap;
+}
+
+table td:nth-child(1) {
+  white-space: nowrap;
+}
+
+/* 响应式表格调整 */
+@media (max-width: 767px) {
+  table {
+    font-size: 12px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  table th,
+  table td {
+    padding: 5px 8px;
+    height: auto;
+  }
+}
+
+/* 移动端表格容器 */
+@media (max-width: 480px) {
+  table {
+    max-width: 100%;
+  }
+}

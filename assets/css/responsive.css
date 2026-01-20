@@ -1,0 +1,526 @@
+/* ========================================
+   响应式布局优化
+   ======================================== */
+
+/* 超大屏幕 (≥1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1340px;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 100px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 65px;
+  }
+
+  .post-container,
+  .sidebar-container {
+    padding-right: 3%;
+  }
+}
+
+/* 大屏幕 (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* 平板横屏 (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 60px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 45px;
+  }
+
+  .post-preview > a > .post-title {
+    font-size: 20px;
+  }
+}
+
+/* 平板竖屏 (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 50px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 40px;
+  }
+
+  .post-preview > a > .post-title {
+    font-size: 18px;
+  }
+
+  .sidebar-container {
+    font-size: 13px;
+  }
+
+  .sidebar-container .short-about img {
+    width: 70%;
+  }
+}
+
+/* 移动设备通用优化 (≤767px) */
+@media (max-width: 767px) {
+  /* 容器内边距优化 */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* 文章容器优化 */
+  .post-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* 侧边栏在移动端堆叠显示 */
+  .sidebar-container {
+    margin-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* 头部标题优化 */
+  .intro-header .header-name,
+  .intro-header .header-desc {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .intro-header .header-desc {
+    font-size: 13px;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 36px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 28px;
+  }
+
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 16px;
+  }
+
+  .intro-header .post-heading .subheading {
+    font-size: 15px;
+  }
+
+  .intro-header .post-heading .meta {
+    font-size: 14px;
+  }
+
+  /* 文章预览优化 */
+  .post-preview > a > .post-title {
+    font-size: 20px;
+  }
+
+  .post-preview > a > .post-subtitle {
+    font-size: 14px;
+  }
+
+  /* 标签云优化 */
+  .tags a,
+  .tags .tag {
+    font-size: 14px;
+    padding: 0.2rem 0.4rem;
+    margin: 2px 1px;
+  }
+
+  #tag_cloud a,
+  #tag_cloud .tag {
+    font-size: 14px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  /* 按钮触摸区域优化 */
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .pager li > a,
+  .pager li > span {
+    padding: 8px 16px;
+    font-size: 1.2rem;
+  }
+
+  /* 社交图标优化 */
+  .fa-stack {
+    transform: scale(0.9);
+  }
+
+  /* 列表优化 */
+  .post-container ul,
+  .post-container ol {
+    padding-left: 25px;
+  }
+}
+
+/* 小屏手机 (≤480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* 头部进一步优化 */
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 60px 0 40px;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 28px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 24px;
+  }
+
+  /* 侧边栏图片优化 */
+  .sidebar-container .short-about img {
+    width: 60%;
+  }
+
+  /* 文章标题优化 */
+  .post-container h1 {
+    font-size: 24px;
+  }
+
+  .post-container h2 {
+    font-size: 20px;
+  }
+
+  .post-container h3 {
+    font-size: 18px;
+  }
+
+  /* 详情页内容字体 - 小屏手机 */
+  .post-container {
+    font-size: 15px !important;
+  }
+
+  /* 代码块优化 */
+  pre {
+    font-size: 14px;
+    padding: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 表格优化 */
+  .table-responsive {
+    border: none;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  table th,
+  table td {
+    padding: 5px 8px;
+    height: auto;
+  }
+
+  /* 按钮全宽优化 */
+  .pager {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pager li {
+    width: 100%;
+  }
+
+  .pager li > a,
+  .pager li > span {
+    display: block;
+    text-align: center;
+  }
+
+  /* 标签列表优化 */
+  .one-tag-list .post-preview > a .post-title {
+    font-size: 15px;
+  }
+
+  .one-tag-list .post-preview > .post-meta {
+    position: static;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+
+  /* 归档列表优化 */
+  .archives-list .post-preview > a .post-title {
+    font-size: 13px;
+  }
+
+  .archives-list .post-preview > .post-meta {
+    position: static;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+}
+
+/* 超小屏手机 (≤375px) */
+@media (max-width: 375px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 24px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 20px;
+  }
+
+  .post-preview > a > .post-title {
+    font-size: 18px;
+  }
+
+  .post-content-preview {
+    font-size: 15px !important;
+    color: rgb(115, 115, 115);
+    font-style: normal;
+  }
+
+  /* 详情页内容 - 超小屏手机 */
+  .post-container {
+    font-size: 15px !important;
+  }
+
+  .post-preview > .post-meta {
+    font-size: 1rem;
+    color: rgb(115, 115, 115);
+    font-style: normal;
+  }
+
+  /* 减少内边距 */
+  .post-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .sidebar-container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* iPhone X/11/12/13 及以上安全区域适配 */
+@supports (padding: max(0px)) {
+  @media (max-width: 767px) {
+    .intro-header {
+      padding-top: max(0px, env(safe-area-inset-top));
+    }
+
+    footer {
+      padding-bottom: max(65px, calc(65px + env(safe-area-inset-bottom)));
+    }
+  }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 767px) and (orientation: landscape) {
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 40px 0;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 28px;
+  }
+
+  .intro-header .post-heading h1 {
+    font-size: 22px;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  /* 增大触摸目标 */
+  a {
+    padding: 2px 0;
+  }
+
+  .tags a,
+  .tags .tag {
+    min-height: 44px;
+    line-height: 44px;
+  }
+
+  #tag_cloud a,
+  #tag_cloud .tag {
+    min-height: 40px;
+    line-height: 40px;
+  }
+
+  /* 优化按钮点击效果 */
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .pager li > a:active {
+    transform: scale(0.98);
+  }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* 优化字体渲染 */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .sidebar-container,
+  .intro-header,
+  footer,
+  .pager {
+    display: none;
+  }
+
+  .post-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* 减少动画 (用户偏好设置) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 深色模式支持 (系统偏好) */
+@media (prefers-color-scheme: dark) {
+  /* 保留原有浅色主题，但提供适配基础 */
+  html {
+    color-scheme: light;
+  }
+}
+
+/* 侧边栏响应式显示控制 */
+@media (max-width: 991px) {
+  .sidebar-container section.visible-md,
+  .sidebar-container section.visible-lg {
+    display: block;
+  }
+
+  .sidebar-container {
+    text-align: center;
+  }
+
+  .sidebar-container .short-about img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sidebar-container h5 {
+    text-align: center;
+  }
+
+  .sidebar-container .tags {
+    text-align: center;
+  }
+
+  .sidebar-container .list-inline {
+    text-align: center;
+  }
+}
+
+/* 表格在移动端的优化 */
+@media (max-width: 767px) {
+  /* 强制表格可滚动 */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  /* 为表格添加自定义滚动条样式 */
+  .table-responsive::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+
+  .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+/* 图片容器优化 */
+@media (max-width: 767px) {
+  .post-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em auto;
+  }
+
+  /* 防止图片溢出 */
+  article,
+  .post-container {
+    overflow-x: hidden;
+  }
+}
+
+/* 代码块滚动优化 */
+@media (max-width: 767px) {
+  pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: normal;
+  }
+
+  pre code {
+    display: block;
+    width: auto;
+    white-space: pre;
+    word-wrap: normal;
+  }
+}

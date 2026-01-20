@@ -1,0 +1,291 @@
+/**
+ * GitHub风格的语法高亮样式
+ * 支持 Rouge 语法高亮器
+ * 适配极简主题风格
+ */
+
+/* 代码块基础样式 */
+.highlight {
+  margin: 1.5rem 0;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  background-color: #f6f8fa;
+}
+
+.highlight pre,
+.highlight code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.highlight pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* 防止代码换行 */
+.highlight pre code {
+  white-space: pre;
+  word-wrap: normal;
+}
+
+/* GitHub风格语法高亮颜色 */
+
+/* 注释 */
+.highlight .c,
+.highlight .ch,
+.highlight .cm,
+.highlight .cp,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs {
+  color: #6a737d;
+  font-style: italic;
+}
+
+/* 关键字 */
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+  color: #d73a49;
+}
+
+/* 函数名 */
+.highlight .nf,
+.highlight .fm {
+  color: #6f42c1;
+}
+
+/* 类名 */
+.highlight .nc {
+  color: #6f42c1;
+  font-weight: 600;
+}
+
+/* 字符串 */
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+  color: #032f62;
+}
+
+/* 数字 */
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il {
+  color: #005cc5;
+}
+
+/* 变量 */
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: #e36209;
+}
+
+/* 操作符 */
+.highlight .o,
+.highlight .ow {
+  color: #d73a49;
+}
+
+/* 常量 */
+.highlight .no {
+  color: #005cc5;
+}
+
+/* 属性 */
+.highlight .na {
+  color: #6f42c1;
+}
+
+/* 标签 */
+.highlight .nt {
+  color: #22863a;
+}
+
+/* 名称 */
+.highlight .n,
+.highlight .nb,
+.highlight .bp {
+  color: #24292e;
+}
+
+/* 异常 */
+.highlight .ne {
+  color: #d73a49;
+  font-weight: 600;
+}
+
+/* 装饰器 */
+.highlight .nd {
+  color: #6f42c1;
+}
+
+/* 正则表达式 */
+.highlight .srr {
+  color: #032f62;
+}
+
+/* 特殊字符 */
+.highlight .sc {
+  color: #032f62;
+}
+
+/* 符号 */
+.highlight .ss {
+  color: #005cc5;
+}
+
+/* 通用文本 */
+.highlight .highlight {
+  background-color: #f6f8fa;
+}
+
+/* 行号（如果使用） */
+.highlight .lineno {
+  color: #6a737d;
+  margin-right: 10px;
+}
+
+/* 链接 */
+.highlight a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.highlight a:hover {
+  text-decoration: underline;
+}
+
+/* 响应式优化 */
+@media (max-width: 767px) {
+  .highlight pre {
+    font-size: 12px;
+    padding: 0.75rem;
+  }
+}
+
+/* 深色模式支持（可选） */
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: #1e1e1e;
+  }
+
+  .highlight .c,
+  .highlight .ch,
+  .highlight .cm,
+  .highlight .cp,
+  .highlight .cpf,
+  .highlight .c1,
+  .highlight .cs {
+    color: #8b949e;
+  }
+
+  .highlight .k,
+  .highlight .kd,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kt {
+    color: #ff7b72;
+  }
+
+  .highlight .nf,
+  .highlight .fm {
+    color: #d2a8ff;
+  }
+
+  .highlight .nc {
+    color: #d2a8ff;
+  }
+
+  .highlight .s,
+  .highlight .sa,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .dl,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .se,
+  .highlight .sh,
+  .highlight .si,
+  .highlight .sx,
+  .highlight .sr,
+  .highlight .s1,
+  .highlight .ss {
+    color: #a5d6ff;
+  }
+
+  .highlight .m,
+  .highlight .mb,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .mo,
+  .highlight .il {
+    color: #79c0ff;
+  }
+
+  .highlight .nv,
+  .highlight .vc,
+  .highlight .vg,
+  .highlight .vi {
+    color: #ffa657;
+  }
+
+  .highlight .o,
+  .highlight .ow {
+    color: #ff7b72;
+  }
+
+  .highlight .no {
+    color: #79c0ff;
+  }
+
+  .highlight .na {
+    color: #d2a8ff;
+  }
+
+  .highlight .nt {
+    color: #7ee787;
+  }
+
+  .highlight .n,
+  .highlight .nb,
+  .highlight .bp {
+    color: #c9d1d9;
+  }
+
+  .highlight .ne {
+    color: #ff7b72;
+  }
+
+  .highlight .nd {
+    color: #d2a8ff;
+  }
+}

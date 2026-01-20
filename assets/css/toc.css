@@ -1,0 +1,412 @@
+/**
+ * 文章目录（TOC）样式
+ * 支持桌面端固定侧边栏和移动端浮层
+ */
+
+/* === 目录容器 === */
+
+.article-toc {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 250px;
+  max-height: calc(100vh - 150px);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  z-index: 90;
+  transition: all 0.3s ease;
+}
+
+/* === 目录标题 === */
+
+.article-toc::before {
+  content: '目录';
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(10, 10, 10);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(96, 165, 250);
+  padding-right: 2rem;
+  position: relative;
+}
+
+/* === 目录关闭按钮 === */
+
+.toc-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(10, 10, 10);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+  z-index: 1;
+}
+
+.toc-close-btn:hover {
+  background-color: rgb(245, 245, 245);
+  border-color: rgb(180, 180, 180);
+  color: rgb(96, 165, 250);
+}
+
+.toc-close-btn:active {
+  transform: scale(0.95);
+  background-color: rgb(235, 235, 235);
+}
+
+/* === 目录隐藏状态 === */
+
+.article-toc.toc-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+}
+
+/* === 目录重新打开按钮 === */
+
+.toc-toggle-btn {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 36px;
+  height: 36px;
+  background-color: rgb(96, 165, 250);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
+  cursor: pointer;
+  z-index: 89;
+  transition: all 0.3s ease;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.toc-toggle-btn:hover {
+  background-color: rgb(59, 130, 246);
+  transform: scale(1.05);
+}
+
+.toc-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+.toc-toggle-btn.visible {
+  display: flex;
+}
+
+/* === 目录列表 === */
+
+.toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-item {
+  margin: 0;
+  padding: 0;
+}
+
+/* 移除空项的样式 */
+.toc-item-empty {
+  display: none;
+}
+
+/* === 目录链接 === */
+
+.toc-link {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  color: rgb(55, 65, 81);
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.toc-link:hover {
+  color: rgb(96, 165, 250);
+  border-left-color: rgb(96, 165, 250);
+  background-color: rgb(245, 247, 250);
+}
+
+.toc-link.active {
+  color: rgb(96, 165, 250);
+  border-left-color: rgb(96, 165, 250);
+  background-color: rgb(235, 241, 255);
+  font-weight: 500;
+}
+
+/* === 不同层级的缩进 === */
+
+/* h1 作为一级目录，无缩进 */
+.toc-level-1 > .toc-link {
+  padding-left: 0.5rem;
+  font-weight: 600;
+}
+
+/* h2 作为二级目录，有缩进 */
+.toc-level-2 > .toc-link {
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* === 子目录列表 === */
+
+.toc-sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0.5rem;
+}
+
+/* === 目录滚动条样式 === */
+
+.article-toc::-webkit-scrollbar {
+  width: 6px;
+}
+
+.article-toc::-webkit-scrollbar-track {
+  background: rgb(240, 240, 240);
+  border-radius: 3px;
+}
+
+.article-toc::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180);
+  border-radius: 3px;
+}
+
+.article-toc::-webkit-scrollbar-thumb:hover {
+  background: rgb(150, 150, 150);
+}
+
+/* === 标题锚点图标 === */
+
+.heading-anchor {
+  display: none;
+  margin-left: 0.5rem;
+  color: rgb(150, 150, 150);
+  text-decoration: none;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.post-container h1:hover .heading-anchor,
+.post-container h2:hover .heading-anchor {
+  display: inline;
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: rgb(96, 165, 250);
+}
+
+.post-container h1.active,
+.post-container h2.active {
+  color: rgb(96, 165, 250);
+}
+
+/* === 移动端目录按钮 === */
+
+#toc-button {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(96, 165, 250);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+  cursor: pointer;
+  z-index: 91;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+#toc-button:hover {
+  background-color: rgb(59, 130, 246);
+  transform: scale(1.1);
+}
+
+#toc-button:active {
+  transform: scale(0.95);
+}
+
+#toc-button i {
+  font-size: 1.4rem;
+}
+
+#toc-button::after {
+  content: '目录';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  color: rgb(10, 10, 10);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#toc-button:hover::after {
+  opacity: 1;
+}
+
+/* === 移动端目录遮罩层 === */
+
+#toc-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 92;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#toc-overlay.toc-overlay-visible {
+  display: block;
+  opacity: 1;
+}
+
+/* === 响应式 - 平板端 === */
+
+@media (max-width: 1199px) {
+  .article-toc {
+    width: 200px;
+    right: 10px;
+    font-size: 0.9rem;
+  }
+
+  .toc-link {
+    font-size: 1.2rem;
+  }
+
+  .toc-level-1 > .toc-link {
+    font-size: 1.2rem;
+  }
+
+  .toc-level-2 > .toc-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* === 响应式 - 移动端 === */
+
+@media (max-width: 991px) {
+  /* 隐藏桌面端目录和按钮 */
+  .article-toc {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    max-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 93;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  /* 移动端隐藏桌面端的关闭和切换按钮 */
+  .toc-close-btn {
+    display: none;
+  }
+
+  .toc-toggle-btn {
+    display: none !important;
+  }
+
+  .article-toc.toc-hidden {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .article-toc.toc-open {
+    right: 0;
+  }
+
+  /* 显示移动端按钮 */
+  #toc-button {
+    display: flex;
+  }
+
+  /* 移动端目录标题添加关闭按钮 */
+  .article-toc::before {
+    content: '目录';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* 移动端调整链接样式 */
+  .toc-link {
+    font-size: 1.4rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .toc-level-1 > .toc-link {
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .toc-level-2 > .toc-link {
+    padding-left: 1.75rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #toc-button {
+    bottom: 100px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  #toc-button i {
+    font-size: 1.2rem;
+  }
+
+  .article-toc {
+    width: 85%;
+  }
+}

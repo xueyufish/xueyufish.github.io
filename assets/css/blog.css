@@ -251,6 +251,24 @@ pre code {
     padding: 10px 0;
   }
 }
+
+/* Logo 样式 */
+.intro-header .header-logo {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.intro-header .header-logo img {
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .header-logo img {
+    height: 40px;
+  }
+}
+
 .intro-header .header-name {
   /* Hux learn from
      *     TypeIsBeautiful,
@@ -260,29 +278,18 @@ pre code {
   line-height: 1.7;
   font-size: 16px;
   line-height: 1.1;
-  display: block;
+  display: inline-block;
   font-weight: 300;
-  margin-left: 5px;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .header-name {
-    margin-left: 110px;
-  }
+  vertical-align: middle;
 }
 .intro-header .header-name a {
   text-decoration: none;
 }
 .intro-header .header-desc {
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: 13px;
+  line-height: 1.4;
   display: block;
   font-weight: 300;
-  margin-left: 5px;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .header-desc {
-    margin-left: 110px;
-  }
 }
 .intro-header .site-heading,
 .intro-header .post-heading,

@@ -11,53 +11,67 @@
     </div>
 </footer>
 
+<!-- 核心库 - 预加载并同步加载 jQuery -->
 <script src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/css/bootstrap.min-202011150938.css" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/css/blog-201904082241.min.css" | prepend: site.baseurl }}"></script>
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
 
+<!-- 合并后的主要 JS 文件（Bootstrap + 主题切换 + 搜索 + 目录） -->
+<script src="{{ "/assets/js/main.min.js" | prepend: site.baseurl }}"></script>
+
+<!-- 图片懒加载 -->
+<script src="{{ "/assets/js/lazyload.js" | prepend: site.baseurl }}"></script>
+
+<!-- 标签云 - 按需加载 -->
 <script>
+(function() {
+    // 只在存在标签云元素的页面加载
     if($('#tag_cloud').length !== 0){
-        async("{{ "/assets/site/js/jquery.tagcloud.js " | prepend: site.qiniu_url }}",function(){
+        var script = document.createElement('script');
+        script.src = "{{ "/assets/js/jquery.tagcloud.js" | prepend: site.baseurl }}";
+        script.async = true;
+        script.onload = function() {
             $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
             };
             $('#tag_cloud a').tagcloud();
-        })
+        };
+        document.head.appendChild(script);
     }
+})();
 </script>
 
-<!--fastClick.js -->
+<!-- FastClick - 移动端触摸优化 -->
 <script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
+(function() {
+    // 只在移动设备加载
+    if ('addEventListener' in document && 'ontouchstart' in window) {
+        var script = document.createElement('script');
+        script.src = "https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js";
+        script.async = true;
+        script.onload = function() {
+            if (typeof FastClick !== 'undefined') {
+                var $nav = document.querySelector("nav");
+                if($nav) FastClick.attach($nav);
+            }
+        };
+        document.head.appendChild(script);
+    }
+})();
 </script>
 
-<!-- Baidu Tongji -->
+<!-- Baidu Tongji - 百度统计 -->
 {% if site.ba_track_id %}
 <script>
-    //
+(function() {
     var _baId = '{{ site.ba_track_id }}';
-
-    // Originial
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
       hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      hm.async = true;
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
+})();
 </script>
 {% endif %}
+
