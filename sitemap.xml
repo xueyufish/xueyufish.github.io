@@ -1,0 +1,65 @@
+---
+layout: null
+sitemap:
+  priority: 1.0
+  lastmod: '2024-12-01'
+  changefreq: 'daily'
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 首页 -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <lastmod>{% if site.posts.size > 0 %}{{ site.posts.first.date | date: "%Y-%m-%d" }}{% else %}{{ site.time | date: "%Y-%m-%d" }}{% endif %}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 所有文章 -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+    {% if post.last_modified_at %}
+    <lastmod>{{ post.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif post.edit-date %}
+    <lastmod>{{ post.edit-date | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif post.date %}
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {% endfor %}
+
+  <!-- 所有页面 -->
+  {% for page in site.pages %}
+  {% unless page.sitemap.exclude == true or page.layout == 'feed' or page.name == 'sitemap.xml' %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+    {% if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+    <changefreq>monthly</changefreq>
+    <priority>{% if page.priority %}{{ page.priority }}{% else %}0.6{% endif %}</priority>
+  </url>
+  {% endunless %}
+  {% endfor %}
+
+  <!-- 标签页面 -->
+  {% for tag in site.tags %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/tags/#{{ tag[0] }}</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  {% endfor %}
+
+</urlset>
