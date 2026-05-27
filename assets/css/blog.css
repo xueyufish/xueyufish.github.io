@@ -1094,6 +1094,10 @@ body {
   overflow: hidden;
 }
 
+.home-card+.home-card {
+  margin-top: 0;
+}
+
 .home-card-link,
 .post-container .home-card-link {
   display: flex;
@@ -1106,7 +1110,7 @@ body {
 
 .home-card-cover,
 .post-container .home-card-cover {
-  width: 200px;
+  width: 140px;
   flex-shrink: 0;
   aspect-ratio: 1.5 / 1;
   overflow: hidden;
