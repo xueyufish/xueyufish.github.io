@@ -22,7 +22,7 @@ twitter_username:   xueyufish
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "scripts", "*.gemspec"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "scripts", "*.gemspec", ".playwright-mcp"]
 anchorjs: true
 
 # 性能优化配置
