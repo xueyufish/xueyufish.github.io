@@ -1160,10 +1160,24 @@ body {
 .post-container .home-card-meta {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 4px;
+  justify-content: space-between;
+  margin-top: 12px;
   font-size: 13px;
   color: #a0a0a0;
+}
+
+.home-card-meta-left,
+.post-container .home-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-card-meta-right,
+.post-container .home-card-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .home-card-tag,

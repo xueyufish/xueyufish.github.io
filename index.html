@@ -39,14 +39,18 @@ layout: page
             {% endif %}
           </p>
           <div class="home-card-meta">
-            {% if post.tags.size > 0 %}
-            {% assign first_tag = post.tags | first %}
-            <span class="home-card-tag">{{ first_tag }}</span>
-            {% endif %}
-            {% if post.reading_time %}
-            <span class="home-card-reading">{{ post.reading_time }} 分钟</span>
-            {% endif %}
-            <time class="home-card-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <div class="home-card-meta-left">
+              {% if post.tags.size > 0 %}
+              {% assign first_tag = post.tags | first %}
+              <span class="home-card-tag">{{ first_tag }}</span>
+              {% endif %}
+            </div>
+            <div class="home-card-meta-right">
+              {% if post.reading_time %}
+              <span class="home-card-reading">{{ post.reading_time }} 分钟</span>
+              {% endif %}
+              <time class="home-card-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            </div>
           </div>
         </div>
       </a>
