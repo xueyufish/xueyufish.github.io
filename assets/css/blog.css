@@ -1106,6 +1106,7 @@ body {
   color: inherit;
   padding-bottom: 32px;
   border-bottom: 1px solid #f0f0f0;
+  align-items: flex-start;
 }
 
 .home-card-cover,
