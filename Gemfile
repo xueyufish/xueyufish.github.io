@@ -3,6 +3,9 @@ source "https://rubygems.org"
 # Jekyll 核心宝石
 gem "jekyll", "~> 4.3"
 
+# 兼容 Ruby 3.4+（bigdecimal 不再是默认 gem）
+gem "bigdecimal"
+
 # 分页插件
 gem "jekyll-paginate"
 
