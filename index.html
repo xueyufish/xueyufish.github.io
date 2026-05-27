@@ -30,6 +30,14 @@ layout: page
           {% endif %}
         </div>
         <div class="home-card-body">
+          <h2 class="home-card-title">{{ post.title }}</h2>
+          <p class="home-card-excerpt">
+            {% if post.description %}
+            {{ post.description }}
+            {% else %}
+            {{ post.content | strip_html | truncate: 150 }}
+            {% endif %}
+          </p>
           <div class="home-card-meta">
             {% if post.tags.size > 0 %}
             {% assign first_tag = post.tags | first %}
@@ -40,14 +48,6 @@ layout: page
             {% endif %}
             <time class="home-card-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
           </div>
-          <h2 class="home-card-title">{{ post.title }}</h2>
-          <p class="home-card-excerpt">
-            {% if post.description %}
-            {{ post.description }}
-            {% else %}
-            {{ post.content | strip_html | truncate: 150 }}
-            {% endif %}
-          </p>
         </div>
       </a>
     </article>
