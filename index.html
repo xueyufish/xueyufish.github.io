@@ -2,35 +2,116 @@
 layout: page
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl }}">
-    <h2 class="post-title">
-      {{post.title}}
-    </h2>
-    <div class="post-content-preview">
-      {{ post.content | strip_html | truncate:200 }}
+<div class="home-banner">
+  <div class="home-banner-inner">
+    <div class="home-banner-left">
+      <a href="{{ "/" | prepend: site.baseurl }}" class="home-banner-name">{{ site.author }}</a>
+      <span class="home-banner-tagline">{{ site.description }}</span>
     </div>
-  </a>
-  <!-- <p class="post-meta">
-    Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-  </p> -->
+    <nav class="home-banner-nav">
+      <a href="{{ "/" | prepend: site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+      <a href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+      <a href="{{ "/tags/" | prepend: site.baseurl }}">Tags</a>
+      <a href="{{ "/archives/" | prepend: site.baseurl }}">Archives</a>
+    </nav>
+  </div>
 </div>
-<hr>
-{% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+<div class="home-layout">
+  <div class="home-articles">
+    {% for post in paginator.posts %}
+    <article class="home-card">
+      <a href="{{ post.url | prepend: site.baseurl }}" class="home-card-link">
+        <div class="home-card-cover">
+          {% if post.header-img and post.header-img != "" %}
+          <img src="{{ post.header-img }}" alt="{{ post.title }}" loading="lazy">
+          {% else %}
+          <div class="home-card-placeholder">{{ post.title | truncate: 2, "" }}</div>
+          {% endif %}
+        </div>
+        <div class="home-card-body">
+          <div class="home-card-meta">
+            {% if post.tags.size > 0 %}
+            {% assign first_tag = post.tags | first %}
+            <span class="home-card-tag">{{ first_tag }}</span>
+            {% endif %}
+            {% if post.reading_time %}
+            <span class="home-card-reading">{{ post.reading_time }} 分钟</span>
+            {% endif %}
+            <time class="home-card-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+          </div>
+          <h2 class="home-card-title">{{ post.title }}</h2>
+          <p class="home-card-excerpt">
+            {% if post.description %}
+            {{ post.description }}
+            {% else %}
+            {{ post.content | strip_html | truncate: 150 }}
+            {% endif %}
+          </p>
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="home-pager">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="home-pager-prev">&larr; Previous</a>
+      {% endif %}
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="home-pager-next">Next &rarr;</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+  </div>
+
+  <aside class="home-aside">
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">Search</h3>
+      <div class="home-aside-search">
+        <form action="{{ "/search/" | prepend: site.baseurl }}" method="get" role="search">
+          <input type="search" name="q" placeholder="Search articles..." aria-label="搜索文章">
+        </form>
+      </div>
+    </div>
+
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">Connect</h3>
+      <div class="home-aside-social">
+        {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" title="Twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+        {% if site.zhihu_username %}
+        <a href="https://www.zhihu.com/people/{{ site.zhihu_username }}" target="_blank" rel="noopener noreferrer" title="知乎">
+          知
+        </a>
+        {% endif %}
+        {% if site.RSS %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="RSS">
+          <i class="fa fa-rss" aria-hidden="true"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if site.featured-tags %}
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">Tags</h3>
+      <div class="home-aside-tags">
+        {% for tag in site.tags %}
+          {% if tag[1].size > site.featured-condition-size %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag[0] | uri_escape }}">{{ tag[0] }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </aside>
+</div>

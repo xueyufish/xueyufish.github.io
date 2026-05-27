@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% if page.url != '/' %}
 <header class="intro-header" role="banner">
   <div class="container">
     <div class="row">
@@ -25,6 +26,7 @@ layout: default
     </div>
   </div>
 </header>
+{% endif %}
 
 <main id="main-content" role="main" tabindex="-1">
   <div class="container">
