@@ -1089,7 +1089,7 @@ body {
 /* ========== Homepage Article Cards ========== */
 .home-card,
 .post-container .home-card {
-  margin-bottom: 36px;
+  margin-bottom: 0;
   border-radius: 0;
   overflow: hidden;
 }
@@ -1100,6 +1100,8 @@ body {
   gap: 24px;
   text-decoration: none;
   color: inherit;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .home-card-cover,
@@ -1193,8 +1195,8 @@ body {
 .post-container .home-card-excerpt {
   font-size: 14px;
   line-height: 1.7;
-  color: #666;
-  margin: 0;
+  color: #525252;
+  margin: 0 0 8px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
