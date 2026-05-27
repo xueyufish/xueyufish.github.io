@@ -1092,10 +1092,13 @@ body {
   margin-bottom: 0;
   border-radius: 0;
   overflow: hidden;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .home-card+.home-card {
   margin-top: 0;
+  padding-top: 32px;
 }
 
 .home-card-link,
@@ -1104,8 +1107,6 @@ body {
   gap: 24px;
   text-decoration: none;
   color: inherit;
-  padding-bottom: 32px;
-  border-bottom: 1px solid #f0f0f0;
   align-items: flex-start;
 }
 
