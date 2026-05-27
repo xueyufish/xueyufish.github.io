@@ -100,18 +100,5 @@ layout: page
         {% endif %}
       </div>
     </div>
-
-    {% if site.featured-tags %}
-    <div class="home-aside-section">
-      <h3 class="home-aside-title">Tags</h3>
-      <div class="home-aside-tags">
-        {% for tag in site.tags %}
-          {% if tag[1].size > site.featured-condition-size %}
-          <a href="{{ site.baseurl }}/tags/#{{ tag[0] | uri_escape }}">{{ tag[0] }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
   </aside>
 </div>
