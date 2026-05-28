@@ -1150,6 +1150,23 @@ body {
   background: #0085a1;
 }
 
+.home-aside .tags a,
+.home-aside .tags .tag {
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: 2px 8px;
+  display: inline-block;
+}
+
+.home-aside .tags a:hover,
+.home-aside .tags .tag:hover {
+  color: #fff;
+  background: #0085a1;
+}
+
 /* ========== Homepage Article Cards ========== */
 .home-card,
 .post-container .home-card {
