@@ -9,8 +9,8 @@ layout: page
       <span class="home-banner-tagline">{{ site.description }}</span>
     </div>
     <nav class="home-banner-nav">
-      <a href="{{ "/" | prepend: site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
-      <a href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+      <a href="{{ "/" | prepend: site.baseurl }}"{% if page.url == '/' %} class="active"{% endif %}>首页</a>
+      <a href="{{ "/about/" | prepend: site.baseurl }}">关于</a>
     </nav>
   </div>
 </div>
@@ -71,7 +71,7 @@ layout: page
     <div class="home-aside-section">
       <div class="home-aside-search">
         <form action="{{ "/search/" | prepend: site.baseurl }}" method="get" role="search">
-          <input type="search" name="q" placeholder="Search articles..." aria-label="搜索文章">
+          <input type="search" name="q" placeholder="搜索..." aria-label="搜索文章">
         </form>
       </div>
     </div>
