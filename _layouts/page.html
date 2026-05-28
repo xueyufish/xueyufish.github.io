@@ -26,23 +26,15 @@ layout: default
     <aside class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container" role="complementary" aria-label="侧边栏">
       <!-- 搜索框 -->
       <section class="visible-md visible-lg" aria-label="搜索">
-        <div class="search-container" role="search">
-          <h5>搜索文章</h5>
-          <div class="search-input-wrapper">
-            <label for="search-input" class="sr-only">搜索文章</label>
-            <input type="search" id="search-input" placeholder="输入关键词搜索..." autocomplete="off" aria-label="搜索文章">
-            <button id="search-button" class="search-button" aria-label="开始搜索">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-          <div id="search-loading" class="search-loading" role="status" aria-live="polite">加载中...</div>
-          <div id="search-results" class="search-results" role="listbox" aria-label="搜索结果"></div>
+        <div class="home-aside-search">
+          <form action="{{ "/search/" | prepend: site.baseurl }}" method="get" role="search">
+            <input type="search" name="q" placeholder="搜索..." aria-label="搜索文章">
+          </form>
         </div>
       </section>
 
       <!-- 社交链接 -->
       <section class="visible-md visible-lg" aria-label="社交媒体">
-        <h3 class="home-aside-title">Connect</h3>
         <div class="home-aside-social">
           {% if site.RSS %}
           <a href="{{ "/feed.xml" | prepend: site.baseurl }}" title="RSS">
