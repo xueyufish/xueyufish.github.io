@@ -954,6 +954,21 @@ body {
 
 .post-container:not(.post-container:has(.home-banner)) .post-meta {
   color: #8b8b8b !important;
+  font-size: 14px !important;
+}
+
+.post-container:not(.post-container:has(.home-banner)) .post-content,
+.post-container:not(.post-container:has(.home-banner)) .post-preview {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.post-container:not(.post-container:has(.home-banner)) h1.post-title {
+  font-size: 18px !important;
+}
+
+.sidebar-container h5 {
+  font-size: 13px !important;
 }
 
 /* ========== Homepage Banner ========== */
