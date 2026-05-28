@@ -945,6 +945,10 @@ body {
 .home-banner {
   border-bottom: 1px solid #f0f0f0 !important;
   margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
 }
 
 .home-banner-inner {
@@ -999,6 +1003,10 @@ body {
 .site-banner {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
 }
 
 .post-container:not(.post-container:has(.home-banner)) {
