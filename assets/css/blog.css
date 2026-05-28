@@ -1084,8 +1084,9 @@ body {
   margin-bottom: 28px;
 }
 
-.home-aside-title {
-  font-size: 11px;
+.home-aside-title,
+h3.home-aside-title {
+  font-size: 11px !important;
   font-weight: 600;
   color: #1a1a1a;
   margin: 0 0 8px 0;
