@@ -7,6 +7,7 @@ body {
   font-family: 'Inter', -apple-system, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   font-size: 16px;
   line-height: 1.7;
+  color: #1a1a1a !important;
 }
 
 @media (min-width: 1200px) {
@@ -969,7 +970,7 @@ body {
 .home-banner-name {
   font-size: 18px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #1a1a1a !important;
   text-decoration: none;
 }
 
@@ -991,7 +992,7 @@ body {
 
 .home-banner-nav a {
   font-size: 13px;
-  color: #1a1a1a;
+  color: #1a1a1a !important;
   text-decoration: none;
 }
 
@@ -1236,7 +1237,7 @@ h3.home-aside-title {
   display: flex;
   gap: 24px;
   text-decoration: none;
-  color: inherit;
+  color: #1a1a1a;
   align-items: flex-start;
   outline: none;
 }
@@ -1316,7 +1317,7 @@ h3.home-aside-title {
   display: inline-block;
   padding: 2px 8px;
   font-size: 13px;
-  color: #525252;
+  color: #8b8b8b;
   background: #f7f7f7;
   border-radius: 4px;
 }
