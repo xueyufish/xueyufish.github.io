@@ -935,6 +935,12 @@ body {
   display: none !important;
 }
 
+/* ========== Detail Page Layout Overrides ========== */
+.post-container:not(.post-container:has(.home-banner)) {
+  margin-left: 0 !important;
+  padding-left: 15px !important;
+}
+
 /* ========== Homepage Banner ========== */
 .home-banner {
   border-bottom: 1px solid #f0f0f0 !important;
