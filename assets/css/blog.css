@@ -1175,6 +1175,36 @@ body {
   background: #0085a1;
 }
 
+.home-aside .list-inline1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-aside .list-inline1 li {
+  margin-bottom: 0.25rem;
+}
+
+.home-aside .list-inline1 a {
+  font-size: 13px;
+  color: #525252;
+  text-decoration: none;
+}
+
+.home-aside .list-inline1 a:hover {
+  color: #0085a1;
+}
+
+.home-aside a[href*="archives"] {
+  font-size: 13px;
+  color: #525252;
+  text-decoration: none;
+}
+
+.home-aside a[href*="archives"]:hover {
+  color: #0085a1;
+}
+
 /* ========== Homepage Article Cards ========== */
 .home-card,
 .post-container .home-card {
