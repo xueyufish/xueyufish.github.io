@@ -940,6 +940,20 @@ body {
 .post-container:not(.post-container:has(.home-banner)) {
   margin-left: 0 !important;
   padding-left: 15px !important;
+  margin-top: 0.75rem;
+}
+
+.post-container:not(.post-container:has(.home-banner)) .post-title {
+  color: #1a1a1a !important;
+}
+
+.post-container:not(.post-container:has(.home-banner)) .post-preview,
+.post-container:not(.post-container:has(.home-banner)) .post-content {
+  color: #525252 !important;
+}
+
+.post-container:not(.post-container:has(.home-banner)) .post-meta {
+  color: #8b8b8b !important;
 }
 
 /* ========== Homepage Banner ========== */
