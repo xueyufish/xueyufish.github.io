@@ -1001,7 +1001,11 @@ body {
   font-weight: 600;
   color: #1a1a1a !important;
   text-decoration: none;
-  outline: none;
+  outline: none !important;
+}
+
+.home-banner-name:focus {
+  outline: none !important;
 }
 
 .home-banner-name:hover {
@@ -1064,7 +1068,11 @@ body {
   font-weight: 600;
   color: #1a1a1a;
   text-decoration: none;
-  outline: none;
+  outline: none !important;
+}
+
+.site-banner-name:focus {
+  outline: none !important;
 }
 
 .site-banner-name:hover {
