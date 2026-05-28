@@ -105,5 +105,47 @@ layout: page
         {% endif %}
       </div>
     </div>
+
+    {% if site.featured-tags %}
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">常用标签</h3>
+      <nav class="tags" aria-label="标签云">
+        {% for tag in site.tags %}
+          {% if tag[1].size > site.featured-condition-size %}
+            <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }} ({{ tag[1].size }} 篇文章)" rel="tag">
+              {{ tag[0] }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+    {% endif %}
+
+    {% if site.recent-entries %}
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">最新文章</h3>
+      <div>
+        <ul class="list-inline1">
+          <li>
+            <a href="{{ site.posts[0].url }}">{{ site.posts[0].title }}</a>
+          </li>
+          {% for post in site.posts offset:1 limit:site.entries-condition-size %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if site.archives %}
+    <div class="home-aside-section">
+      <h3 class="home-aside-title">文章归档</h3>
+      <div>
+        <a href="{{'/archives/' | prepend: site.baseurl }}">查看所有文章</a>
+      </div>
+    </div>
+    {% endif %}
   </aside>
 </div>
