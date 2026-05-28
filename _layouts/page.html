@@ -3,29 +3,18 @@ layout: default
 ---
 
 {% if page.url != '/' %}
-<header class="intro-header" role="banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12">
-        <div class="site-header">
-          <span class="header-logo">
-            <a href="{{'/' | prepend: site.baseurl }}" aria-label="返回首页">
-              <img src="/assets/image/logo.png" alt="{{ site.title }} Logo"/>
-            </a>
-          </span>
-          <span class="header-name">
-            <a href="{{'/' | prepend: site.baseurl }}">
-              <h1 class="title">{{ site.title }}</h1>
-            </a>
-          </span>
-          <span class="header-desc">
-            {{ site.description }}
-          </span>
-        </div>
-      </div>
+<div class="site-banner">
+  <div class="site-banner-inner">
+    <div class="site-banner-left">
+      <a href="{{ "/" | prepend: site.baseurl }}" class="site-banner-name">Xiumin Yu</a>
+      <span class="site-banner-tagline">{{ site.description }}</span>
     </div>
+    <nav class="site-banner-nav">
+      <a href="{{ "/" | prepend: site.baseurl }}">首页</a>
+      <a href="{{ "/about/" | prepend: site.baseurl }}">关于</a>
+    </nav>
   </div>
-</header>
+</div>
 {% endif %}
 
 <main id="main-content" role="main" tabindex="-1">

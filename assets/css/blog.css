@@ -989,6 +989,60 @@ body {
   color: #0085a1;
 }
 
+/* ========== Site Banner (non-homepage) ========== */
+.site-banner {
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 40px;
+}
+
+.site-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.site-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.site-banner-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.site-banner-name:hover {
+  color: #0085a1;
+}
+
+.site-banner-tagline {
+  font-size: 13px;
+  color: #8b8b8b;
+  line-height: 1.5;
+}
+
+.site-banner-nav {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.site-banner-nav a {
+  font-size: 13px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.site-banner-nav a:hover {
+  color: #0085a1;
+}
+
 /* ========== Homepage Main Layout ========== */
 .home-layout {
   max-width: 1200px;
