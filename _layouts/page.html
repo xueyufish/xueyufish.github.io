@@ -6,7 +6,10 @@ layout: default
 <div class="site-banner">
   <div class="site-banner-inner">
     <div class="site-banner-left">
-      <a href="{{ "/" | prepend: site.baseurl }}" class="site-banner-name">Xiumin Yu</a>
+      <div class="site-banner-name-line">
+        <img src="/assets/image/profile.jpg" alt="" class="profile-avatar">
+        <a href="{{ "/" | prepend: site.baseurl }}" class="site-banner-name">Xiumin Yu</a>
+      </div>
       <span class="site-banner-tagline">{{ site.description }}</span>
     </div>
     <nav class="site-banner-nav">
@@ -23,6 +26,7 @@ layout: default
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 post-container">
         {{ content }}
       </div>
+      {% if page.url != '/' %}
     <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12 home-aside" role="complementary" aria-label="侧边栏">
       <div class="home-aside-section">
         <div class="home-aside-search">
@@ -104,5 +108,6 @@ layout: default
       </div>
       {% endif %}
     </aside>
+    {% endif %}
   </div>
 </main>
