@@ -279,13 +279,28 @@
 /* === Footer === */
 
 [data-theme="dark"] footer {
-  background-color: #1a1a1a;
-  border-color: #3f3f46;
+  background-color: #141414;
+  border-color: #2a2a2a;
   color: #a1a1aa;
 }
 
 [data-theme="dark"] footer a {
   color: #60a5fa;
+}
+
+
+
+[data-theme="dark"] footer .copyright {
+  color: #6b6b6b;
+}
+
+[data-theme="dark"] footer .copyright a {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] footer .copyright a:hover,
+[data-theme="dark"] footer .copyright a:focus {
+  color: #ededed;
 }
 
 /* === 滚动条 === */
@@ -830,10 +845,16 @@
 
 [data-theme="dark"] .home-card-link:hover .home-card-title {
   color: #60a5fa;
+  padding-left: 8px;
 }
 
 [data-theme="dark"] .home-card-excerpt {
   color: #a1a1aa;
+}
+
+[data-theme="dark"] .home-card-link:hover .home-card-excerpt {
+  color: #60a5fa;
+  padding-left: 8px;
 }
 
 [data-theme="dark"] .home-card-meta {
@@ -843,6 +864,15 @@
 [data-theme="dark"] .home-card-tag {
   color: #a1a1aa;
   background: #2a2a2a;
+}
+
+[data-theme="dark"] .home-card-link:hover .home-card-meta-left {
+  padding-left: 8px;
+}
+
+[data-theme="dark"] .home-card-tag:hover {
+  color: #60a5fa;
+  background: #383838;
 }
 
 [data-theme="dark"] .home-card-reading,
@@ -856,21 +886,20 @@
 
 [data-theme="dark"] .theme-toggle-group {
   background: #1e1e1e;
-  border-color: #3f3f46;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 [data-theme="dark"] .theme-toggle-btn {
-  color: #71717a;
+  color: #6b6b6b;
 }
 
 [data-theme="dark"] .theme-toggle-btn:hover {
-  color: #a1a1aa;
+  color: #a0a0a0;
   background: #2a2a2a;
 }
 
 [data-theme="dark"] .theme-toggle-btn.active {
-  color: #e4e4e7;
-  background: #333;
+  color: #ededed;
+  background: #27272a;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 

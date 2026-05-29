@@ -1,28 +1,24 @@
 <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="footer-inner">
+        <div class="footer-bottom">
                 <p class="copyright text-muted">
-                  &copy; {{ site.copyright }} | {{ site.title }} By {{ site.author }}
-                </p>
+                        &copy; {{ site.time | date: "%Y" }} {{ site.full_name }}
+                    </p>
+            <div class="theme-toggle-group">
+                <button class="theme-toggle-btn" data-theme="light" aria-label="日间模式" title="日间模式">
+                    <i class="fa fa-sun-o"></i>
+                </button>
+                <button class="theme-toggle-btn" data-theme="dark" aria-label="夜间模式" title="夜间模式">
+                    <i class="fa fa-moon-o"></i>
+                </button>
+                <button class="theme-toggle-btn" data-theme="system" aria-label="跟随系统" title="跟随系统">
+                    <i class="fa fa-desktop"></i>
+                </button>
             </div>
         </div>
     </div>
 </footer>
-
-<!-- 主题切换按钮组 -->
-<div class="theme-toggle-group">
-    <button class="theme-toggle-btn" data-theme="light" aria-label="日间模式" title="日间模式">
-        <i class="fa fa-sun-o"></i>
-    </button>
-    <button class="theme-toggle-btn" data-theme="dark" aria-label="夜间模式" title="夜间模式">
-        <i class="fa fa-moon-o"></i>
-    </button>
-    <button class="theme-toggle-btn" data-theme="system" aria-label="跟随系统" title="跟随系统">
-        <i class="fa fa-desktop"></i>
-    </button>
-</div>
 
 <!-- 回到顶部按钮 -->
 <button id="back-to-top" aria-label="回到顶部" title="回到顶部">
