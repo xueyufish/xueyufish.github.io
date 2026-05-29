@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% if page.url != '/' %}
+{% if page.url != '/' and paginator == nil %}
 <div class="site-banner">
   <div class="site-banner-inner">
     <div class="site-banner-left">
@@ -26,7 +26,7 @@ layout: default
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 post-container">
         {{ content }}
       </div>
-      {% if page.url != '/' %}
+      {% if page.url != '/' and paginator == nil %}
     <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12 home-aside" role="complementary" aria-label="侧边栏">
       <div class="home-aside-section">
         <div class="home-aside-search">
