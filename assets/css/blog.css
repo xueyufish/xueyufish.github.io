@@ -1414,8 +1414,8 @@ h3.home-aside-title {
 .home-pager {
   display: flex;
   justify-content: space-between;
-  margin: 48px 0 24px;
-  padding-top: 24px;
+  margin: 24px 0 24px;
+  padding-top: 12px;
 }
 
 .home-pager a {
