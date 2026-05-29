@@ -938,8 +938,6 @@ body {
 
 /* ========== Detail Page Layout Overrides ========== */
 .post-container:not(.post-container:has(.home-banner)) {
-  margin-left: 0 !important;
-  padding-left: 15px !important;
   margin-top: 0.75rem;
 }
 
@@ -1115,7 +1113,7 @@ body {
   min-width: 0;
 }
 
-.home-aside {
+.home-layout > .home-aside {
   width: 260px;
   flex-shrink: 0;
 }

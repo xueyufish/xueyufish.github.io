@@ -96,4 +96,4 @@ entries-condition-size: 10
 #]
 
 # 资源版本号（用于缓存破坏）
-version: 1.0.2
+version: 1.0.3
