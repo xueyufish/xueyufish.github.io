@@ -416,6 +416,11 @@ pre code {
   color: #808080;
   font-size: 14px;
   margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.post-preview > .post-meta .post-meta-sep {
+  margin: 0 0.4em;
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
@@ -969,7 +974,7 @@ body {
 }
 
 .post-container:not(.post-container:has(.home-banner)) h1.post-title {
-  font-size: 22px !important;
+  font-size: 26px !important;
 }
 
 .sidebar-container h5 {
@@ -979,7 +984,7 @@ body {
 /* ========== Homepage Banner ========== */
 .home-banner {
   border-bottom: 1px solid #f0f0f0 !important;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -1426,6 +1431,7 @@ h3.home-aside-title {
   margin: 0 0 4px 0;
   line-height: 1.4;
   transition: color 0.12s ease, padding-left 0.3s ease;
+  border-bottom: none;
 }
 
 .home-card-link:hover .home-card-title {

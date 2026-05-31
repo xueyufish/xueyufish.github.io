@@ -1,7 +1,7 @@
 /**
  * 文章目录自动生成功能
- * 功能：提取 h1/h2 标题生成目录、滚动高亮当前章节、移动端展开/收起
- * 对应 Markdown：#(h1)、##(h2)
+ * 功能：提取 h2/h3 标题生成目录、滚动高亮当前章节、移动端展开/收起
+ * 对应 Markdown：##(h2)、###(h3)
  */
 
 (function() {
@@ -16,8 +16,8 @@
     tocOverlayId: 'toc-overlay',
     tocClass: 'article-toc',
     activeClass: 'active',
-    titleMinLevel: 1,
-    titleMaxLevel: 2,
+    titleMinLevel: 2,
+    titleMaxLevel: 3,
     scrollOffset: 100,
     throttleDelay: 100
   };
@@ -126,7 +126,7 @@
     tocList.id = CONFIG.tocListId;
     tocList.className = 'toc-list';
 
-    let currentH1Item = null;
+    let currentH2Item = null;
     let currentSubList = null;
 
     headings.forEach((heading, index) => {
@@ -136,25 +136,25 @@
         tocLinks.push(link);
       }
 
-      if (heading.level === 1) {
-        // h1 直接添加到主列表
+      if (heading.level === 2) {
+        // h2 直接添加到主列表
         tocList.appendChild(li);
-        currentH1Item = li;
+        currentH2Item = li;
         currentSubList = null;
-      } else if (heading.level === 2) {
-        // h2 添加到上一个 h1 的子列表
-        if (currentH1Item && !currentSubList) {
-          // 创建子列表并添加到当前 h1 项
+      } else if (heading.level === 3) {
+        // h3 添加到上一个 h2 的子列表
+        if (currentH2Item && !currentSubList) {
+          // 创建子列表并添加到当前 h2 项
           currentSubList = document.createElement('ul');
           currentSubList.className = 'toc-sub-list';
-          currentH1Item.appendChild(currentSubList);
+          currentH2Item.appendChild(currentSubList);
         }
 
         if (currentSubList) {
           currentSubList.appendChild(li);
         } else {
-          // 如果没有 h1 作为父级，直接添加到主列表（降级处理）
-          console.warn('TOC: h2 found without parent h1, adding to main list');
+          // 如果没有 h2 作为父级，直接添加到主列表（降级处理）
+          console.warn('TOC: h3 found without parent h2, adding to main list');
           tocList.appendChild(li);
         }
       }

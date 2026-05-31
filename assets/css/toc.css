@@ -161,14 +161,14 @@
 
 /* === 不同层级的缩进 === */
 
-/* h1 作为一级目录，无缩进 */
-.toc-level-1 > .toc-link {
+/* h2 作为一级目录，无缩进 */
+.toc-level-2 > .toc-link {
   padding-left: 0.5rem;
   font-weight: 600;
 }
 
-/* h2 作为二级目录，有缩进 */
-.toc-level-2 > .toc-link {
+/* h3 作为二级目录，有缩进 */
+.toc-level-3 > .toc-link {
   padding-left: 1.5rem;
   font-size: 1.2rem;
 }
@@ -214,8 +214,8 @@
   transition: opacity 0.2s ease;
 }
 
-.post-container h1:hover .heading-anchor,
-.post-container h2:hover .heading-anchor {
+.post-container h2:hover .heading-anchor,
+.post-container h3:hover .heading-anchor {
   display: inline;
   opacity: 1;
 }
@@ -224,8 +224,8 @@
   color: rgb(96, 165, 250);
 }
 
-.post-container h1.active,
-.post-container h2.active {
+.post-container h2.active,
+.post-container h3.active {
   color: rgb(96, 165, 250);
 }
 
@@ -313,11 +313,11 @@
     font-size: 1.2rem;
   }
 
-  .toc-level-1 > .toc-link {
+  .toc-level-2 > .toc-link {
     font-size: 1.2rem;
   }
 
-  .toc-level-2 > .toc-link {
+  .toc-level-3 > .toc-link {
     font-size: 1.1rem;
   }
 }
@@ -382,13 +382,13 @@
     padding: 0.6rem 0.75rem;
   }
 
-  .toc-level-1 > .toc-link {
+  .toc-level-2 > .toc-link {
     padding-left: 0.5rem;
     font-size: 1.4rem;
     font-weight: 600;
   }
 
-  .toc-level-2 > .toc-link {
+  .toc-level-3 > .toc-link {
     padding-left: 1.75rem;
     font-size: 1.3rem;
   }
