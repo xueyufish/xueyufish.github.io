@@ -16,7 +16,7 @@
     tocOverlayId: 'toc-overlay',
     tocClass: 'article-toc',
     activeClass: 'active',
-    titleMinLevel: 2,
+    titleMinLevel: 1,
     titleMaxLevel: 3,
     scrollOffset: 100,
     throttleDelay: 100
@@ -87,7 +87,11 @@
     const headingElements = container.querySelectorAll(selectors.join(','));
     const result = [];
 
-    headingElements.forEach((heading, index) => {
+    headingElements.forEach((heading) => {
+      if (heading.classList.contains('post-title')) {
+        return;
+      }
+
       const level = parseInt(heading.tagName.substring(1));
       const text = heading.textContent.trim();
 
@@ -96,7 +100,7 @@
           element: heading,
           level: level,
           text: text,
-          id: `heading-${index}`
+          id: `heading-${result.length}`
         });
       }
     });
@@ -136,7 +140,12 @@
         tocLinks.push(link);
       }
 
-      if (heading.level === 2) {
+      if (heading.level === 1) {
+        li.classList.add('toc-level-top');
+        tocList.appendChild(li);
+        currentH2Item = null;
+        currentSubList = null;
+      } else if (heading.level === 2) {
         // h2 直接添加到主列表
         tocList.appendChild(li);
         currentH2Item = li;

@@ -161,6 +161,12 @@
 
 /* === 不同层级的缩进 === */
 
+.toc-level-top > .toc-link {
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
 /* h2 作为一级目录，无缩进 */
 .toc-level-2 > .toc-link {
   padding-left: 0.5rem;
