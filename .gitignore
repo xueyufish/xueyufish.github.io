@@ -26,3 +26,6 @@ Gruntfile.js
 ### Windows 系统文件
 ehthumbs.db
 Thumbs.db
+
+.omo/
+.playwright-mcp/
