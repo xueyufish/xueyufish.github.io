@@ -689,11 +689,11 @@ body {
 }
 #tag_cloud a,
 #tag_cloud .tag {
-  font-size: 14px;
+  font-size: 12px;
   border: none;
-  line-height: 28px;
+  line-height: 22px;
   margin: 0 2px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   background: #D6D6D6;
 }
 #tag_cloud a:hover,
@@ -742,10 +742,15 @@ body {
 }
 .one-tag-list .post-preview {
   position: relative;
+  border-bottom: none;
+  padding: 5px 0;
+}
+.one-tag-list hr {
+  margin: 0;
 }
 .one-tag-list .post-preview > a .post-title {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   margin-top: 20px;
 }
 .one-tag-list .post-preview > a .post-subtitle {
@@ -764,8 +769,8 @@ body {
     margin-left: 20px;
   }
   .one-tag-list .post-preview > a > .post-title {
-    font-size: 18px;
-    line-height: 1.3;
+    font-size: 14px;
+    line-height: 1.5;
   }
   .one-tag-list .post-preview > a > .post-subtitle {
     font-size: 14px;
@@ -776,48 +781,101 @@ body {
 }
 /* Tags support End*/
 /* Archives */
-.archives-list .tag-text {
-  font-weight: 200;
-  /* Hux learn from
-     *     TypeIsBeautiful,
-     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
-     */
-  font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
-  line-height: 1.7;
+.archives-page {
+  max-width: 720px;
 }
-.archives-list .post-preview {
-  position: relative;
+
+.archives-page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-border-light);
+  color: var(--color-text);
 }
-.archives-list .post-preview > a .post-title {
+
+.archive-year {
+  margin-bottom: 2.5rem;
+}
+
+.archives-page .archive-year-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-lighter);
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.archive-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.15s ease, padding 0.15s ease;
+  margin: 0 -0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.archive-item:hover {
+  background: var(--color-bg-alt);
+}
+
+.archive-item-date {
+  font-size: 13px;
+  color: var(--color-text-lighter);
+  min-width: 4.5em;
+  flex-shrink: 0;
+  font-feature-settings: "tnum";
+  font-family: "Inter", -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.archive-item-title {
   font-size: 14px;
-  font-weight: 500;
-  margin-top: 10px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.5;
+  transition: color 0.15s ease;
 }
-.archives-list .post-preview > .post-meta {
-  position: absolute;
-  right: 5px;
-  bottom: 0px;
-  margin: 0px;
-  font-size: 12px;
-  line-height: 12px;
+
+.archive-item:hover .archive-item-title {
+  color: var(--color-accent);
 }
+
 @media only screen and (min-width: 768px) {
-  .archives-list .post-preview {
+  .archives-page {
     margin-left: 20px;
   }
-  .archives-list .post-preview > a > .post-title {
-    font-size: 14px;
-    line-height: 1.3;
-  }
-  .archives-list .post-preview .post-meta {
+
+  .archive-item-date {
     font-size: 14px;
   }
 }
-.archives-list hr {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 0;
-  border-top: 1px solid #eee;
+
+@media (max-width: 480px) {
+.archives-page .archive-year-title {
+    font-size: 20px;
+  }
+
+  .archive-item {
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .archive-item-date {
+    font-size: 12px;
+    min-width: auto;
+  }
+
+  .archive-item-title {
+    font-size: 14px;
+  }
 }
 /* Archives End*/
 /* Hux make all image responsible in post-container */

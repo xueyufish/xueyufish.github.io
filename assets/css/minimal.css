@@ -146,9 +146,14 @@ body {
 }
 
 /* 标签列表卡片 */
-.one-tag-list .post-preview,
+.one-tag-list .post-preview {
+  border-bottom: none;
+  padding: 1.25rem 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+
 .archives-list .post-preview {
-  border-bottom: 1px solid var(--color-border-light);
   padding: 1.25rem 0;
   margin-bottom: 0;
   background: transparent;

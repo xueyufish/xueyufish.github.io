@@ -269,7 +269,11 @@
 
   /* 归档列表优化 */
   .archives-list .post-preview > a .post-title {
-    font-size: 13px;
+    font-size: 16px;
+  }
+  .archives-list .post-preview > span {
+    font-size: 20px;
+    font-weight: 600;
   }
 
   .archives-list .post-preview > .post-meta {
