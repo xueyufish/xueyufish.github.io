@@ -61,12 +61,29 @@ Only gem plugin: `jekyll-paginate`. The two `_plugins/*.rb` files are auto-loade
 Blog images are hosted on **Cloudflare R2** (`blog-assets` bucket) via `assets.yuxiumin.com`, not in git.
 
 - **Upload script:** `scripts/upload-to-r2 <file>... --dir <slug>`
-- **Upload script (batch):** `scripts/upload-to-r2 ~/Desktop/*.png --dir my-post`
 - **URL pattern:** `https://assets.yuxiumin.com/attachment/{slug}/{filename}`
 - **CLI env:** `CLOUDFLARE_API_TOKEN` must be set (from Cloudflare dashboard → API Tokens)
 - **wrangler version:** local wrangler (tested with 4.112.0) requires `--remote` flag due to macOS 12 incompatibility — both scripts pass it automatically
 - **Config:** `wrangler.toml` at project root with account ID
 - `assets/attachment/` is gitignored — images exist only in R2, not in the repo
+
+### Usage examples
+
+```bash
+# 1. 上传单张图片（--dir 是你的文章 slug，同名文件会覆盖）
+scripts/upload-to-r2 ~/Desktop/diagram.png --dir raft-protocol-intro
+
+# 2. 批量上传多张图到同一文章
+scripts/upload-to-r2 ~/Desktop/fig1.png ~/Desktop/fig2.png --dir my-post-slug
+
+# 3. 从桌面丢所有 PNG
+scripts/upload-to-r2 ~/Desktop/*.png --dir my-post-slug
+
+# 4. 不指定 --dir：脚本会提示输入，默认使用当前目录名
+scripts/upload-to-r2 ~/Desktop/photo.jpg
+```
+
+上传成功后会自动复制 Markdown 图片语法到剪贴板，直接 `Cmd+V` 粘贴到文章即可。
 
 ## Build & repo excludes
 
