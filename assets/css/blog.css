@@ -1613,17 +1613,16 @@ h3.home-aside-title {
 }
 .post-tag {
   display: inline-block;
-  padding: 3px 10px;
-  font-size: 13px;
-  color: #8b8b8b;
-  background: #f7f7f7;
-  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 3px;
   text-decoration: none;
-  transition: all 0.12s ease;
 }
 .post-tag:hover {
-  color: #0085a1;
-  background: #e8e8e8;
+  color: #fff;
+  background: #0085a1;
 }
 
 .theme-toggle-btn.active {

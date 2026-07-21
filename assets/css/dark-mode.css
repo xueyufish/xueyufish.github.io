@@ -817,12 +817,14 @@
   background: #2a2a2a;
 }
 
-[data-theme="dark"] .home-aside-tags a {
+[data-theme="dark"] .home-aside-tags a,
+[data-theme="dark"] .post-tag {
   color: #a1a1aa;
   background: #2a2a2a;
 }
 
-[data-theme="dark"] .home-aside-tags a:hover {
+[data-theme="dark"] .home-aside-tags a:hover,
+[data-theme="dark"] .post-tag:hover {
   color: #fff;
   background: #60a5fa;
 }
