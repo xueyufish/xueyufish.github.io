@@ -1604,6 +1604,28 @@ h3.home-aside-title {
   background: #e8e8e8;
 }
 
+/* 文章标签 */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.post-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 13px;
+  color: #8b8b8b;
+  background: #f7f7f7;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.12s ease;
+}
+.post-tag:hover {
+  color: #0085a1;
+  background: #e8e8e8;
+}
+
 .theme-toggle-btn.active {
   color: #1a1a1a;
   background: #fff;
