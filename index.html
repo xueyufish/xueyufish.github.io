@@ -23,13 +23,6 @@ layout: page
     {% for post in paginator.posts %}
     <article class="home-card">
       <a href="{{ post.url | prepend: site.baseurl }}" class="home-card-link">
-        <div class="home-card-cover">
-          {% if post.header-img and post.header-img != "" %}
-          <img src="{{ post.header-img }}" alt="{{ post.title }}" loading="lazy">
-          {% else %}
-          <div class="home-card-placeholder">{{ post.title | truncate: 2, "" }}</div>
-          {% endif %}
-        </div>
         <div class="home-card-body">
           <h2 class="home-card-title">{{ post.title }}</h2>
           <p class="home-card-excerpt">
