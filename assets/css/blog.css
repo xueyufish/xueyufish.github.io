@@ -1608,9 +1608,10 @@ h3.home-aside-title {
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   margin-top: 10px;
 }
+
 .post-tag {
   display: inline-block;
   padding: 2px 8px;
