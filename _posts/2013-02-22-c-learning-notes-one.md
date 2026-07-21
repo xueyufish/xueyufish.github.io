@@ -2,8 +2,8 @@
 layout:     post
 title:      "重温 C 语言 (一)"
 date:       2013-02-22
-author:     "xueyufish"
-keyword:    "程序语言, C, xueyufish"
+author:     "yuxiumin"
+keyword:    "程序语言, C, yuxiumin"
 tags:
     - 程序语言
     - C

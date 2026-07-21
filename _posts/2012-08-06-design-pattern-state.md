@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 状态模式(State pattern)"
 date:       2012-08-06
-author:     "xueyufish"
-keyword:    "设计模式, 状态模式, State pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 状态模式, State pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -114,4 +114,4 @@ ConcreteStateA handle ：testB
 ```
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/state](https://github.com/xueyufish/design-pattern/tree/master/state)
+[https://github.com/yuxiumin/design-pattern/tree/master/state](https://github.com/yuxiumin/design-pattern/tree/master/state)

@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 享元模式(Flyweight)"
 date:       2012-06-20
-author:     "xueyufish"
-keyword:    "设计模式, 享元模式, Flyweight Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 享元模式, Flyweight Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -133,4 +133,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/flyweight](https://github.com/xueyufish/design-pattern/tree/master/flyweight)
+[https://github.com/yuxiumin/design-pattern/tree/master/flyweight](https://github.com/yuxiumin/design-pattern/tree/master/flyweight)

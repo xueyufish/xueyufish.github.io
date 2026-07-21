@@ -2,8 +2,8 @@
 layout:     post
 title:      "分布式系统CAP理论和BASE思想概述"
 date:       2017-04-22
-author:     "xueyufish"
-keyword:    "分布式, 分布式理论, CAP, BASE, xueyufish"
+author:     "yuxiumin"
+keyword:    "分布式, 分布式理论, CAP, BASE, yuxiumin"
 tags:
     - CAP
     - BASE

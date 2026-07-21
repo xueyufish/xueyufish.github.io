@@ -2,8 +2,8 @@
 layout:     post
 title:      "Kong Api网关简介(一) 安装运行"
 date:       2018-07-08
-author:     "xueyufish"
-keyword:    "开源项目, 网关, Gateway, Kong, Nginx, xueyufish"
+author:     "yuxiumin"
+keyword:    "开源项目, 网关, Gateway, Kong, Nginx, yuxiumin"
 description: "Kong Api网关安装运行简介"
 tags:
     - 开源项目
@@ -239,7 +239,7 @@ Content-Length: 58
 发现返回的是<code>404 Not Found</code>，因为我们在 route 中定义了 host，所以需要在 header 中指定 host。 根据 Kong Admin Api 要求，添加 Route 时，methods、hosts、path三者至少选择一个。修改请求如下：
 
 ```shell
-[xueyufish@izbp13cqwumhn3wzp2j5mqz kong-gateway]$ curl -i -X GET \
+[yuxiumin@izbp13cqwumhn3wzp2j5mqz kong-gateway]$ curl -i -X GET \
 >   --url http://127.0.0.1:8000/ \
 >   --header 'Host: baidu.com'
 HTTP/1.1 200 OK

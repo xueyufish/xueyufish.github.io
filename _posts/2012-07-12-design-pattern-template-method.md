@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 模板方法(Template Method)"
 date:       2012-07-12
-author:     "xueyufish"
-keyword:    "设计模式, 模板方法, Template Method, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 模板方法, Template Method, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -105,4 +105,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/template-method](https://github.com/xueyufish/design-pattern/tree/master/template-method)
+[https://github.com/yuxiumin/design-pattern/tree/master/template-method](https://github.com/yuxiumin/design-pattern/tree/master/template-method)

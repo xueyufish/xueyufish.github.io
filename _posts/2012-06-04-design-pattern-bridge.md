@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 桥接模式(Bridge)"
 date:       2012-06-04
-author:     "xueyufish"
-keyword:    "设计模式, 桥接模式, Bridge Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 桥接模式, Bridge Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -114,4 +114,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/bridge](https://github.com/xueyufish/design-pattern/tree/master/bridge)
+[https://github.com/yuxiumin/design-pattern/tree/master/bridge](https://github.com/yuxiumin/design-pattern/tree/master/bridge)

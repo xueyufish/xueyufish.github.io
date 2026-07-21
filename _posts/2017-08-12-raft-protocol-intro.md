@@ -2,8 +2,8 @@
 layout:     post
 title:      "Raft 协议简介"
 date:       2017-08-12
-author:     "xueyufish"
-keyword:    "Raft, 分布式, 分布式协议, xueyufish"
+author:     "yuxiumin"
+keyword:    "Raft, 分布式, 分布式协议, yuxiumin"
 description: "Raft 协议简介"
 tags:
     - Raft

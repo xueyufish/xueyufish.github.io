@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 工厂方法(Factory Method)"
 date:       2012-04-04
-author:     "xueyufish"
-keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, yuxiumin"
 tags:
     - 设计模式
 ---
@@ -82,4 +82,4 @@ public class ProductB implements Product {
 4. 实现了框架间的解耦。高层模块只需要知道产品的抽象类，其他的实现类都不用关心，符合[迪米特法则](https://en.wikipedia.org/wiki/Law_of_Demeter)；也符合[依赖倒置原则](https://en.wikipedia.org/wiki/Dependency_inversion_principle)，只依赖产品类的抽象；同时也符合[里氏替换原则](https://en.wikipedia.org/wiki/Liskov_substitution_principle)，使用产品子类替换产品父类。
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/factory-method](https://github.com/xueyufish/design-pattern/tree/master/factory-method)
+[https://github.com/yuxiumin/design-pattern/tree/master/factory-method](https://github.com/yuxiumin/design-pattern/tree/master/factory-method)

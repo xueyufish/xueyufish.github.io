@@ -2,8 +2,8 @@
 layout:     post
 title:      "REST API 设计指南"
 date:       2019-01-29
-author:     "xueyufish"
-keyword:    "架构设计, REST, API, xueyufish"
+author:     "yuxiumin"
+keyword:    "架构设计, REST, API, yuxiumin"
 tags:
     - 架构设计
     - REST
@@ -13,7 +13,7 @@ REST(Representational State Transfer) 是在 2000 年由 Roy Fielding 起草的 
 
 作为使用 HTTP 协议的 RESTful API，主要遵循以下几个设计原则:
  1. REST API 主要围绕资源进行设计，包含任意类型的对象、数据、或者可以被客户端访问的服务;
- 2. 每一个资源通常有一个资源标识符，唯一的标识了资源, 例如: `http://example.xueyufish.com/users/1`;
+ 2. 每一个资源通常有一个资源标识符，唯一的标识了资源, 例如: `http://example.yuxiumin.com/users/1`;
  3. 客户端通过交换资源来表示与服务端的交互，例如，大多数应用使用 JSON 作为交换格式，也有通过 XML 或者 Protobuf 进行交互;
  4. REST API 使用统一接口帮助解耦客户端和服务端实现，最通用的操作包括 GET, POST, PUT, PATCH, 和 DELETE.
  5. REST API 使用无状态请求模型。HTTP 请求应该是独立并且可能以任何顺序发生的，所以不能在请求之间保留瞬时状态信息，唯一可以存储信息的地方是资源本身，每个请求都应该是一个原子操作。
@@ -23,26 +23,26 @@ REST(Representational State Transfer) 是在 2000 年由 Roy Fielding 起草的 
 REST API 通常围绕资源来组织，在业务系统中，从架构设计出发，通常会聚焦在业务实体或者领域对象的聚合上。我们在组织资源的 URI 时，应当尽可能的使用资源本身的名词而非基于资源操作的动词。例如，对于订单创建的操作：
 
 ```
-POST https://example.xueyufish.com/orders //  (1) Good
+POST https://example.yuxiumin.com/orders //  (1) Good
 
-POST https://example.xueyufish.com/create-order // (2) Bad
+POST https://example.yuxiumin.com/create-order // (2) Bad
 ```
 
 请求 (1) 使用 POST 方式创建订单(基于订单资源本身的名词)，请求 (2) 基于动词，更加推荐使用第一种。在复杂业务场景中，API 和下游数据库的实体往往不是一一对应的，更好的做法应该是和 DDD 中领域对象的聚合相对应。
 
 此外，推荐在 API 中采用统一风格的命名习惯，保留一致性的结构层次。例如：
 ```
-GET https://example.xueyufish.com/orders    // (3)
+GET https://example.yuxiumin.com/orders    // (3)
 
-GET https://example.xueyufish.com/orders/{id}   // (4)
+GET https://example.yuxiumin.com/orders/{id}   // (4)
 ```
 请求 (3) 查询所有的订单列表，请求 (4) 查询具体 id 的订单信息。在 URI 中，通常推荐复数形式。
 
 也可以使用类似的层级关系来表达更深层的逻辑含义，例如：
 ```
-GET https://example.xueyufish.com/orders/1/customers    // (5)
+GET https://example.yuxiumin.com/orders/1/customers    // (5)
 
-GET https://example.xueyufish.com/customers/10/orders   // (6)
+GET https://example.yuxiumin.com/customers/10/orders   // (6)
 ```
 请求 (5) 查询订单 1 下所关联的所有客户信息，而请求 (6) 则查询客户 10 下所关联的所有订单信息。
 
@@ -75,17 +75,17 @@ HTTP 协议定义了为请求分配语义级别含义的方法，大多数 RESTf
 ### Media types 
 在 HTTP 协议中，API 消费者和服务通过请求和响应来交换资源，而交互格式通过 `MIME types` 来定义。例如，对于 JSON 格式使用 `media type = application/json`, 对于 XML 格式使用 `media type = application/xml`。请求和响应的 `Content-Type` 头包含了具体的资源格式，例如以下 POST 请求包含 JSON 格式数据：
 ```
-POST https://example.xueyufish.com/orders HTTP/1.1
+POST https://example.yuxiumin.com/orders HTTP/1.1
 Content-Type: application/json; charset=utf-8
 Content-Length: 57
 
-{"Id":1,"Name":"xueyufish","Category":"Widgets","Price":1.99}
+{"Id":1,"Name":"yuxiumin","Category":"Widgets","Price":1.99}
 ```
 如果服务端不支持指定的媒体类型，将返回 HTTP 状态码 `415(Unsupported Media Type)`。
 
 客户端也可以在请求头中包含一个 Accept 字段指定期望从服务端接收的媒体类型的列表，例如：
 ```
-GET https://example.xueyufish.com/orders HTTP/1.1
+GET https://example.yuxiumin.com/orders HTTP/1.1
 Accept: application/json
 ```
 如果服务端不能匹配任何媒体类型，将返回 HTTP 状态码 `406(Not Acceptable)`。
@@ -195,7 +195,7 @@ GET /customers?fields=id,name,age,updated_at&state=open&sort=-updated_at
 URI 版本的方式直接在请求 URI 中添加版本号，是相对简单的方式，但是依赖服务端路由请求到指定的 endpoint。例如：
 
 ```
-https://example.xueyufish.com/v2/customers/3
+https://example.yuxiumin.com/v2/customers/3
 ```
 
 但是，当 Web API 经过多次迭代时，它可能变得难以操作，并且服务器必须支持许多不同的版本。同时这个方案还会使得 HATEOAS 的实现复杂化，因为所有链接都需要包含版本号。
@@ -203,14 +203,14 @@ https://example.xueyufish.com/v2/customers/3
 ### 查询字符串版本
 查询字符串版本的方式就是将版本号放在 URI 的查询字符串中，如下：
 ```
-https://example.xueyufish.com/customers/3?version=2
+https://example.yuxiumin.com/customers/3?version=2
 ```
 这种方法具有语义上的优势，即总是从相同的URI中检索相同的资源，但它依赖于处理请求的代码来解析查询字符串并返回适当的HTTP响应。同样，这个方案也会使得 HATEOAS 的实现复杂化，因为所有链接都需要包含版本号。
 
 ### 头部版本
 头部版本指客户端将版本号添加在自定义头中，随请求一起发送给服务端，例如：
 ```
-GET https://exmaple.xueyufish.com/customers/3 HTTP/1.1
+GET https://exmaple.yuxiumin.com/customers/3 HTTP/1.1
 Custom-Header: api-version=1
 ```
 相比较前两种，此种方式实现 HATEOAS 需要在链接中包含自定义头。
@@ -218,15 +218,15 @@ Custom-Header: api-version=1
 ### 媒体类型版本
 媒体类型版本值客户端发起请求时将版本号放置在 Accept 头中。客户端通过 Accept 头来指定期望从服务端接收的媒体类型的列表，例如：
 ```
-GET https://exmaple.xueyufish.com/customers/3 HTTP/1.1
-Accept: application/vnd.example-xueyufish.v1+json
+GET https://exmaple.yuxiumin.com/customers/3 HTTP/1.1
+Accept: application/vnd.example-yuxiumin.v1+json
 ```
-上述请求的 Accept 头中 `vnd.example-xueyufish.v1` 告诉服务端返回版本 1 的资源，同时 json 元素通知服务端响应体以 json 格式返回。
+上述请求的 Accept 头中 `vnd.example-yuxiumin.v1` 告诉服务端返回版本 1 的资源，同时 json 元素通知服务端响应体以 json 格式返回。
 
 web 服务端接收请求后，以 `Content-Type` 头返回:
 ```http
 HTTP/1.1 200 OK
-Content-Type: application/exmaple.xueyufish.com.v1+json; charset=utf-8
+Content-Type: application/exmaple.yuxiumin.com.v1+json; charset=utf-8
 
 {"id":3,"name":"Contoso LLC","address":"1 Microsoft Way Redmond WA 98053"}
 ```

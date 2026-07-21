@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 装饰器模式(Decorator)"
 date:       2012-05-08
-author:     "xueyufish"
-keyword:    "设计模式, 装饰器模式, Decorator Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 装饰器模式, Decorator Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -127,4 +127,4 @@ public class Client {
 ```
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/decorator](https://github.com/xueyufish/design-pattern/tree/master/decorator)
+[https://github.com/yuxiumin/design-pattern/tree/master/decorator](https://github.com/yuxiumin/design-pattern/tree/master/decorator)

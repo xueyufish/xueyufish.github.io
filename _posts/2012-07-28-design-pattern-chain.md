@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 责任链模式(Chain-of-responsibility pattern)"
 date:       2012-07-28
-author:     "xueyufish"
-keyword:    "设计模式, 责任链模式, Chain-of-responsibility pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 责任链模式, Chain-of-responsibility pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -158,4 +158,4 @@ Manager has solved the problem!
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern-java/tree/master/chain](https://github.com/xueyufish/design-pattern-java/tree/master/chain)
+[https://github.com/yuxiumin/design-pattern-java/tree/master/chain](https://github.com/yuxiumin/design-pattern-java/tree/master/chain)

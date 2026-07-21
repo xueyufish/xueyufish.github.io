@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 策略模式(Strategy)"
 date:       2012-06-29
-author:     "xueyufish"
-keyword:    "设计模式, 策略模式, Strategy Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 策略模式, Strategy Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -120,4 +120,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/strategy](https://github.com/xueyufish/design-pattern/tree/master/strategy)
+[https://github.com/yuxiumin/design-pattern/tree/master/strategy](https://github.com/yuxiumin/design-pattern/tree/master/strategy)

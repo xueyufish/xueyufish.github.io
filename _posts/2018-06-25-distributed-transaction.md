@@ -2,8 +2,8 @@
 layout:     post
 title:      "分布式事务"
 date:       2018-06-25
-author:     "xueyufish"
-keyword:    "分布式, 事务, 分布式事务, xueyufish"
+author:     "yuxiumin"
+keyword:    "分布式, 事务, 分布式事务, yuxiumin"
 description: "分布式系统事务简述"
 tags:
     - 分布式

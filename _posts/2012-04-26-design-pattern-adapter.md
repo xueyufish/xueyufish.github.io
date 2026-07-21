@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 适配器模式(Adapter)"
 date:       2012-04-26
-author:     "xueyufish"
-keyword:    "设计模式, 适配器模式, Adapter Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 适配器模式, Adapter Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构性模式
@@ -91,4 +91,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/adapter](https://github.com/xueyufish/design-pattern/tree/master/adapter)
+[https://github.com/yuxiumin/design-pattern/tree/master/adapter](https://github.com/yuxiumin/design-pattern/tree/master/adapter)

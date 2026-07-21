@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 迭代器模式(Iterator)"
 date:       2012-07-22
-author:     "xueyufish"
-keyword:    "设计模式, 迭代器模式, Iterator Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 迭代器模式, Iterator Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -163,4 +163,4 @@ ddd
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/iterator](https://github.com/xueyufish/design-pattern/tree/master/iterator)
+[https://github.com/yuxiumin/design-pattern/tree/master/iterator](https://github.com/yuxiumin/design-pattern/tree/master/iterator)

@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 外观模式(Facade)"
 date:       2012-05-29
-author:     "xueyufish"
-keyword:    "设计模式, 外观模式, Facade Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 外观模式, Facade Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -99,4 +99,4 @@ public class Client {
 }
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/facade](https://github.com/xueyufish/design-pattern/tree/master/facade)
+[https://github.com/yuxiumin/design-pattern/tree/master/facade](https://github.com/yuxiumin/design-pattern/tree/master/facade)

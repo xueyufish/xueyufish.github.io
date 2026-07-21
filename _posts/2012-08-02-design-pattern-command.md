@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 命令模式(Command pattern)"
 date:       2012-08-02
-author:     "xueyufish"
-keyword:    "设计模式, 命令模式, Command pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 命令模式, Command pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -133,4 +133,4 @@ Receiver.turnOff()
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/command](https://github.com/xueyufish/design-pattern/tree/master/command)
+[https://github.com/yuxiumin/design-pattern/tree/master/command](https://github.com/yuxiumin/design-pattern/tree/master/command)

@@ -3,7 +3,7 @@ layout:     post
 title:      "JVM 类加载机制"
 keyword:    "Java, JVM, ClassLoader"
 date:       2014-04-22
-author:     "xueyufish"
+author:     "yuxiumin"
 tags:
     - Java
 ---

@@ -3,7 +3,7 @@ layout:     post
 title:      "Lua学习参考"
 date:       2018-07-07
 description: "Lua学习参考"
-keyword:    "编程语言, Lua, xueyufish"
+keyword:    "编程语言, Lua, yuxiumin"
 tags:
     - 编程语言
     - Lua

@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 原型模式(Prototype)"
 date:       2012-04-18
-author:     "xueyufish"
-keyword:    "设计模式, 原型模式, Prototype Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 原型模式, Prototype Pattern, yuxiumin"
 tags:
     - 设计模式
     - 创建型模式
@@ -90,4 +90,4 @@ public static void main(String... args) {
 ```
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/prototype](https://github.com/xueyufish/design-pattern/tree/master/prototype)
+[https://github.com/yuxiumin/design-pattern/tree/master/prototype](https://github.com/yuxiumin/design-pattern/tree/master/prototype)

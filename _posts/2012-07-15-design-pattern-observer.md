@@ -2,8 +2,8 @@
 layout:     post
 title:      "设计模式 - 观察者(Observer)"
 date:       2012-07-15
-author:     "xueyufish"
-keyword:    "设计模式, 观察者, Observer Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 观察者, Observer Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -163,4 +163,4 @@ ConcreteObserver3: wangwu get message 789
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/observer](https://github.com/xueyufish/design-pattern/tree/master/observer)
+[https://github.com/yuxiumin/design-pattern/tree/master/observer](https://github.com/yuxiumin/design-pattern/tree/master/observer)
