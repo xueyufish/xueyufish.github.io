@@ -16,7 +16,7 @@ tags:
 对象行为模式
 
 # 结构
-![观察者模式结构](/assets/attachment/design-pattern/ac2f733f8f9dbe2564a6d4c4e358abaf.jpg)
+![观察者模式结构](https://assets.yuxiumin.com/attachment/design-pattern/ac2f733f8f9dbe2564a6d4c4e358abaf.jpg)
 
 观察者模式由以下几部分组成：
 

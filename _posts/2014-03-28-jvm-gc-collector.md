@@ -8,13 +8,13 @@ tags:
     - Java
 ---
 
-![HotSpot 垃圾收集器.jpg](/assets/attachment/jvm-gc-collector/c625baa0-dde6-449e-93df-c3a67f2f430f.jpg)
+![HotSpot 垃圾收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/c625baa0-dde6-449e-93df-c3a67f2f430f.jpg)
 
 以上是 HotSpot 虚拟机中的 7 个垃圾收集器，连线表示垃圾收集器可以配合使用。
 
 ### Serial 收集器
 
-![Serial 垃圾收集器.jpg](/assets/attachment/jvm-gc-collector/22fda4ae-4dd5-489d-ab10-9ebfdad22ae0.jpg)
+![Serial 垃圾收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/22fda4ae-4dd5-489d-ab10-9ebfdad22ae0.jpg)
 
 Serial 收集器是单线程的收集器，不仅意味着只会使用一个线程进行垃圾收集工作，更重要的是它在进行垃圾收集时，必须暂停所有其他工作线程，往往造成过长的等待时间。
 
@@ -24,7 +24,7 @@ Serial 收集器是单线程的收集器，不仅意味着只会使用一个线�
 
 ### ParNew 收集器
 
-![ParNew 垃圾收集器.jpg](/assets/attachment/jvm-gc-collector/81538cd5-1bcf-4e31-86e5-e198df1e013b.jpg)
+![ParNew 垃圾收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/81538cd5-1bcf-4e31-86e5-e198df1e013b.jpg)
 
 它是 Serial 收集器的多线程版本。是 Server 模式下的虚拟机首选新生代收集器，除了性能原因外，主要是因为除了 Serial 收集器，只有它能与 CMS 收集器配合工作。
 
@@ -42,7 +42,7 @@ Parallel Scavenge 收集器是并行的多线程收集器。其它收集器关�
 
 ### 3.4 Serial Old 收集器
 
-![Serial Old 收集器.jpg](/assets/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
+![Serial Old 收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
 
 Serial Old 是 Serial 收集器的老年代版本，也是给 Client 模式下的虚拟机使用。如果用在 Server 模式下，它有两大用途：
 
@@ -51,13 +51,13 @@ Serial Old 是 Serial 收集器的老年代版本，也是给 Client 模式下�
 
 ### Parallel Old 收集器
 
-![Parallel Old 收集器.jpg](/assets/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
+![Parallel Old 收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
 
 Parallel Scavenge 收集器的老年代版本。在注重吞吐量以及 CPU 资源敏感的场合，都可以优先考虑 Parallel Scavenge 加 Parallel Old 收集器。
 
 ### CMS 收集器
 
-![CMS 收集器.jpg](/assets/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
+![CMS 收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/08f32fd3-f736-4a67-81ca-295b2a7972f2.jpg)
 CMS（Concurrent Mark Sweep），从 Mark Sweep 可以知道它是基于标记-清除算法实现的。
 
 特点：并发收集、低停顿。
@@ -79,7 +79,7 @@ CMS（Concurrent Mark Sweep），从 Mark Sweep 可以知道它是基于标记-�
 
 ### G1 收集器
 
-![G1 收集器.jpg](/assets/attachment/jvm-gc-collector/f99ee771-c56f-47fb-9148-c0036695b5fe.jpg)
+![G1 收集器.jpg](https://assets.yuxiumin.com/attachment/jvm-gc-collector/f99ee771-c56f-47fb-9148-c0036695b5fe.jpg)
 
 G1（Garbage-First）收集器是当今收集器技术发展最前沿的成果之一，它是一款面向服务端应用的垃圾收集器，HotSpot 开发团队赋予它的使命是（在比较长期的）未来可以替换掉 JDK 1.5 中发布的 CMS 收集器。它具备如下特点：
 

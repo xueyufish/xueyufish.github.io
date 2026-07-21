@@ -25,7 +25,7 @@ youtube_username:   xueyufish
 highlighter: rouge
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "scripts", "*.gemspec", ".playwright-mcp"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "scripts", "*.gemspec", ".playwright-mcp", "assets/attachment"]
 anchorjs: true
 
 # 性能优化配置

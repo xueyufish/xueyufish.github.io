@@ -16,7 +16,7 @@ tags:
 对象行为模式
 
 # 结构
-![策略模式结构](/assets/attachment/design-pattern/a377258801ec102e4ccf0d07af0e4f37.png)
+![策略模式结构](https://assets.yuxiumin.com/attachment/design-pattern/a377258801ec102e4ccf0d07af0e4f37.png)
 
 策略模式由以下部分组成:
 

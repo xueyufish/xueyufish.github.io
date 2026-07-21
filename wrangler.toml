@@ -1,0 +1,10 @@
+# Cloudflare Workers / R2 配置
+# 用于 wrangler CLI 上传博客图片到 R2 存储桶
+# 在运行 wrangler login 后生效
+
+name = "xueyufish-assets"
+main = ""
+
+# 注意: 运行 wrangler login 后 wrangler 会自动获取 account_id
+# 如需手动指定，取消下面注释并填写:
+# account_id = "<你的 Cloudflare Account ID>"

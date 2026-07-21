@@ -8,7 +8,7 @@ tags:
     - 工作
 ---
 
-![Title](/assets/attachment/why-to-join-a-startup/title.jpg)
+![Title](https://assets.yuxiumin.com/attachment/why-to-join-a-startup/title.jpg)
 
 转眼在家陪笑笑也有一个月的时间，看着她一天天长大确实是最开心的事情。明天就要开始新的一段职业生涯，新的环境、新的同事，一切都充满了期待与跳转。
 
