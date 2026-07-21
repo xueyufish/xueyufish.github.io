@@ -56,11 +56,23 @@ Only gem plugin: `jekyll-paginate`. The two `_plugins/*.rb` files are auto-loade
 - **HTML compression:** `compress_html` is enabled in `_config.yml`.
 - **CDN vendors:** Font Awesome (`cdn.staticfile.org`), MathJax and FastClick (`cdn.bootcss.com`).
 
+## Image storage (Cloudflare R2)
+
+Blog images are hosted on **Cloudflare R2** (`blog-assets` bucket) via `assets.yuxiumin.com`, not in git.
+
+- **Upload script:** `scripts/upload-to-r2 <file>... --dir <slug>`
+- **Upload script (batch):** `scripts/upload-to-r2 ~/Desktop/*.png --dir my-post`
+- **URL pattern:** `https://assets.yuxiumin.com/attachment/{slug}/{filename}`
+- **CLI env:** `CLOUDFLARE_API_TOKEN` must be set (from Cloudflare dashboard → API Tokens)
+- **wrangler version:** local wrangler (tested with 4.112.0) requires `--remote` flag due to macOS 12 incompatibility — both scripts pass it automatically
+- **Config:** `wrangler.toml` at project root with account ID
+- `assets/attachment/` is gitignored — images exist only in R2, not in the repo
+
 ## Build & repo excludes
 
-`_config.yml` `exclude` omits from the build: `less`, `node_modules`, `Gruntfile.js`, `package.json`, `README.md`, `scripts`, `*.gemspec`, `.playwright-mcp`.
+`_config.yml` `exclude` omits from the build: `less`, `node_modules`, `Gruntfile.js`, `package.json`, `README.md`, `scripts`, `*.gemspec`, `.playwright-mcp`, `assets/attachment`.
 
-`.gitignore` additionally excludes: `_site/`, `.jekyll-metadata`, `.sass-cache/`, `.backup/`, `package.json`, `Gruntfile.js`, `*.sh`, `.omo/`, `.playwright-mcp/`.
+`.gitignore` additionally excludes: `_site/`, `.jekyll-metadata`, `.sass-cache/`, `.backup/`, `package.json`, `Gruntfile.js`, `*.sh`, `.omo/`, `.playwright-mcp/`, `.wrangler/`, `assets/attachment/`.
 
 ## CI
 
