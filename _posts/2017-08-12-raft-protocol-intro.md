@@ -17,7 +17,7 @@ Raft 是一种为了管理复制日志的一致性算法。它提供了和 Paxos
 1. **领导人 (Leader)**: 负责处理来自客户端的请求，管理日志复制、以及与 Follower 保持心跳以维持其领导人地位。在一个任期内,领导人一直都会是领导人直到自己宕机了。
 2. **追随者 (Follower)**: 刚启动时所有节点为 Follower 状态，响应 Leader 的日志同步请求，响应 Candidate 的请求，把请求到 Follower 的事务转发给 Leader；
 3. **候选人 (Candidate)**: 负责选举投票，Raft 刚启动时由一个节点从 Follower 转为 Candidate 发起选举，选举出 Leader 后从 Candidate 转为 Leader  状态；
-![Raft协议角色](/assets/attachment/raft-protocol-intro/e69b90e3e5b3b1faf66e8dc088d780e3.png)
+![Raft协议角色](https://assets.yuxiumin.com/attachment/raft-protocol-intro/e69b90e3e5b3b1faf66e8dc088d780e3.png)
 
 # 任期
 Raft 中时间被划分成任意长度的任期 (Term)，每个任期开始都是一次选举。在选举成功后，Leader 会管理整个集群直到任期结束。有时候选举会失败，那么这个任期就会没有 Leader 而结束，一个新的任期（和一次新的选举）会很快重新开始。Raft 保证了在一个给定的任期内，最多只有一个 Leader。针对某个任期的选举有下面几种可能：
@@ -26,7 +26,7 @@ Raft 中时间被划分成任意长度的任期 (Term)，每个任期开始都�
 3. 如果 Leader 或 Candidate 发现自己的 Term 比其他 Follower 小，Leader 或 Candidate 转为 Follower，Term 递增。
 4. 如果 Follower 发现自己的 Term 比其他 Follower 小，更新 Term 与其他 Follower 保持一致。
 
-![Raft任期](/assets/attachment/raft-protocol-intro/2c8ab2c4739c177554c72b1979e48328.png)
+![Raft任期](https://assets.yuxiumin.com/attachment/raft-protocol-intro/2c8ab2c4739c177554c72b1979e48328.png)
 
 # Leader 选举
 Raft 使用心跳机制来触发 Leader 选举。当服务器程序启动时，他们都是 Follower 身份。一个服务器节点继续保持着 Follower 状态直到他从 Leader 或者 Candidate 处接收到有效的 RPCs。
@@ -49,7 +49,7 @@ Raft 协议强依赖 Leader 节点的可用性来确保集群数据的一致性�
 ### 数据到达 Leader 节点前
 
 这个阶段 Leader 的不可用对整个系统的一致性不造成影响。
-![数据到达Leader前的不一致性](/assets/attachment/raft-protocol-intro/15fdd1dc00280488d6d6b4f3e0e950d7.png)
+![数据到达Leader前的不一致性](https://assets.yuxiumin.com/attachment/raft-protocol-intro/15fdd1dc00280488d6d6b4f3e0e950d7.png)
 
 ### 数据到达 Leader 节点，但未复制到 Follower 节点
 
@@ -57,37 +57,37 @@ Raft 协议强依赖 Leader 节点的可用性来确保集群数据的一致性�
 
 原来的 Leader 节点恢复后作为 Follower 加入集群重新从当前任期的新 Leader 处同步数据，强制保持和新选出的 Leader 数据一致。
 
-![数据到达Leader但未复制到Follower节点的不一致性](/assets/attachment/raft-protocol-intro/e9ccc3837439b3c5661e25f2b004c2e6.png)
+![数据到达Leader但未复制到Follower节点的不一致性](https://assets.yuxiumin.com/attachment/raft-protocol-intro/e9ccc3837439b3c5661e25f2b004c2e6.png)
 
 ### 数据到达 Leader 节点，成功复制到 Follower 所有节点，但还未向 Leader 响应接收
 
 这个阶段 Leader 不可用，虽然数据在 Follower 节点处于未提交状态（Uncommitted）但保持一致，重新选出 Leader 后可完成数据提交，此时 <code>Client</code> 由于不知到底提交成功没有，可重试提交。针对这种情况 Raft 要求 <code>RPC</code> 请求实现幂等性，也就是要实现内部去重机制。
 
-![数据到达Leader节点成功复制到Follower所有节点，但还未向Leader响应接收](/assets/attachment/raft-protocol-intro/a66543ab00678ff94d1e49d625754419.png)
+![数据到达Leader节点成功复制到Follower所有节点，但还未向Leader响应接收](https://assets.yuxiumin.com/attachment/raft-protocol-intro/a66543ab00678ff94d1e49d625754419.png)
 
 ### 数据到达 Leader 节点，成功复制到 Follower 部分节点，但还未向 Leader 响应接收
 
 这个阶段 Leader 挂掉，数据在 Follower 节点处于未提交状态（Uncommitted）且不一致，Raft 协议要求投票只能投给拥有最新数据的节点。所以拥有最新数据的节点会被选为 Leader 再强制同步数据到 Follower，数据不会丢失并最终一致。
 
-![数据到达Leader成功复制到Follower部分节点但还未向Leader响应接收](/assets/attachment/raft-protocol-intro/e88920eaab63652ce05de3cd5ad95866.png)
+![数据到达Leader成功复制到Follower部分节点但还未向Leader响应接收](https://assets.yuxiumin.com/attachment/raft-protocol-intro/e88920eaab63652ce05de3cd5ad95866.png)
 
 ### 数据到达 Leader 节点，成功复制到 Follower 所有或多数节点，数据在 Leader 处于已提交状态，但在 Follower 处于未提交状态
 
 这个阶段 Leader 挂掉，重新选出新 Leader 后的处理流程和阶段 3 一样。
 
-![](/assets/attachment/raft-protocol-intro/2156a1d771c1adac7336a19f7f42e4b1.png)
+![](https://assets.yuxiumin.com/attachment/raft-protocol-intro/2156a1d771c1adac7336a19f7f42e4b1.png)
 
 ### 数据到达 Leader 节点，成功复制到 Follower 所有或多数节点，数据在所有节点都处于已提交状态，但还未响应 Client
 
 这个阶段 Leader 挂掉，集群内部数据其实已经是一致的，<code>Client</code> 重复重试基于幂等策略对一致性无影响。
 
-![](/assets/attachment/raft-protocol-intro/46e4f2e4521ae00189a4427f7679ebad.png)
+![](https://assets.yuxiumin.com/attachment/raft-protocol-intro/46e4f2e4521ae00189a4427f7679ebad.png)
 
 ### 网络分区导致的脑裂情况，出现双 Leader
 
 网络分区将原先的 Leader 节点和 Follower 节点分隔开，Follower 收不到 Leader 的心跳将发起选举产生新的 Leader。这时就产生了双 Leader，原先的 Leader 独自在一个区，向它提交数据不可能复制到多数节点所以永远提交不成功。向新的 Leader 提交数据可以提交成功，网络恢复后旧的 Leader 发现集群中有更新任期的新 Leader 则自动降级为 Follower 并从新 Leader 处同步数据达成集群数据一致。
 
-![](/assets/attachment/raft-protocol-intro/8e1cb38a56d86a412289ad1318b40838.png)
+![](https://assets.yuxiumin.com/attachment/raft-protocol-intro/8e1cb38a56d86a412289ad1318b40838.png)
 
 # 参考资料
 

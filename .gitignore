@@ -29,3 +29,9 @@ Thumbs.db
 
 .omo/
 .playwright-mcp/
+
+### 博客图片（已迁移到 Cloudflare R2）
+assets/attachment/
+
+### Cloudflare wrangler 缓存
+.wrangler/

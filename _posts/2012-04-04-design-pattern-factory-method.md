@@ -16,7 +16,7 @@ tags:
 
 # 结构
 
-![工厂方法结构](/assets/attachment/design-pattern/92aa5402b066887668e352dbe53dd3e6.png)
+![工厂方法结构](https://assets.yuxiumin.com/attachment/design-pattern/92aa5402b066887668e352dbe53dd3e6.png)
 
 工厂方法主要由以下几部分组成：
 

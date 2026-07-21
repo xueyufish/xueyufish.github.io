@@ -16,7 +16,7 @@ tags:
 
 # 结构
 
-![抽象工厂结构](/assets/attachment/design-pattern/023e023818ddba953a3a055e3a7976dd.png)
+![抽象工厂结构](https://assets.yuxiumin.com/attachment/design-pattern/023e023818ddba953a3a055e3a7976dd.png)
 
 抽象工厂主要由以下几部分组成：
 1. 抽象工厂(AbstractFactory): 声明一个创建抽象产品对象的操作接口

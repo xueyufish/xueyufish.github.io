@@ -44,19 +44,19 @@ tags:
 
 **脏读**：当一个事务允许读取另外一个事务修改但未提交的数据时，就可能发生脏读。
 
-![dirty-read](/assets/attachment/distributed-transaction/8F322917A3D82C246A3960D1A212EA33.jpg)
+![dirty-read](https://assets.yuxiumin.com/attachment/distributed-transaction/8F322917A3D82C246A3960D1A212EA33.jpg)
 
 事务 T1 首先从表中查询 id=1 的字段 (value = a)，然后另外一个事务 T2 更新表中 id=1 的字段 (value = b), 但是此时 T2 未提交事务，T1查询到的为事务 T2 更新的值 b，后事务 T2 回滚事务，T1 查询到的还是 T2 更新的值 b，发生数据不一致。
 
 **不可重复读**：
 
-![nonrepeatable-reads](/assets/attachment/distributed-transaction/36c0727913bcc31bc43bb49cc285e20a.jpg)
+![nonrepeatable-reads](https://assets.yuxiumin.com/attachment/distributed-transaction/36c0727913bcc31bc43bb49cc285e20a.jpg)
 
 事务 T1 首先从表中查询 id=1 的行，然后另外一个事务 T2 更新表中 id=1 的字段值为 b 并且提交事务, 这时 T1 看到的仍然是它之前查询到的结果，在此执行 select 是仍然和之前的查询结果一样。
 
 **幻读**：
 
-![phantoms-read](/assets/attachment/distributed-transaction/b80ff76ca06076a113586b2f5fbe35c0.png)
+![phantoms-read](https://assets.yuxiumin.com/attachment/distributed-transaction/b80ff76ca06076a113586b2f5fbe35c0.png)
 
 事务 T1 首先从表中查询 id 从 1 到 20 的行，然后另外一个事务 T2 往表插入了 id=3 的行并且提交事务, 这时 T1 看到的结果集仍然和它之前查询到的结果集一样。
 
@@ -103,7 +103,7 @@ TCC 模型认为对于业务系统中的一个特定的业务逻辑，其对外�
 1. 初步操作 Try: 完成所有业务检查，预留必须的资源；
 2. 确认操作 Confirm: 真正执行业务逻辑，不做任务业务检查，只使用 Try 阶段预留的业务资源。因此，只要 Try 成功，Confirm 必须能成功。另外，Confirm操作需满足幂等性，保证每一笔分布式事务有且只能成功一次。
 3. 取消操作 Cancel: 释放 Try 阶段预留的业务资源。同样，Cancel 操作也需要保证幂等性。
-![tcc-transaction-model](/assets/attachment/distributed-transaction/91762cceea0e9be0251923dfaa809686.jpg)
+![tcc-transaction-model](https://assets.yuxiumin.com/attachment/distributed-transaction/91762cceea0e9be0251923dfaa809686.jpg)
 
 TCC 模型包括三部分：
 1. 主业务服务：整个业务活动的发起方，服务的编排者，负责发起并完成整个业务活动；

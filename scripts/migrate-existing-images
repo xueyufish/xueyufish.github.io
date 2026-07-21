@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# migrate-existing-images — Upload all existing assets/attachment/ images to R2
+#
+# This uploads every image currently in the git-tracked assets/attachment/
+# directory to the R2 bucket, preserving the directory structure.
+#
+# After this completes, you can verify images at:
+#   https://assets.yuxiumin.com/attachment/<post-slug>/<filename>
+#
+# Usage:
+#   ./scripts/migrate-existing-images             # upload all, prompt per dir
+#   ./scripts/migrate-existing-images --yes        # upload all, no prompt
+#   ./scripts/migrate-existing-images --dir raft-protocol-intro  # just one dir
+# ==============================================================================
+set -euo pipefail
+
+BATCH=""
+TARGET_DIR=""
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --yes|-y) BATCH="yes"; shift ;;
+    --dir)    TARGET_DIR="$2"; shift 2 ;;
+    *)        echo "Unknown: $1" >&2; exit 1 ;;
+  esac
+done
+
+ASSETS_DIR="assets/attachment"
+
+if [[ -n "$TARGET_DIR" ]]; then
+  DIRS=("${ASSETS_DIR}/${TARGET_DIR}")
+  if [[ ! -d "${DIRS[0]}" ]]; then
+    echo "Error: directory not found: ${DIRS[0]}" >&2
+    exit 1
+  fi
+else
+  DIRS=()
+  for d in "${ASSETS_DIR}"/*/; do
+    [[ -d "$d" ]] && DIRS+=("$d")
+  done
+fi
+
+echo "Found ${#DIRS[@]} post image directories"
+echo ""
+
+TOTAL=0
+for DIR in "${DIRS[@]}"; do
+  SLUG="$(basename "$DIR")"
+  FILES=("$DIR"*)
+  COUNT=${#FILES[@]}
+
+  echo "── ${SLUG} (${COUNT} files)"
+
+  if [[ "$BATCH" != "yes" ]]; then
+    read -r -p "   Upload? [Y/n/q] " ans
+    case "$ans" in
+      [Nn]*) echo "   → skipped"; continue ;;
+      [Qq]*) echo "Quit."; exit 0 ;;
+    esac
+  fi
+
+  for f in "$DIR"*; do
+    [[ -f "$f" ]] || continue
+    BASENAME="$(basename "$f")"
+    echo -n "   ${BASENAME} ... "
+    if wrangler r2 object put "blog-assets/attachment/${SLUG}/${BASENAME}" --file="$f" --remote &>/dev/null; then
+      echo "OK"
+      TOTAL=$((TOTAL + 1))
+    else
+      echo "FAILED" >&2
+    fi
+  done
+done
+
+echo ""
+echo "Migration complete: ${TOTAL} images uploaded to R2."
+echo "Verify at: https://assets.yuxiumin.com/attachment/..."
