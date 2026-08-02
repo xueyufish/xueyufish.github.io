@@ -2,8 +2,8 @@
 layout:     post
 title:      "JVM 内存模型"
 date:       2014-03-15
-author:     "xueyufish"
-keyword:    "程序语言, Java, JVM, xueyufish"
+author:     "yuxiumin"
+keyword:    "程序语言, Java, JVM, yuxiumin"
 description: "JVM 内存模型介绍"
 tags:
     - 程序语言

@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 抽象工厂(Abstract Factory)"
+description: "设计模式 - 抽象工厂(Abstract Factory)详解：为创建一组相关对象提供统一接口，GoF 创建型模式，无需指定具体类"
 date:       2012-04-08
-author:     "xueyufish"
-keyword:    "设计模式, 抽象工厂, Abstract Factory, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 抽象工厂, Abstract Factory, yuxiumin"
 tags:
     - 设计模式
 ---
@@ -148,4 +149,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/abstract-factory](https://github.com/xueyufish/design-pattern/tree/master/abstract-factory)
+[https://github.com/yuxiumin/design-pattern/tree/master/abstract-factory](https://github.com/yuxiumin/design-pattern/tree/master/abstract-factory)

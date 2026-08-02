@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 适配器模式(Adapter)"
+description: "设计模式 - 适配器模式(Adapter)详解：将类接口转换成客户端期望的接口，GoF 结构型模式，让不兼容的类协同工作"
 date:       2012-04-26
-author:     "xueyufish"
-keyword:    "设计模式, 适配器模式, Adapter Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 适配器模式, Adapter Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构性模式
@@ -91,4 +92,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/adapter](https://github.com/xueyufish/design-pattern/tree/master/adapter)
+[https://github.com/yuxiumin/design-pattern/tree/master/adapter](https://github.com/yuxiumin/design-pattern/tree/master/adapter)

@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 状态模式(State pattern)"
+description: "设计模式 - 状态模式详解：对象内部状态改变时行为也随之改变，GoF 行为型模式，消除大量条件判断"
 date:       2012-08-06
-author:     "xueyufish"
-keyword:    "设计模式, 状态模式, State pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 状态模式, State pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -114,4 +115,4 @@ ConcreteStateA handle ：testB
 ```
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/state](https://github.com/xueyufish/design-pattern/tree/master/state)
+[https://github.com/yuxiumin/design-pattern/tree/master/state](https://github.com/yuxiumin/design-pattern/tree/master/state)

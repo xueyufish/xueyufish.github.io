@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "重温 C 语言 (一)"
+description: "重温 C 语言（一）：Hello World、基本数据类型、运算符、输入输出，基于《C 程序设计语言：现代方法》"
 date:       2013-02-22
-author:     "xueyufish"
-keyword:    "程序语言, C, xueyufish"
+author:     "yuxiumin"
+keyword:    "程序语言, C, yuxiumin"
 tags:
     - 程序语言
     - C

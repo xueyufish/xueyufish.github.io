@@ -76,13 +76,13 @@ body {
      *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
      */
   font-family: 'Inter', -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
-  line-height: 1.7;
+  line-height: 1.5;
   font-size: 16px;
   color: #404040;
   overflow-x: hidden;
 }
 p {
-  margin: 30px 0;
+  margin: 0 0 16px;
 }
 h1,
 h2,
@@ -160,6 +160,10 @@ pre,
 .table-responsive {
   -webkit-overflow-scrolling: touch;
 }
+pre,
+code {
+  font-size: 12px;
+}
 pre code {
   display: block;
   width: auto;
@@ -179,7 +183,7 @@ pre code {
 .post-container h4,
 .post-container h5,
 .post-container h6 {
-  margin: 30px 0 10px;
+  margin: 24px 0 16px;
 }
 .post-container h5 {
   font-size: 19px;
@@ -199,7 +203,7 @@ pre code {
 }
 .post-container ul,
 .post-container ol {
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 @media screen and (max-width: 768px) {
   .post-container ul,
@@ -1604,8 +1608,37 @@ h3.home-aside-title {
   background: #e8e8e8;
 }
 
+/* 文章标签 */
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.post-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 12px;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.post-tag:hover {
+  color: #fff;
+  background: #0085a1;
+}
+
 .theme-toggle-btn.active {
   color: #1a1a1a;
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
+
+
+/* 正文链接蓝色，便于区分（放末尾覆盖前面冲突规则）*/
+.post-content a{color:#2563eb}
+.post-content a:hover,.post-content a:focus{color:#1d4ed8;text-decoration:underline}
+[data-theme="dark"] .post-content a{color:#60a5fa}
+[data-theme="dark"] .post-content a:hover,[data-theme="dark"] .post-content a:focus{color:#93c5fd;text-decoration:underline}

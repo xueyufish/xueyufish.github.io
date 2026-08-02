@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 迭代器模式(Iterator)"
+description: "设计模式 - 迭代器模式(Iterator)详解：顺序访问聚合对象元素而不暴露内部表示，GoF 行为型模式"
 date:       2012-07-22
-author:     "xueyufish"
-keyword:    "设计模式, 迭代器模式, Iterator Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 迭代器模式, Iterator Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -163,4 +164,4 @@ ddd
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/iterator](https://github.com/xueyufish/design-pattern/tree/master/iterator)
+[https://github.com/yuxiumin/design-pattern/tree/master/iterator](https://github.com/yuxiumin/design-pattern/tree/master/iterator)

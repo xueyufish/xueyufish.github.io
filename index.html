@@ -23,13 +23,6 @@ layout: page
     {% for post in paginator.posts %}
     <article class="home-card">
       <a href="{{ post.url | prepend: site.baseurl }}" class="home-card-link">
-        <div class="home-card-cover">
-          {% if post.header-img and post.header-img != "" %}
-          <img src="{{ post.header-img }}" alt="{{ post.title }}" loading="lazy">
-          {% else %}
-          <div class="home-card-placeholder">{{ post.title | truncate: 2, "" }}</div>
-          {% endif %}
-        </div>
         <div class="home-card-body">
           <h2 class="home-card-title">{{ post.title }}</h2>
           <p class="home-card-excerpt">
@@ -40,12 +33,13 @@ layout: page
             {% endif %}
           </p>
           <div class="home-card-meta">
-            <div class="home-card-meta-left">
-              {% if post.tags.size > 0 %}
-              {% assign first_tag = post.tags | first %}
-              <span class="home-card-tag">{{ first_tag }}</span>
-              {% endif %}
-            </div>
+              <div class="home-card-meta-left">
+                {% if post.tags.size > 0 %}
+                {% for tag in post.tags limit:8 %}
+                <span class="home-card-tag">{{ tag }}</span>
+                {% endfor %}
+                {% endif %}
+              </div>
             <div class="home-card-meta-right">
               {% if post.reading_time %}
               <span class="home-card-reading">{{ post.reading_time }} 分钟</span>

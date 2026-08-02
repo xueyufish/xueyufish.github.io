@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 策略模式(Strategy)"
+description: "设计模式 - 策略模式(Strategy)详解：定义算法族并封装使它们可互换，GoF 行为型模式，算法独立于客户端变化"
 date:       2012-06-29
-author:     "xueyufish"
-keyword:    "设计模式, 策略模式, Strategy Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 策略模式, Strategy Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -120,4 +121,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/strategy](https://github.com/xueyufish/design-pattern/tree/master/strategy)
+[https://github.com/yuxiumin/design-pattern/tree/master/strategy](https://github.com/yuxiumin/design-pattern/tree/master/strategy)

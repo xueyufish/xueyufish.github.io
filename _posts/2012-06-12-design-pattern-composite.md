@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 组合模式(Composite)"
+description: "设计模式 - 组合模式(Composite)详解：将对象组合成树形结构表示整体-部分层次，GoF 结构型模式"
 date:       2012-06-12
-author:     "xueyufish"
-keyword:    "设计模式, 组合模式, Composite Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 组合模式, Composite Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -154,4 +155,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/composite](https://github.com/xueyufish/design-pattern/tree/master/composite)
+[https://github.com/yuxiumin/design-pattern/tree/master/composite](https://github.com/yuxiumin/design-pattern/tree/master/composite)

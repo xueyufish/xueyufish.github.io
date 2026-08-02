@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 单例模式(Singleton)"
+description: "设计模式 - 单例模式(Singleton)详解：确保类只有一个实例并全局访问，属于 GoF 创建型模式，包含懒汉/饿汉线程安全实现对比"
 date:       2012-04-02
-author:     "xueyufish"
-keyword:    "设计模式, 创建型模式, 单例模式, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 创建型模式, 单例模式, yuxiumin"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 设计模式
@@ -136,4 +137,4 @@ public class Singleton {
 * 多线程使用单例使用共享资源时，注意线程安全问题。
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/singleton](https://github.com/xueyufish/design-pattern/tree/master/singleton)
+[https://github.com/yuxiumin/design-pattern/tree/master/singleton](https://github.com/yuxiumin/design-pattern/tree/master/singleton)

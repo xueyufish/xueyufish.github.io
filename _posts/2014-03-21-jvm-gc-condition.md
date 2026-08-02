@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "JVM 垃圾收集 - 对象可回收判断"
+description: "JVM 垃圾收集 - 对象可回收判断：引用计数法、可达性分析、Java 引用的分类（强/软/弱/虚引用）"
 keyword:    "Java, JVM, GC"
 date:       2014-03-21
-author:     "xueyufish"
+author:     "yuxiumin"
 tags:
     - Java
 ---

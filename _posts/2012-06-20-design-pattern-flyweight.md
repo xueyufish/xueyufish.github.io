@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 享元模式(Flyweight)"
+description: "设计模式 - 享元模式(Flyweight)详解：运用共享技术支持大量细粒度对象，GoF 结构型模式，减少内存占用"
 date:       2012-06-20
-author:     "xueyufish"
-keyword:    "设计模式, 享元模式, Flyweight Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 享元模式, Flyweight Pattern, yuxiumin"
 tags:
     - 设计模式
     - 结构型模式
@@ -133,4 +134,4 @@ public class Client {
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/flyweight](https://github.com/xueyufish/design-pattern/tree/master/flyweight)
+[https://github.com/yuxiumin/design-pattern/tree/master/flyweight](https://github.com/yuxiumin/design-pattern/tree/master/flyweight)

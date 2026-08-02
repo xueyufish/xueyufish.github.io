@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "JVM 垃圾收集 - 垃圾收集器"
+description: "JVM 垃圾收集器详解：Serial、ParNew、Parallel Scavenge、CMS、G1 等 HotSpot 收集器特性与适用场景"
 keyword:    "Java, JVM, GC"
 date:       2014-03-28
-author:     "xueyufish"
+author:     "yuxiumin"
 tags:
     - Java
 ---

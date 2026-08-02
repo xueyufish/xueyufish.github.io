@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 原型模式(Prototype)"
+description: "设计模式 - 原型模式(Prototype)详解：通过拷贝原型实例创建新对象，GoF 创建型模式，含浅拷贝深拷贝对比"
 date:       2012-04-18
-author:     "xueyufish"
-keyword:    "设计模式, 原型模式, Prototype Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 原型模式, Prototype Pattern, yuxiumin"
 tags:
     - 设计模式
     - 创建型模式
@@ -90,4 +91,4 @@ public static void main(String... args) {
 ```
 
 #### 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/prototype](https://github.com/xueyufish/design-pattern/tree/master/prototype)
+[https://github.com/yuxiumin/design-pattern/tree/master/prototype](https://github.com/yuxiumin/design-pattern/tree/master/prototype)

@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 建造者模式(Builder)"
+description: "设计模式 - 建造者模式(Builder)详解：将复杂对象的构建与表示分离，GoF 创建型模式，适用于多步骤构建场景"
 date:       2012-04-15
-author:     "xueyufish"
-keyword:    "设计模式, 建造者, Builder, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 建造者, Builder, yuxiumin"
 tags:
     - 设计模式
     - 创建型模式
@@ -102,4 +103,4 @@ public class Director {
 ```
 
 ## 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/builder](https://github.com/xueyufish/design-pattern/tree/master/builder)
+[https://github.com/yuxiumin/design-pattern/tree/master/builder](https://github.com/yuxiumin/design-pattern/tree/master/builder)

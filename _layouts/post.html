@@ -37,6 +37,14 @@ layout: page
       </time>
       {% endif %}
     </div>
+
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag }}" class="post-tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
   </header>
 
   <div class="post-content">

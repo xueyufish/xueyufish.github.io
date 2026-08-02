@@ -2,8 +2,8 @@
 layout:     post
 title:      "Kong Api网关简介(二) 插件"
 date:       2018-07-09
-author:     "xueyufish"
-keyword:    "开源项目, 网关, Gateway, Kong, Nginx, xueyufish"
+author:     "yuxiumin"
+keyword:    "开源项目, 网关, Gateway, Kong, Nginx, yuxiumin"
 description: "Kong Api网关插件简介"
 tags:
     - 开源项目
@@ -65,9 +65,9 @@ Content-Length: 41
 
 为了继续测试，我们创建一个consumer，执行命令：
 ```shell
-[xueyufish@izbp13cqwumhn3wzp2j5mqz kong-gateway]$ curl -i -X POST \
+[yuxiumin@izbp13cqwumhn3wzp2j5mqz kong-gateway]$ curl -i -X POST \
 >   --url http://127.0.0.1:8001/consumers/ \
->   --data "username=xueyufish"
+>   --data "username=yuxiumin"
 HTTP/1.1 201 Created
 Date: Mon, 09 Jul 2018 08:52:13 GMT
 Content-Type: application/json; charset=utf-8
@@ -76,7 +76,7 @@ Access-Control-Allow-Origin: *
 Server: kong/0.14.0
 Content-Length: 110
 
-{"custom_id":null,"created_at":1531126333,"username":"xueyufish","id":"580046a0-bbf0-4b9f-91ad-9324976df6be"}
+{"custom_id":null,"created_at":1531126333,"username":"yuxiumin","id":"580046a0-bbf0-4b9f-91ad-9324976df6be"}
 ```
 
 Kong 中的消费者对象代表了一个服务的消费者或者一个用户。我们可以使用 Kong 作为消费者数据存储，或者也可以将用户列表映射到数据库，以保持 Kong 与现有主数据存储的一致性；在BFF模型下，也可以为每个业务实现，或者client定义一个消费者，例如：ios、android、pc，或者针对具体不同的业务实现具备不同的消费者，具体根据业务需要而定。
@@ -84,7 +84,7 @@ Kong 中的消费者对象代表了一个服务的消费者或者一个用户。
 然后，执行命令给创建的消费者添加一个key：
 ```shell
 $ curl -i -X POST \
->   --url http://127.0.0.1:8001/consumers/xueyufish/key-auth/ \
+>   --url http://127.0.0.1:8001/consumers/yuxiumin/key-auth/ \
 >   --data 'key=123456'
 HTTP/1.1 201 Created
 Date: Mon, 09 Jul 2018 09:05:59 GMT

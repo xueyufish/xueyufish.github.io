@@ -10,7 +10,7 @@
 
     <!-- 基础 SEO Meta 标签 -->
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
-    {% if page.keyword %}<meta name="keyword" content="{{ page.keyword }}">{% else %}<meta name="keyword" content="{{ site.keyword }}">{% endif %}
+    {% if page.keyword %}<meta name="keywords" content="{{ page.keyword }}">{% else %}<meta name="keywords" content="{{ site.keyword }}">{% endif %}
     <meta name="author" content="{{ site.author }}">
     <meta name="robots" content="{% if page.noindex %}noindex{% else %}index,follow{% endif %}">
     <meta name="googlebot" content="{% if page.noindex %}noindex{% else %}index,follow{% endif %}">
@@ -41,6 +41,23 @@
     {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
     <meta name="twitter:image" content="{% if page.og-image %}{{ page.og-image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.url }}{{ site.baseurl }}/assets/image/logo.png{% endif %}">
     {% if site.twitter_username %}<meta name="twitter:creator" content="@{{ site.twitter_username }}">{% endif %}
+
+    <!-- Open Graph / Article 增强 -->
+    {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    {% if page.edit-date %}
+    <meta property="article:modified_time" content="{{ page.edit-date | date_to_xmlschema }}">
+    {% endif %}
+    <meta property="article:author" content="{{ site.author }}">
+    {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+    {% endif %}
+
+    <!-- Google Search Console 验证 -->
+    {% if site.google_site_verification and site.google_site_verification != "" %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+    {% endif %}
 
     <!-- 资源预加载 -->
     <link rel="preload" href="{{ "/assets/css/main.min.css?v=" | append: site.version | prepend: site.baseurl }}" as="style">
@@ -84,19 +101,17 @@
       })();
     </script>
 
-    <!-- MathJax 异步加载配置 - 延迟加载以提升首屏性能 -->
+    <!-- MathJax 异步加载 - 仅在包含数学公式的页面加载 -->
     <script>
-      // 只在包含数学公式的页面加载 MathJax
       (function() {
-        var needsMathJax = false;
-        // 检查页面内容是否包含数学公式标记
-        if (document.body.innerHTML.indexOf('$$') !== -1 ||
-            document.body.innerHTML.indexOf('$') !== -1 ||
-            document.body.innerHTML.indexOf('\\(') !== -1) {
-          needsMathJax = true;
-        }
+        function loadMathJax() {
+          var body = document.body;
+          if (!body) return;
+          var content = body.innerHTML;
+          if (content.indexOf('$$') === -1 &&
+              content.indexOf('$') === -1 &&
+              content.indexOf('\\(') === -1) return;
 
-        if (needsMathJax) {
           window.MathJax = {
             showProcessingMessages: false,
             messageStyle: "none",
@@ -116,6 +131,12 @@
           script.async = true;
           script.src = 'https://cdn.bootcss.com/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
           document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', loadMathJax);
+        } else {
+          loadMathJax();
         }
       })();
     </script>
@@ -180,6 +201,28 @@
         "query-input": "required name=search_term_string"
       }
       {% endif %}
+    }
+    </script>
+
+    <!-- BreadcrumbList 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "{{ site.url }}{{ site.baseurl }}/"
+        }{% if page.url != '/' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{% if page.title %}{{ page.title }}{% else %}{{ page.url | remove_first: '/' | split: '/' | first }}{% endif %}",
+          "item": "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+        }{% endif %}
+      ]
     }
     </script>
 </head>

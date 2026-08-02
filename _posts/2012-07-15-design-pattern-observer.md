@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "设计模式 - 观察者(Observer)"
+description: "设计模式 - 观察者模式(Observer)详解：定义对象间一对多依赖，GoF 行为型模式，状态变化自动通知所有观察者"
 date:       2012-07-15
-author:     "xueyufish"
-keyword:    "设计模式, 观察者, Observer Pattern, xueyufish"
+author:     "yuxiumin"
+keyword:    "设计模式, 观察者, Observer Pattern, yuxiumin"
 tags:
     - 设计模式
     - 对象行为模式
@@ -163,4 +164,4 @@ ConcreteObserver3: wangwu get message 789
 ```
 
 # 参考代码
-[https://github.com/xueyufish/design-pattern/tree/master/observer](https://github.com/xueyufish/design-pattern/tree/master/observer)
+[https://github.com/yuxiumin/design-pattern/tree/master/observer](https://github.com/yuxiumin/design-pattern/tree/master/observer)

@@ -1,9 +1,10 @@
 ---
 layout:     post
 title:      "区块链基本概念"
+description: "区块链基本概念入门：区块结构、加密哈希、工作量证明、分布式账本原理，适合技术背景快速理解区块链"
 subtitle:   ""
 date:       2018-01-14
-author:     "xueyufish "
+author:     "yuxiumin "
 tags:
     - 区块链
 ---
