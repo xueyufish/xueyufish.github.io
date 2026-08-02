@@ -25,10 +25,6 @@ Cache-Aside 是业内最为常用的模式，也就是在业务代码内管理�
 
 在写场景下，先将数据写入到存储系统，写入成功后再将数据写入到缓存；或者写入成功后将缓存数据过期，下次读取时再加载缓存。
 
-![](/assets/image/cache-update-strategy//cce983cbc455596091c6b802a9eb2bb4.png)
-
-![](/assets/image/cache-update-strategy//212f12c3aac659f611fa5a79992d8c37.png)
-
 执行 Cache-Aside 模式的伪码如下：
 ```java
 public V read(K key) {
@@ -54,13 +50,11 @@ public void write(K key, V value) {
 
 Read Through 模式在查询操作中更新缓存。当缓存没有命中时，Cache Aside 由调用方负责把数据加载入缓存，而 Read Through 则用缓存服务自己来加载，从而对应用方是透明的。
 
-![read-through](/assets/image/cache-update-strategy//read-through.png)
 
 # Write Through 模式
 
 Write Through 模式在更新数据时发生。当有数据更新的时候，如果没有命中缓存，直接更新数据库，然后返回。如果命中了缓存，则更新缓存，然后再由 Cache 自己更新数据库，其中更新缓存和更新数据库是一个同步操作。对应用方而言，操作也是是透明的。
 
-![write-through](/assets/image/cache-update-strategy//write-through.png)
 
 # Write Back 模式
 
@@ -68,7 +62,6 @@ Write back 模式其实就是 Linux 文件系统 Page Cache 的算法。在更�
 
 Write back 模式带来的问题是，数据不是强一致性的，甚至可能会丢失，并且实现逻辑比较复杂，因为需要对有哪些数据被更新做跟踪。
 
-![write-back](/assets/image/cache-update-strategy//Write-back_with_write-allocation.png)
 
 ### 参考资料
 
