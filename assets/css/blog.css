@@ -160,6 +160,10 @@ pre,
 .table-responsive {
   -webkit-overflow-scrolling: touch;
 }
+pre,
+code {
+  font-size: 12px;
+}
 pre code {
   display: block;
   width: auto;
@@ -1631,3 +1635,10 @@ h3.home-aside-title {
   background: #fff;
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
+
+
+/* 正文链接蓝色，便于区分（放末尾覆盖前面冲突规则）*/
+.post-content a{color:#2563eb}
+.post-content a:hover,.post-content a:focus{color:#1d4ed8;text-decoration:underline}
+[data-theme="dark"] .post-content a{color:#60a5fa}
+[data-theme="dark"] .post-content a:hover,[data-theme="dark"] .post-content a:focus{color:#93c5fd;text-decoration:underline}
