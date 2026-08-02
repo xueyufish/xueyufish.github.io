@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 状态模式(State pattern)"
+description: "设计模式 - 状态模式详解：对象内部状态改变时行为也随之改变，GoF 行为型模式，消除大量条件判断"
 date:       2012-08-06
 author:     "yuxiumin"
 keyword:    "设计模式, 状态模式, State pattern, yuxiumin"

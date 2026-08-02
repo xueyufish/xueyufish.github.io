@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 装饰器模式(Decorator)"
+description: "设计模式 - 装饰器模式(Decorator)详解：动态给对象添加额外职责，GoF 结构型模式，比继承更灵活"
 date:       2012-05-08
 author:     "yuxiumin"
 keyword:    "设计模式, 装饰器模式, Decorator Pattern, yuxiumin"

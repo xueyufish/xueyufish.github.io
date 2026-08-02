@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "REST API 设计指南"
+description: "RESTful API 设计指南：资源组织、命名规范、版本管理、分页过滤、错误处理、安全认证等实战经验总结"
 date:       2019-01-29
 author:     "yuxiumin"
 keyword:    "架构设计, REST, API, yuxiumin"

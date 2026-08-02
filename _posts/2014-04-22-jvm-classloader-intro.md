@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "JVM 类加载机制"
+description: "JVM 类加载机制详解：类加载的 7 个生命周期阶段、双亲委派模型、自定义 ClassLoader 实现"
 keyword:    "Java, JVM, ClassLoader"
 date:       2014-04-22
 author:     "yuxiumin"

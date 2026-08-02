@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "重温 C 语言 (二)"
+description: "重温 C 语言（二）：指针详解、指针变量、指针运算、数组与指针的关系、动态内存分配"
 date:       2013-03-06
 author:     "yuxiumin"
 keyword:    "程序语言, C, yuxiumin"

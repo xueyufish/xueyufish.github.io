@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 桥接模式(Bridge)"
+description: "设计模式 - 桥接模式(Bridge)详解：将抽象与实现分离使其可独立变化，GoF 结构型模式，解决类爆炸问题"
 date:       2012-06-04
 author:     "yuxiumin"
 keyword:    "设计模式, 桥接模式, Bridge Pattern, yuxiumin"

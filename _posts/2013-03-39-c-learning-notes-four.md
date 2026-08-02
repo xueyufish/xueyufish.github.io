@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "重温 C 语言 (四)"
+description: "重温 C 语言（四）：动态存储分配、malloc/calloc/realloc/free、内存管理和回收"
 date:       2013-03-18
 author:     "yuxiumin"
 keyword:    "程序语言, C, yuxiumin"

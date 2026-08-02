@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "分布式系统CAP理论和BASE思想概述"
+description: "分布式系统 CAP 理论和 BASE 思想详解：一致性、可用性、分区容忍性的权衡，以及 BASE 柔性事务设计原则"
 date:       2017-04-22
 author:     "yuxiumin"
 keyword:    "分布式, 分布式理论, CAP, BASE, yuxiumin"

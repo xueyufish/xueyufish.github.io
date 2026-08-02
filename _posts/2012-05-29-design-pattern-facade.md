@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 外观模式(Facade)"
+description: "设计模式 - 外观模式(Facade)详解：为子系统提供统一的高层接口，GoF 结构型模式，简化复杂系统调用"
 date:       2012-05-29
 author:     "yuxiumin"
 keyword:    "设计模式, 外观模式, Facade Pattern, yuxiumin"

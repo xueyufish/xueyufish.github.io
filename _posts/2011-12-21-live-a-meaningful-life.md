@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "度过有意义的生命"
+description: "俞敏洪同济大学演讲《度过有意义的生命》全文整理：关于奋斗、坚持与人生意义的思考"
 date:       2011-12-21 21:15
 author:     "yuxiumin"
 keyword:    "生活, 励志, yuxiumin"

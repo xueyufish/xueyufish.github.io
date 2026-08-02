@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 工厂方法(Factory Method)"
+description: "设计模式 - 工厂方法(Factory Method)详解：定义创建对象的接口由子类决定实例化哪个类，GoF 创建型模式，将对象创建延迟到子类"
 date:       2012-04-04
 author:     "yuxiumin"
 keyword:    "设计模式, 创建型模式, 工厂方法, Factory Method, yuxiumin"

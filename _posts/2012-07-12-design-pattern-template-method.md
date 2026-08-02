@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 模板方法(Template Method)"
+description: "设计模式 - 模板方法(Template Method)详解：定义算法骨架将步骤延迟到子类，GoF 行为型模式，复用不变逻辑"
 date:       2012-07-12
 author:     "yuxiumin"
 keyword:    "设计模式, 模板方法, Template Method, yuxiumin"

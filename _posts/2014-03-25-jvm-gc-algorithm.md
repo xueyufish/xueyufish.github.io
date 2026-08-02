@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "JVM 垃圾收集 - 垃圾收集算法"
+description: "JVM 垃圾收集 - 垃圾收集算法：标记-清除、标记-复制、标记-整理、分代收集算法原理与对比"
 keyword:    "Java, JVM, GC"
 date:       2014-03-25
 author:     "yuxiumin"

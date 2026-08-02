@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 迭代器模式(Iterator)"
+description: "设计模式 - 迭代器模式(Iterator)详解：顺序访问聚合对象元素而不暴露内部表示，GoF 行为型模式"
 date:       2012-07-22
 author:     "yuxiumin"
 keyword:    "设计模式, 迭代器模式, Iterator Pattern, yuxiumin"

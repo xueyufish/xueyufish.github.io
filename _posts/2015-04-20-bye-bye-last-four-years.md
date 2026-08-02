@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "再见，我的四年生活"
+description: "告别四年职场生涯的个人感悟与记录"
 date:       2015-04-20
 author:     "yuxiumin"
 tags:

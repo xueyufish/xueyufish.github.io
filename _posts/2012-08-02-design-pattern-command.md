@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 命令模式(Command pattern)"
+description: "设计模式 - 命令模式详解：将请求封装为对象支持参数化和撤销，GoF 行为型模式，实现操作队列和日志"
 date:       2012-08-02
 author:     "yuxiumin"
 keyword:    "设计模式, 命令模式, Command pattern, yuxiumin"

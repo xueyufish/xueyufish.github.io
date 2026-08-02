@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "发布至生产环境的准备事项(译)"
+description: "发布至生产环境的准备事项检查清单（译）：涵盖安全、配置、日志、监控、备份等服务端上线 Checklist"
 date:       2017-12-22
 author:     "yuxiumin"
 keyword:    "DevOps, 架构"

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "Markdown 语法总结"
+description: "Markdown 语法完整总结：标题、列表、代码块、表格、链接、图片等常用语法速查手册"
 date:       2012-12-16
 author:     "yuxiumin"
 keyword:    "程序语言, Markdown, yuxiumin"

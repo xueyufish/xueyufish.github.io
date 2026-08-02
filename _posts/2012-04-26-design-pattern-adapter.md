@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 适配器模式(Adapter)"
+description: "设计模式 - 适配器模式(Adapter)详解：将类接口转换成客户端期望的接口，GoF 结构型模式，让不兼容的类协同工作"
 date:       2012-04-26
 author:     "yuxiumin"
 keyword:    "设计模式, 适配器模式, Adapter Pattern, yuxiumin"

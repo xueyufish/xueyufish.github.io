@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "加入创业团队: 说说我的原因"
+description: "加入创业团队的原因与思考：从大公司到创业公司的职业选择，分享创业环境下的成长与挑战"
 date:       2011-07-27
 author:     "yuxiumin"
 keyword:    "工作, yuxiumin"

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "重温 C 语言 (三)"
+description: "重温 C 语言（三）：大型程序组织、源文件与头文件、多文件编译、存储类型说明符"
 date:       2013-03-18
 author:     "yuxiumin"
 keyword:    "程序语言, C, yuxiumin"

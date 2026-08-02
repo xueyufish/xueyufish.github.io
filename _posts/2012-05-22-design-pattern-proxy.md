@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 代理模式(Proxy)"
+description: "设计模式 - 代理模式(Proxy)详解：为对象提供代理以控制访问，GoF 结构型模式，含远程/虚拟/保护代理实现"
 date:       2012-05-22
 author:     "yuxiumin"
 keyword:    "设计模式, 代理模式, Proxy, yuxiumin"

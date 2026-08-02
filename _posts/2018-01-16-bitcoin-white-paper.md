@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "比特币：一种点对点的电子现金系统"
+description: "比特币白皮书中文翻译：中本聪原论文全文对照译注，点对点电子现金系统的设计原理"
 date:       2018-01-16
 author:     "yuxiumin"
 header-img: ""

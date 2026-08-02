@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "设计模式 - 抽象工厂(Abstract Factory)"
+description: "设计模式 - 抽象工厂(Abstract Factory)详解：为创建一组相关对象提供统一接口，GoF 创建型模式，无需指定具体类"
 date:       2012-04-08
 author:     "yuxiumin"
 keyword:    "设计模式, 抽象工厂, Abstract Factory, yuxiumin"
