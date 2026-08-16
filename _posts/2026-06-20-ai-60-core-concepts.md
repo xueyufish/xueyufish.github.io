@@ -11,6 +11,8 @@ tags:
     - 架构设计
 ---
 
+***转自： [https://www.chaspark.com/#/hotspots/1290766262900256768](https://www.chaspark.com/#/hotspots/1290766262900256768)***
+
 ## 01  LLM 大语言模型
 
 技术评审会上算法同事飙了一堆 LLM、Transformer、Attention，你全程点头但一个字没听进去，回去搜了一圈发现解释比原文还绕。不是你理解力差，是这东西被讲得太复杂了。
@@ -1093,4 +1095,4 @@ API 就是两个系统之间的通信接口。你的产品后端给大模型服�
 
 ---
 
-***本文转载于： [https://www.chaspark.com/#/hotspots/1290766262900256768](https://www.chaspark.com/#/hotspots/1290766262900256768)***
+
